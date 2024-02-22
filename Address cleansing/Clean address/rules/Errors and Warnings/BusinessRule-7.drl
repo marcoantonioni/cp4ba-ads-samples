@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Wrong ZIP code</name>
+  <uuid>af156921-a8a7-459d-a918-1fd94b2c6855</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    ZIP  is not empty or 'State and ZIP'  is not empty
+then
+add `Info: Verify the ZIP code on the following page: https://www.unitedstateszipcodes.org/{ the ZIP code of Preprocessing }` to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

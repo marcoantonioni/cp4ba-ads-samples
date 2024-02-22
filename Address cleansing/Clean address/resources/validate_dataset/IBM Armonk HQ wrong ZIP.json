@@ -1,0 +1,14 @@
+{
+  "operationId" : "461b57d7-e9ec-4b0f-9977-05d90080eae5",
+  "body" : {
+    "address" : {
+      "street" : "New Orchard Road",
+      "secondaryAddressInfo" : "",
+      "city" : "Armonk",
+      "state" : "New York",
+      "zipCode" : "94022",
+      "addressee" : "International Business Machines Corp.",
+      "lastLine" : ""
+    }
+  }
+}

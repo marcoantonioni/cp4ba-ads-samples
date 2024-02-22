@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>customerLifetimeValue</name>
+  <uuid>b64b8f19-d94d-40eb-9ab6-bba3a6b4a8c8</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="customerLifetimeValue" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="input" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.retention_with_ml.data.CustomerRecord" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_ii" name="Customer" typeRef="com.ibm.ads.samples.telecom.retention_with_ml.data.CustomerRecord"/>
+    </inputData>
+    <decision id="input-mapping" name="Input mapping">
+        <description>ML model input</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.retention_with_ml.data.CustomerRecord" collection="false" name="Customer"/>
+                <input bomType="com.ibm.ads.samples.telecom.retention_with_ml.data.Subscription" collection="false" name="Subscription"/>
+                <output bomType="_084740706.telecom.retention_with_ml.customerlifetimevalue.Input" collection="false" name="Input mapping"/>
+                <rule defaultRule="false" href="input-mapping/mapping.drl" kind="BusinessRule" name="mapping"/>
+                <rule defaultRule="false" href="input-mapping/car%20owner.drl" kind="BusinessRule" name="car owner"/>
+                <rule defaultRule="false" href="input-mapping/rate%20plan.dmt" kind="DecisionTable" name="rate plan"/>
+                <rule defaultRule="true" href="input-mapping/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="input-mapping/Gender%20mapping.dmt" kind="DecisionTable" name="Gender mapping"/>
+                <rule defaultRule="false" href="input-mapping/Marital%20status%20mapping.dmt" kind="DecisionTable" name="Marital status mapping"/>
+                <rule defaultRule="false" href="input-mapping/Payment%20method%20mapping.dmt" kind="DecisionTable" name="Payment method mapping"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="_084740706.telecom.retention_with_ml.customerlifetimevalue.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Output mapping">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="_084740706.telecom.retention_with_ml.customerlifetimevalue.Output" collection="false" name="ML model invocation"/>
+                <output bomType="java.lang.Double" collection="false" name="Output mapping"/>
+                <rule defaultRule="false" href="output-mapping/check%20error.drl" kind="BusinessRule" name="check error"/>
+                <rule defaultRule="false" href="output-mapping/life%20time%20value.drl" kind="BusinessRule" name="life time value"/>
+                <rule defaultRule="true" href="output-mapping/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_1" name="Subscription">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.retention_with_ml.data.Subscription" collection="false" name="Subscription"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_1_ii" name="Subscription" typeRef="com.ibm.ads.samples.telecom.retention_with_ml.data.Subscription"/>
+    </inputData>
+    <decision id="Prediction" name="ML model invocation">
+        <description>ML model output</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="_084740706.telecom.retention_with_ml.customerlifetimevalue.Input" collection="false" name="Input mapping"/>
+                <output bomType="_084740706.telecom.retention_with_ml.customerlifetimevalue.Output" collection="false" name="ML model invocation"/>
+                <rule defaultRule="false" href="Prediction/Prediction.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="prediction_ii" name="ML model invocation" typeRef="_084740706.telecom.retention_with_ml.customerlifetimevalue.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Apply reward</name>
+  <uuid>46f11e64-e271-4a0a-b67d-fabddc17da56</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[-- set decision to Customer ;
+set decision to a new Customer where 
+    the name is the name , 
+    the offers are the offers , 
+    the status is the status , 
+    the total amount is the total amount ; 
+-- Add reward to the current wallet amount
+set the wallet amount of decision to the wallet amount + round( 'Eligible amount' * 'Wallet multipler' , 0 ) ;
+print "Wallet reward is: " + round( 'Eligible amount' * 'Wallet multipler' , 0 ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

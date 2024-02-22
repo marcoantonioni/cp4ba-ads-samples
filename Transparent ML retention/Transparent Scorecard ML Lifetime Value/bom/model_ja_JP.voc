@@ -1,0 +1,37 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic#concept.label = characteristic
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.Characteristic(double,double,java.lang.String,java.lang.String)#phrase.navigation = 新規の {characteristic}ここで{0, differential score} {1, partial score} {2, reason code} {3, name}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.action = {this}のdifferential scoreを{differential score}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.addition_setter = {this}のdifferential scoreに{differential score}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.navigation = {this}の{differential score}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.subtraction_setter = {this}のdifferential scoreから{differential score}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.name#phrase.action = {this}のnameを{name}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.name#phrase.navigation = {this}の{name}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.action = {this}のpartial scoreを{partial score}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.addition_setter = {this}のpartial scoreに{partial score}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.navigation = {this}の{partial score}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.subtraction_setter = {this}のpartial scoreから{partial score}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.reasonCode#phrase.action = {this}のreason codeを{reason code}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.reasonCode#phrase.navigation = {this}の{reason code}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input#concept.label = ML モデル入力
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.Input(java.lang.Integer)#phrase.navigation = 新規の {ML モデル入力}ここで{0, rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.action = {this}のrateplanを{rateplan}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.addition_setter = {this}のrateplanに{rateplan}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.navigation = {this}の{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.subtraction_setter = {this}のrateplanから{rateplan}を引く
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output#concept.label = ML モデル出力
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.Output(double,java.util.List)#phrase.navigation = 新規の {ML モデル出力}ここで{0, rawresult} {1, reason codes}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.addTo_reasonCodes(java.lang.String)#phrase.action = {this}のreason codesに{0}を追加
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.clear_reasonCodes()#phrase.action = {this}のreason codesをクリアする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.action = {this}のrawresultを{rawresult}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.addition_setter = {this}のrawresultに{rawresult}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.navigation = {this}の{rawresult}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.subtraction_setter = {this}のrawresultから{rawresult}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.reasonCodes#phrase.action = {this}のreason codesを{reason codes}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.reasonCodes#phrase.navigation = {this}の{reason codes}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.removeFrom_reasonCodes(java.lang.String)#phrase.action = {this}のreason codesから{0}を削除

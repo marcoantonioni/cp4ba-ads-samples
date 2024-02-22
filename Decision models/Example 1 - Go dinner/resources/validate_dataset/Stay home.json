@@ -1,0 +1,11 @@
+{
+  "operationId" : "4c853d12-ec2b-4bff-9730-801ead5bc831",
+  "body" : {
+    "financialInformation" : {
+      "balance" : 1000,
+      "debits" : 250
+    },
+    "weatherForecast" : "Storm",
+    "guests" : [ true, true, false, false, false, true ]
+  }
+}

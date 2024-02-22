@@ -1,0 +1,216 @@
+package com.ibm.ads.samples.transportation.car_rental.data;
+
+public class Car
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Car"
+        property "de.generated" "true"
+{
+    public double ID
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ID"
+                property update "true";
+    public string brand
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "brand"
+                property update "true";
+    public com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox carBlackBox
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "carBlackBox"
+                property update "true";
+    public com.ibm.ads.samples.transportation.car_rental.data.CarCategory category
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "category"
+                property update "true";
+    public string model
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "model"
+                property update "true";
+    public string serialNumber
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "serialNumber"
+                property update "true";
+    public com.ibm.ads.samples.transportation.car_rental.data.CarStatus status
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "status"
+                property update "true";
+    public Car(double ID, string brand, com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox carBlackBox, com.ibm.ads.samples.transportation.car_rental.data.CarCategory category, string model, string serialNumber, com.ibm.ads.samples.transportation.car_rental.data.CarStatus status)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Car()
+                property "dataio.default" "true";
+}
+
+public class CarBlackBox
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CarBlackBox"
+        property "de.generated" "true"
+{
+    public double ID
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ID"
+                property update "true";
+    public double averageSpeedLastWeek
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "averageSpeedLastWeek"
+                property update "true";
+    public double currentMileage
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "currentMileage"
+                property update "true";
+    public double distanceDrivenLastWeek
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "distanceDrivenLastWeek"
+                property update "true";
+    public com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord lastMaintenanceRecord
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lastMaintenanceRecord"
+                property update "true";
+    public double maxEngineTemperature
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "maxEngineTemperature"
+                property update "true";
+    public double maxSpeedLastWeek
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "maxSpeedLastWeek"
+                property update "true";
+    public double oilLevel
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "oilLevel"
+                property update "true";
+    public double tyrePressure
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tyrePressure"
+                property update "true";
+    public CarBlackBox(double ID, 
+        double averageSpeedLastWeek, 
+        double currentMileage, 
+        double distanceDrivenLastWeek, 
+        com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord lastMaintenanceRecord,
+        double maxEngineTemperature, 
+        double maxSpeedLastWeek, 
+        double oilLevel, 
+        double tyrePressure)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CarBlackBox()
+                property "dataio.default" "true";
+}
+
+public class CarCategory
+        extends java.lang.Enum
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CarCategory"
+        property "de.generated" "true"
+{
+    domain {static compact, static fullSize, static premium}
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarCategory compact
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "compact";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarCategory fullSize
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fullSize";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarCategory premium
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "premium";
+}
+
+public class CarMaintenanceRecord
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CarMaintenanceRecord"
+        property "de.generated" "true"
+{
+    public double ID
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ID"
+                property update "true";
+    public java.time.ZonedDateTime lastFullServiceDate
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lastFullServiceDate"
+                property update "true";
+    public java.time.ZonedDateTime lastOilChangeDate
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lastOilChangeDate"
+                property update "true";
+    public double serviceMileage
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "serviceMileage"
+                property update "true";
+    public CarMaintenanceRecord(double ID, java.time.ZonedDateTime lastFullServiceDate, java.time.ZonedDateTime lastOilChangeDate, double serviceMileage)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CarMaintenanceRecord()
+                property "dataio.default" "true";
+}
+
+public class CarReturnRecord
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CarReturnRecord"
+        property "de.generated" "true"
+{
+    public double ID
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ID"
+                property update "true";
+    public boolean bodyIsDirty
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "bodyIsDirty"
+                property update "true";
+    public double fuelLevel
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fuelLevel"
+                property update "true";
+    public com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition interiorCondition
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "interiorCondition"
+                property update "true";
+    public CarReturnRecord(double ID, boolean bodyIsDirty, double fuelLevel, com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition interiorCondition)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CarReturnRecord()
+                property "dataio.default" "true";
+}
+
+public class CarStatus
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CarStatus"
+        property "de.generated" "true"
+{
+    domain {static available, static inNeedOfMaintenance, static notAvailable}
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarStatus available
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "available";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarStatus inNeedOfMaintenance
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "inNeedOfMaintenance";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.CarStatus notAvailable
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "notAvailable";
+}
+
+public class InteriorCondition
+        extends java.lang.Enum
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "InteriorCondition"
+        property "de.generated" "true"
+{
+    domain {static dirty, static excellent, static fair}
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition dirty
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "dirty";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition excellent
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "excellent";
+    public static final readonly com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition fair
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fair";
+}
+

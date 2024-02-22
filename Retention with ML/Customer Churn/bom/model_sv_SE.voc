@@ -1,0 +1,57 @@
+
+# _084740706.telecom.retention_with_ml.customerchurn.Error
+_084740706.telecom.retention_with_ml.customerchurn.Error#concept.label = Output error
+_084740706.telecom.retention_with_ml.customerchurn.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = ett nytt {Output error} där {0, code} {1, message} 
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.action = sätt coden för {this} till {code}
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.navigation = {code} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.action = sätt messagen för {this} till {message}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.navigation = {message} för {this}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Input
+_084740706.telecom.retention_with_ml.customerchurn.Input#concept.label = ML model input
+_084740706.telecom.retention_with_ml.customerchurn.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = ett nytt {ML model input} där {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.action = sätt agen för {this} till {age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.addition_setter = addera {age} till agen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.navigation = {age} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.subtraction_setter = subtrahera {age} från agen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.action = sätt car ownern för {this} till {car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.navigation = {car owner} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.action = sätt childrenen för {this} till {children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.addition_setter = addera {children} till childrenen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.navigation = {children} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.subtraction_setter = subtrahera {children} från childrenen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.action = sätt est incomen för {this} till {est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.addition_setter = addera {est income} till est incomen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.navigation = {est income} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.subtraction_setter = subtrahera {est income} från est incomen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.action = sätt gendern för {this} till {gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.navigation = {gender} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.action = sätt paymethoden för {this} till {paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.navigation = {paymethod} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.action = sätt rateplanen för {this} till {rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.addition_setter = addera {rateplan} till rateplanen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.navigation = {rateplan} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.subtraction_setter = subtrahera {rateplan} från rateplanen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.action = sätt statusen för {this} till {status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.navigation = {status} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.action = sätt usagen för {this} till {usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.addition_setter = addera {usage} till usagen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.navigation = {usage} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.subtraction_setter = subtrahera {usage} från usagen för {this}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Output
+_084740706.telecom.retention_with_ml.customerchurn.Output#concept.label = ML model output
+_084740706.telecom.retention_with_ml.customerchurn.Output.Output(double,double)#phrase.navigation = ett nytt {ML model output} där {0, probability t} {1, probability f} 
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.action = sätt errorn för {this} till {error}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.clearer = rensa errorn för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.navigation = {error} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.inError()#phrase.navigation = {this} är in error
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.action = sätt probability fen för {this} till {probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.addition_setter = addera {probability f} till probability fen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.navigation = {probability f} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.subtraction_setter = subtrahera {probability f} från probability fen för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.action = sätt probability ten för {this} till {probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.addition_setter = addera {probability t} till probability ten för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.navigation = {probability t} för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.subtraction_setter = subtrahera {probability t} från probability ten för {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.run(_084740706.telecom.retention_with_ml.customerchurn.Input)#phrase.navigation = predict({0})

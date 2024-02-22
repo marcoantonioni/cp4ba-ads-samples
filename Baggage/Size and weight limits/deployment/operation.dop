@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Size and weight limits">
+  <name>size-and-weight-limits</name>
+  <uuid>d3ca37aa-0a5f-44bb-b9c4-995e0bdb261e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#82e5af64-4cf8-479a-aba5-3f395a52d923"/>
+  <targetRuleProject href="../../Size%20and%20weight%20limits#48046b0f-680d-4548-9161-7f2cede384f1"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["size-and-weight-limits"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

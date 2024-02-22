@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>e425be60-0f65-415c-b118-5083c0c69950</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Check Baggage" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">This decision checks whether the bags are compliant and determines excess baggage fees.</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Frequent Flyer Status">
+                        
+                <description>Customer's frequent flyer: bronze, silver, gold, platinum, or none.</description>
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel" collection="false" name="Frequent Flyer Status"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Frequent Flyer Status" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Compliance and fees">
+                        
+                <description>Check compliance, and determine extra baggage fees</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel" collection="false" name="Frequent Flyer Status"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking" collection="false" name="Initial Booking"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage" collection="false" name="Checked Baggage"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Compliance and fees"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Check%20compliance.drl" kind="BusinessRule" name="Check compliance"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Get%20extra%20fees.drl" kind="BusinessRule" name="Get extra fees"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Compliance and fees" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_4"/>
+                            
+                </knowledgeRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_5"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_2" name="Initial Booking">
+                        
+                <description>Booking information: number of bags, fare class, and fare basis code.</description>
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking" collection="false" name="Initial Booking"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Initial Booking" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking"/>
+                    
+            </inputData>
+                
+            <inputData id="node_3" name="Checked Baggage">
+                        
+                <description>Details about the baggage dropped at the drop-off counter: number of items, size, and weight.</description>
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage" collection="false" name="Checked Baggage"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_3_ii" name="Checked Baggage" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage"/>
+                    
+            </inputData>
+                
+            <businessKnowledgeModel id="node_4" name="Baggage pricing">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Baggage pricing" typeRef="java.lang.Double"/>
+                        
+                <encapsulatedLogic typeRef="java.lang.Double">
+                                
+                    <formalParameter name="checkedBaggage" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage"/>
+                                
+                    <formalParameter name="initialBooking" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking"/>
+                                
+                    <formalParameter name="frequentFlyerStatus" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.transportation.baggage.baggage_pricing.Baggage_pricing"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage,com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking,com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+                
+            <businessKnowledgeModel id="node_5" name="Baggage compliance">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Baggage compliance" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results"/>
+                        
+                <encapsulatedLogic typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results">
+                                
+                    <formalParameter name="baggage" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.transportation.baggage.baggage_compliance.Baggage_compliance"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

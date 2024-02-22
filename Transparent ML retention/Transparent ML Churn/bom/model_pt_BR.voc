@@ -1,0 +1,46 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input#concept.label = Entrada do modelo ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.Input(java.lang.Double,java.lang.String,java.lang.Integer,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Double)#phrase.navigation = um novo {Entrada do modelo ML} no qual {0, age} {1, car owner} {2, children} {3, est income} {4, gender} {5, paymethod} {6, rateplan} {7, status} {8, usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.action = atribuir o age {this,PARTITIVE_ARTICLE} a {age}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.addition_setter = adicionar {age} ao age {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.navigation = {age} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.subtraction_setter = subtrair {age} do age {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.action = atribuir o car owner {this,PARTITIVE_ARTICLE} a {car owner}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.navigation = {car owner} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.action = atribuir o children {this,PARTITIVE_ARTICLE} a {children}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.addition_setter = adicionar {children} ao children {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.navigation = {children} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.subtraction_setter = subtrair {children} do children {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.action = atribuir o est income {this,PARTITIVE_ARTICLE} a {est income}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.addition_setter = adicionar {est income} ao est income {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.navigation = {est income} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.subtraction_setter = subtrair {est income} do est income {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.action = atribuir o gender {this,PARTITIVE_ARTICLE} a {gender}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.navigation = {gender} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.action = atribuir o paymethod {this,PARTITIVE_ARTICLE} a {paymethod}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.navigation = {paymethod} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.action = atribuir o rateplan {this,PARTITIVE_ARTICLE} a {rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.addition_setter = adicionar {rateplan} ao rateplan {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.navigation = {rateplan} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.subtraction_setter = subtrair {rateplan} do rateplan {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.action = atribuir o status {this,PARTITIVE_ARTICLE} a {status}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.navigation = {status} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.action = atribuir o usage {this,PARTITIVE_ARTICLE} a {usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.addition_setter = adicionar {usage} ao usage {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.navigation = {usage} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.subtraction_setter = subtrair {usage} do usage {this,PARTITIVE_ARTICLE}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output#concept.label = Saída do modelo ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.Output(java.lang.Double,java.lang.String,java.lang.Double)#phrase.navigation = um novo {Saída do modelo ML} no qual {0, confidence} {1, predicted churn} {2, weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.action = atribuir o confidence {this,PARTITIVE_ARTICLE} a {confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.addition_setter = adicionar {confidence} ao confidence {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.navigation = {confidence} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.subtraction_setter = subtrair {confidence} do confidence {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.action = atribuir o predicted churn {this,PARTITIVE_ARTICLE} a {predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.navigation = {predicted churn} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.action = atribuir o weight {this,PARTITIVE_ARTICLE} a {weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.addition_setter = adicionar {weight} ao weight {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.navigation = {weight} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.subtraction_setter = subtrair {weight} do weight {this,PARTITIVE_ARTICLE}

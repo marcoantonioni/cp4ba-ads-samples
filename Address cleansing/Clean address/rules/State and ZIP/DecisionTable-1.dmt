@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Check ZIP code</name>
+  <uuid>894e40a0-eb0f-4ee7-841f-e48c5d850644</uuid>
+  <documentation><![CDATA[Check that the State is associated with the right ZIP code.]]></documentation>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the ZIP code of 'Preprocessing' starts with <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the state of 'Preprocessing' is not one of <strings>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to "Error: Wrong ZIP code. " + the ZIP code of 'Preprocessing' + " corresponds to the following States: " + <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C2">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["0"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Connecticut" , "Massachusetts" , "Maine" , "New Hampshire" , "New Jersey" , "New York" , "Puerto Rico" , "Rhode Island" , "Vermont" , "Virgin Islands" , "Army Post Office Europe" , "Fleet Post Office Europe" , "CT" , "MA" , "ME" , "NH" , "NJ" , "NY" , "PR" , "RI" , "VT" , "VI" , "AE" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Puerto Rico, Rhode Island, Vermont, Virgin Islands, Army Post Office Europe, Fleet Post Office Europe"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["1"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Delaware" , "New York" , "Pennsylvania" , "DE" , "NY" , "PA" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Delaware, New York, Pennsylvania"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["2"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "District of Columbia" , "Maryland" , "North Carolina" , "South Carolina" , "Virginia" , "West Virginia" , "DC" , "MD" , "NC" , "SC" , "VA" , "WV" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["District of Columbia, Maryland, North Carolina, South Carolina, Virginia, West Virginia, DC, MD, NC, SC, VA, WV"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["3"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Alabama" , "Florida" , "Georgia" , "Mississippi" , "Tennessee" , "Army Post Office Americas" , "Fleet Post Office Americas" , "AL" , "FL" , "GA" , "MS" , "TN" , "AA" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Alabama, Florida, Georgia, Mississippi, Tennessee, Army Post Office Americas, Fleet Post Office Americas"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["4"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Indiana" , "Kentucky" , "Michigan" , "Ohio" , "IN" , "KY" , "MI" , "OH" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Indiana, Kentucky, Michigan, Ohio"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["5"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Iowa" , "Minnesota" , "Montana" , "North Dakota" , "South Dakota" , "Wisconsin" , "IA" , "MN" , "MT" , "ND" , "SD" , "WI" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Iowa, Minnesota, Montana, North Dakota, South Dakota, Wisconsin"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["6"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Illinois" , "Kansas" , "Missouri" , "Nebraska" , "IL" , "KS" , "MO" , "NE" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Illinois, Kansas, Missouri, Nebraska"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["7"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Arkansas" , "Louisiana" , "Oklahoma" , "Texas" , "AR" , "LA" , "OK" , "TX" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Arkansas, Louisiana, Oklahoma, Texas"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["8"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Arizona" , "Colorado" , "Idaho" , "New Mexico" , "Nevada" , "Utah" , "Wyoming" , "AZ" , "CO" , "ID" , "NM" , "NV" , "UT" , "WY" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Arizona, Colorado, Idaho, New Mexico, Nevada, Utah, Wyoming"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["9"]]></Param>
+                    </Expression>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[{ "Alaska" , "American Samoa" , "California" , "Guam" , "Hawaii" , "Marshall Islands" , "Federated States of Micronesia" , "Northern Mariana Islands" , "Oregon" , "Palau" , "Washington" , "Army Post Office Pacific" , "Fleet Post Office Pacific" , "AK" , "AS" , "CA" , "GU" , "HI" , "MH" , "FM" , "MP" , "OR" , "PW" , "WA" , "AP" , "AP" }]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Alaska, American Samoa, California, Guam, Hawaii, Marshall Islands, Federated States of Micronesia, Northern Mariana Islands, Oregon, Palau, Washington, Army Post Office Pacific, Fleet Post Office Pacific"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="/0/0/A#Height"><![CDATA[100]]></Data>
+            <Data Name="/2/0/A#Height"><![CDATA[64]]></Data>
+            <Data Name="/3/0/A#Height"><![CDATA[70]]></Data>
+            <Data Name="/5/0/A#Height"><![CDATA[48]]></Data>
+            <Data Name="/8/0/A#Height"><![CDATA[60]]></Data>
+            <Data Name="/9/0/A#Height"><![CDATA[109]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[State and ZIP]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[504]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a string]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[and the State is none of the following]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[391]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[an Address Record]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[If the ZIP code starts with]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[217]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,19 @@
+{
+  "operationId" : "8997f8f5-a19c-4f90-a687-a12ef34bd5c8",
+  "body" : {
+    "frequentFlyerStatus" : "Platinum",
+    "initialBooking" : {
+      "bags" : 0,
+      "fareCode" : "Y",
+      "fareClass" : "Economy"
+    },
+    "checkedBaggage" : {
+      "bag" : [ {
+        "width" : 1,
+        "height" : 1,
+        "depth" : 1,
+        "weight" : 200
+      } ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Compliance and fees">
+  <name>compliance-and-fees</name>
+  <uuid>8997f8f5-a19c-4f90-a687-a12ef34bd5c8</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e425be60-0f65-415c-b118-5083c0c69950"/>
+  <targetRuleProject href="../../Compliance%20and%20fees#71670ebf-5cf5-4bf4-8b94-cf2e9fdbcc2c"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA[compliance-and-fees]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

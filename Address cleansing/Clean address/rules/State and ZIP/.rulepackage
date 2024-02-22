@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>State and ZIP</name>
+  <uuid>c6ec7d39-fa40-4977-94d0-8fab265b8f62</uuid>
+</ilog.rules.studio.model.base:RulePackage>

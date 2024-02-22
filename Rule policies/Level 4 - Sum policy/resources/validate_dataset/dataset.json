@@ -1,0 +1,8 @@
+{
+  "operationId" : "6828a0d9-089f-4e5e-8da5-17775910a79f",
+  "body" : {
+    "fareCode" : "Y",
+    "customerStatus" : "SILVER",
+    "class" : "BUSINESS"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Copy customer information</name>
+  <uuid>510f5d1a-627a-44ab-a6bb-905b50af8f1d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to Customer ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

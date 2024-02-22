@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>169d1bb9-c072-443a-902a-db396a96f4b6</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Customer upgrade" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Determine whether a customer can be upgraded to the next level</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Customer upgrade">
+                        
+                <description>Look at customer information and determine whether this customer should be upgraded (eg from Silver to Gold). In case of an upgrade, a reward is given through the wallet.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer upgrade"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Copy%20customer%20information.drl" kind="BusinessRule" name="Copy customer information"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Upgrade%20table.dmt" kind="DecisionTable" name="Upgrade table"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Bonus%20table.dmt" kind="DecisionTable" name="Bonus table"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Customer upgrade" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

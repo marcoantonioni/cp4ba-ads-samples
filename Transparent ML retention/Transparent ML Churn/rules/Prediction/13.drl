@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>13</name>
+  <uuid>8c815a1e-7e23-4de7-8182-7fdbd7435faa</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the gender is "F" 
+	and the status is "S" 
+	and the paymethod is "CC" 
+	and the usage is at most 84.555 
+	and the est income is more than 44623.7 
+	and the rateplan is more than 3 
+	and the age is at most 56.54 
+	and the age is more than 39.86665 
+then
+	add a new ML model output where
+		the confidence is 0.9090909090909091 , 
+		the predicted churn is "T" , 
+		the weight is 0.9090909090909091 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

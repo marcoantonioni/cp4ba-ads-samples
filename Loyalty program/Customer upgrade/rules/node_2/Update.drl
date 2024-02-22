@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Update</name>
+  <uuid>8332bba0-e971-4fcc-a901-cdfb78e7f33c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Customer where
+        the name is the name, 
+        the offers are the offers, 
+        the status is 'Status and bonus', 
+        the total amount is the total amount, 
+        the wallet amount is the wallet amount  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

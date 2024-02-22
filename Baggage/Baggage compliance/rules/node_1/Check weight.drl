@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check weight</name>
+  <uuid>a607bfb9-b2a6-4715-928d-808299e3523c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'maxweight' to the weight of the size and weight limits ;
+
+if there is at least one Baggage Item in the bags
+    where the weight is more than maxweight , then decision does not get compliant ;
+    add `At least one bagagge is too heavy. The maximum allowed weight is { maxweight }kg or { round( + maxweight * 2.2 , 0 ) } lbs.` to the messages of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

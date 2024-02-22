@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>8adec395-c8bd-4b45-b2cf-9f6bc67970a5</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Car-Rental" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Car maintenance record">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord" collection="false" name="Car maintenance record"/>
+                <rule defaultRule="true" href="node_0/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Car maintenance record" typeRef="com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord"/>
+    </inputData>
+    <decision id="node_1" name="Recurrent maintenance needed">
+        <description>Recurrent maintenance</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord" collection="false" name="Car maintenance record"/>
+                <input bomType="com.ibm.ads.samples.transportation.car_rental.data.Car" collection="false" name="Car"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Recurrent maintenance needed"/>
+                <rule defaultRule="false" href="node_1/overrun%20service%20mileage.drl" kind="BusinessRule" name="overrun service mileage"/>
+                <rule defaultRule="false" href="node_1/last%20maintenance%20too%20old.drl" kind="BusinessRule" name="last maintenance too old"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Recurrent maintenance needed" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Car">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.transportation.car_rental.data.Car" collection="false" name="Car"/>
+                <rule defaultRule="true" href="node_2/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Car" typeRef="com.ibm.ads.samples.transportation.car_rental.data.Car"/>
+    </inputData>
+    <inputData id="node_3" name="Car Return Record">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord" collection="false" name="Car Return Record"/>
+                <rule defaultRule="true" href="node_3/default-value-setting.drl" kind="BusinessRule" name="default-value-setting"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Car Return Record" typeRef="com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord"/>
+    </inputData>
+    <decision id="node_4" name="Unplanned maintenance needed">
+        <description>Special maintenance</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.car_rental.data.Car" collection="false" name="Car"/>
+                <input bomType="com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord" collection="false" name="Car Return Record"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Unplanned maintenance needed"/>
+                <rule defaultRule="false" href="node_4/unplanned%20maintenance.dmt" kind="DecisionTable" name="unplanned maintenance"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Unplanned maintenance needed" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Maintenance needed">
+        <description>In need of maintenance?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Recurrent maintenance needed"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Unplanned maintenance needed"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Maintenance needed"/>
+                <rule defaultRule="false" href="node_5/maintenance.dmt" kind="DecisionTable" name="maintenance"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Maintenance needed" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Cleaning needed">
+        <description>Does this car needs cleaning?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord" collection="false" name="Car Return Record"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Cleaning needed"/>
+                <rule defaultRule="false" href="node_6/cleaning.dmt" kind="DecisionTable" name="cleaning"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Cleaning needed" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="Rental car maintenance">
+        <description>Indicate whether this car needs maintenance</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Maintenance needed"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Cleaning needed"/>
+                <output bomType="com.ibm.ads.samples.transportation.car_rental.data.CarStatus" collection="false" name="Rental car maintenance"/>
+                <rule defaultRule="false" href="node_7/car%20return%20dispatch.dmt" kind="DecisionTable" name="car return dispatch"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Rental car maintenance" typeRef="com.ibm.ads.samples.transportation.car_rental.data.CarStatus"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

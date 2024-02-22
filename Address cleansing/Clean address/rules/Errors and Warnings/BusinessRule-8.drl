@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Address lookup</name>
+  <uuid>dc92ac00-fcb0-48e2-879f-55614c2630df</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if there is at least one string in decision where this string contains "Error" ,
+then  
+add `Info: Verify the address on the following page: https://www.google.com/maps/search/{ the street of Preprocessing  }, { the city of Preprocessing  }, { the state of Preprocessing } , { the ZIP code of Preprocessing } ` to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

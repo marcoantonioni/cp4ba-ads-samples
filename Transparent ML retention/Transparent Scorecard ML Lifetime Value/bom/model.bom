@@ -1,0 +1,78 @@
+
+package com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value;
+
+
+public class Characteristic
+        property "ads.typeId" "3"
+        property "de.generated" "true"
+{
+    public double differentialScore
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Differential Score";
+    public string name
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Name";
+    public double partialScore
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Partial Score";
+    public string reasonCode
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Reason Code";
+    public Characteristic(double differentialScore, double partialScore, string reasonCode, string name)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Characteristic()
+                property "dataio.default" "true";
+}
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{RatePlan}"
+        property "de.generated" "true"
+{
+    public java.lang.Integer rateplan
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "RatePlan";
+    public Input(java.lang.Integer rateplan)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public double rawresult
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "RawResult";
+    public java.util.List reasonCodes domain 0,* class string
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Reason Codes";
+    public Output(double rawresult, 
+        java.util.List reasonCodes domain 0,* class string)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+    public void addTo_reasonCodes(string reasonCodes)
+                property collectionAttribute "reasonCodes"
+                property update "true";
+    public void clear_reasonCodes()
+                property collectionAttribute "reasonCodes"
+                property update "true";
+    public void removeFrom_reasonCodes(string reasonCodes)
+                property collectionAttribute "reasonCodes"
+                property update "true";
+    public void set_reasonCodes(java.util.Collection reasonCodes domain 0,* class string)
+                property collectionAttribute "reasonCodes"
+                property update "true";
+}
+

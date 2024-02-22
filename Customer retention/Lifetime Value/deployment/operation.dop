@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Lifetime Value">
+  <name>Lifetime-Value</name>
+  <uuid>4c309eb0-0243-42d7-8478-c452b27be083</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#6200db83-a44b-443c-be59-23e603e9c58a"/>
+  <targetRuleProject href="../../Lifetime%20Value#b46984a0-3721-40e1-ab06-ccf39eaa96f4"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

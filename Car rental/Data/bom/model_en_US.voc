@@ -1,0 +1,119 @@
+
+# com.ibm.ads.samples.transportation.car_rental.data.Car
+com.ibm.ads.samples.transportation.car_rental.data.Car#concept.documentation =
+com.ibm.ads.samples.transportation.car_rental.data.Car#concept.label = Car
+com.ibm.ads.samples.transportation.car_rental.data.Car.Car(double,java.lang.String,com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox,com.ibm.ads.samples.transportation.car_rental.data.CarCategory,java.lang.String,java.lang.String,com.ibm.ads.samples.transportation.car_rental.data.CarStatus)#phrase.navigation = a new {Car} where {0, ID} {1, brand} {2, car black box} {3, category} {4, model} {5, serial number} {6, status}
+com.ibm.ads.samples.transportation.car_rental.data.Car.ID#phrase.action = set the ID of {this} to {ID}
+com.ibm.ads.samples.transportation.car_rental.data.Car.ID#phrase.addition_setter = add {ID} to the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.ID#phrase.navigation = {ID} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.ID#phrase.subtraction_setter = subtract {ID} from the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.brand#phrase.action = set the brand of {this} to {brand}
+com.ibm.ads.samples.transportation.car_rental.data.Car.brand#phrase.navigation = {brand} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.carBlackBox#phrase.action = set the car black box of {this} to {car black box}
+com.ibm.ads.samples.transportation.car_rental.data.Car.carBlackBox#phrase.clearer = clear the car black box of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.carBlackBox#phrase.navigation = {car black box} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.category#phrase.action = set the category of {this} to {category}
+com.ibm.ads.samples.transportation.car_rental.data.Car.category#phrase.clearer = clear the category of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.category#phrase.navigation = {category} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.model#phrase.action = set the model of {this} to {model}
+com.ibm.ads.samples.transportation.car_rental.data.Car.model#phrase.navigation = {model} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.serialNumber#phrase.action = set the serial number of {this} to {serial number}
+com.ibm.ads.samples.transportation.car_rental.data.Car.serialNumber#phrase.navigation = {serial number} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.transportation.car_rental.data.Car.status#phrase.clearer = clear the status of {this}
+com.ibm.ads.samples.transportation.car_rental.data.Car.status#phrase.navigation = {status} of {this}
+
+# com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox#concept.label = Car black box
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.CarBlackBox(double,double,double,double,com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord,double,double,double,double)#phrase.navigation = a new {Car black box} where {0, ID} {1, average speed last week} {2, current mileage} {3, distance driven last week} {4, last maintenance record} {5, max engine temperature} {6, max speed last week} {7, oil level} {8, tyre pressure}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.ID#phrase.action = set the ID of {this} to {ID}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.ID#phrase.addition_setter = add {ID} to the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.ID#phrase.navigation = {ID} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.ID#phrase.subtraction_setter = subtract {ID} from the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.averageSpeedLastWeek#phrase.action = set the average speed last week of {this} to {average speed last week}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.averageSpeedLastWeek#phrase.addition_setter = add {average speed last week} to the average speed last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.averageSpeedLastWeek#phrase.navigation = {average speed last week} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.averageSpeedLastWeek#phrase.subtraction_setter = subtract {average speed last week} from the average speed last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.currentMileage#phrase.action = set the current mileage of {this} to {current mileage}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.currentMileage#phrase.addition_setter = add {current mileage} to the current mileage of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.currentMileage#phrase.navigation = {current mileage} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.currentMileage#phrase.subtraction_setter = subtract {current mileage} from the current mileage of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.distanceDrivenLastWeek#phrase.action = set the distance driven last week of {this} to {distance driven last week}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.distanceDrivenLastWeek#phrase.addition_setter = add {distance driven last week} to the distance driven last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.distanceDrivenLastWeek#phrase.navigation = {distance driven last week} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.distanceDrivenLastWeek#phrase.subtraction_setter = subtract {distance driven last week} from the distance driven last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.lastMaintenanceRecord#phrase.action = set the last maintenance record of {this} to {last maintenance record}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.lastMaintenanceRecord#phrase.clearer = clear the last maintenance record of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.lastMaintenanceRecord#phrase.navigation = {last maintenance record} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxEngineTemperature#phrase.action = set the max engine temperature of {this} to {max engine temperature}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxEngineTemperature#phrase.addition_setter = add {max engine temperature} to the max engine temperature of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxEngineTemperature#phrase.navigation = {max engine temperature} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxEngineTemperature#phrase.subtraction_setter = subtract {max engine temperature} from the max engine temperature of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxSpeedLastWeek#phrase.action = set the max speed last week of {this} to {max speed last week}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxSpeedLastWeek#phrase.addition_setter = add {max speed last week} to the max speed last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxSpeedLastWeek#phrase.navigation = {max speed last week} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.maxSpeedLastWeek#phrase.subtraction_setter = subtract {max speed last week} from the max speed last week of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.oilLevel#phrase.action = set the oil level of {this} to {oil level}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.oilLevel#phrase.addition_setter = add {oil level} to the oil level of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.oilLevel#phrase.navigation = {oil level} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.oilLevel#phrase.subtraction_setter = subtract {oil level} from the oil level of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.tyrePressure#phrase.action = set the tyre pressure of {this} to {tyre pressure}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.tyrePressure#phrase.addition_setter = add {tyre pressure} to the tyre pressure of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.tyrePressure#phrase.navigation = {tyre pressure} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarBlackBox.tyrePressure#phrase.subtraction_setter = subtract {tyre pressure} from the tyre pressure of {this}
+
+# com.ibm.ads.samples.transportation.car_rental.data.CarCategory
+com.ibm.ads.samples.transportation.car_rental.data.CarCategory#concept.label = Car category
+com.ibm.ads.samples.transportation.car_rental.data.CarCategory.compact#instance.label = compact
+com.ibm.ads.samples.transportation.car_rental.data.CarCategory.fullSize#instance.label = full size
+com.ibm.ads.samples.transportation.car_rental.data.CarCategory.premium#instance.label = premium
+
+# com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord#concept.label = Car maintenance record
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.CarMaintenanceRecord(double,java.time.ZonedDateTime,java.time.ZonedDateTime,double)#phrase.navigation = a new {Car maintenance record} where {0, ID} {1, last full service date} {2, last oil change date} {3, service mileage}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.ID#phrase.action = set the ID of {this} to {ID}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.ID#phrase.addition_setter = add {ID} to the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.ID#phrase.navigation = {ID} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.ID#phrase.subtraction_setter = subtract {ID} from the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.lastFullServiceDate#phrase.action = set the last full service date of {this} to {last full service date}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.lastFullServiceDate#phrase.navigation = {last full service date} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.lastOilChangeDate#phrase.action = set the last oil change date of {this} to {last oil change date}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.lastOilChangeDate#phrase.navigation = {last oil change date} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.serviceMileage#phrase.action = set the service mileage of {this} to {service mileage}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.serviceMileage#phrase.addition_setter = add {service mileage} to the service mileage of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.serviceMileage#phrase.navigation = {service mileage} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarMaintenanceRecord.serviceMileage#phrase.subtraction_setter = subtract {service mileage} from the service mileage of {this}
+
+# com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord#concept.label = Car return record
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.CarReturnRecord(double,boolean,double,com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition)#phrase.navigation = a new {Car return record} where {0, ID} {1, body is dirty} {2, fuel level} {3, interior condition}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.ID#phrase.action = set the ID of {this} to {ID}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.ID#phrase.addition_setter = add {ID} to the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.ID#phrase.navigation = {ID} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.ID#phrase.subtraction_setter = subtract {ID} from the ID of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.action[0] = {this} gets body is dirty only if {body is dirty}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.action[1] = make it {body is dirty} that {this} is body is dirty
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.action[1].deprecated = true
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.navigation = {this} is body is dirty
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.negative_predicate = {this} is not body is dirty
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.negative_predicate_setter = {this} does not get body is dirty
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.bodyIsDirty#phrase.positive_predicate_setter = {this} gets body is dirty
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.fuelLevel#phrase.action = set the fuel level of {this} to {fuel level}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.fuelLevel#phrase.addition_setter = add {fuel level} to the fuel level of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.fuelLevel#phrase.navigation = {fuel level} of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.fuelLevel#phrase.subtraction_setter = subtract {fuel level} from the fuel level of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.interiorCondition#phrase.action = set the interior condition of {this} to {interior condition}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.interiorCondition#phrase.clearer = clear the interior condition of {this}
+com.ibm.ads.samples.transportation.car_rental.data.CarReturnRecord.interiorCondition#phrase.navigation = {interior condition} of {this}
+
+# com.ibm.ads.samples.transportation.car_rental.data.CarStatus
+com.ibm.ads.samples.transportation.car_rental.data.CarStatus#concept.label = Car status
+com.ibm.ads.samples.transportation.car_rental.data.CarStatus.available#instance.label = available
+com.ibm.ads.samples.transportation.car_rental.data.CarStatus.inNeedOfMaintenance#instance.label = in need of maintenance
+com.ibm.ads.samples.transportation.car_rental.data.CarStatus.notAvailable#instance.label = not available
+
+# com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition
+com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition#concept.label = Interior condition
+com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition.dirty#instance.label = dirty
+com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition.excellent#instance.label = excellent
+com.ibm.ads.samples.transportation.car_rental.data.InteriorCondition.fair#instance.label = fair

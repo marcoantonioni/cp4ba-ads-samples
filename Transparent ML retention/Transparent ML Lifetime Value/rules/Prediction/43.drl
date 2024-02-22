@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>43</name>
+  <uuid>aff97ce7-cb67-4f1b-9678-a5131c8c411b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the gender is "F" 
+	and the status is "M" 
+	and the usage is at most 190.275 
+	and the usage is more than 146.745 
+	and the age is more than 48.52335 
+then
+	add a new ML model output where
+		the confidence is 0.7333333333333333 , 
+		the predicted ltv is "MEDIUM_HIGH" , 
+		the weight is 0.7333333333333333 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

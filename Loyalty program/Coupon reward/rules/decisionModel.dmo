@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>1fce38b8-73bc-4c31-b968-27c73c1ee620</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Coupon reward" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Determine the right coupon to issue</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Order">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Order" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Item[]"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Coupon reward">
+                        
+                <description>This decision outputs a coupon based on several criteria, such as the customer status of what has been purchased.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Coupon" collection="false" name="Coupon reward"/>
+                                        
+                        <rule defaultRule="false" href="node_1/10%20pc%20off%20on%20Tech%20items.drl" kind="BusinessRule" name="10 pc off on Tech items"/>
+                                        
+                        <rule defaultRule="false" href="node_1/5%20pc%20off%20on%20Cosmetics.drl" kind="BusinessRule" name="5 pc off on Cosmetics"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Discount%20on%20Product%20of%20the%20week.dmt" kind="DecisionTable" name="Discount on Product of the week"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Coupon reward" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Coupon"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_2" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                    
+            </inputData>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

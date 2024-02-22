@@ -1,0 +1,48 @@
+
+package com.ibm.ads.samples.italian.consiglio_quotidiano.dati;
+
+
+public class Meteo
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "meteo"
+        property "de.generated" "true"
+{
+    public com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura temperatura
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "temperatura"
+                property update "true";
+    public boolean avvisoDiTempesta
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "avvisoDiTempesta"
+                property update "true";
+    public long previsioneDiPioggia
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "previsioneDiPioggia"
+                property update "true";
+    public Meteo(com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura temperatura, boolean avvisoDiTempesta, long previsioneDiPioggia)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Meteo()
+                property "dataio.default" "true";
+}
+
+public class Temperatura
+        extends java.lang.Enum
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "temperatura"
+        property "de.generated" "true"
+{
+    domain {static caldo, static freddo, static moltoCaldo}
+    public static final readonly com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura caldo
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "caldo";
+    public static final readonly com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura freddo
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "freddo";
+    public static final readonly com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura moltoCaldo
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "moltoCaldo";
+}
+

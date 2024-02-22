@@ -1,0 +1,10 @@
+{
+  "id" : null,
+  "providerId" : null,
+  "predictionParameters" : {
+    "predictionParamType" : "SIMPLE",
+    "deploymentId" : null,
+    "modelId" : null
+  },
+  "version" : "V1"
+}

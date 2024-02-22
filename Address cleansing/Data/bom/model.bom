@@ -1,0 +1,61 @@
+
+package com.ibm.ads.samples.transportation.address_cleansing.data;
+
+public class AdressRecord
+        property "ads.typeId" "1"
+        property "de.generated" "true"
+{
+    public string addressee
+                property "ads.attributeId" "1"
+                property update "true";
+    public string city
+                property "ads.attributeId" "2"
+                property update "true";
+    public java.util.List errors domain 0,* class string
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "errors"
+                property update "true";
+    public string lastLine
+                property "ads.attributeId" "3"
+                property update "true";
+    public string secondaryAddressInfo
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "secondaryAddressInfo"
+                property update "true";
+    public string state
+                property "ads.attributeId" "6"
+                property update "true";
+    public string street
+                property "ads.attributeId" "7"
+                property update "true";
+    public string zipCode
+                property "ads.attributeId" "8"
+                property update "true";
+    public AdressRecord(string addressee, 
+        string city, 
+        java.util.List errors domain 0,* class string, 
+        string lastLine, 
+        string secondaryAddressInfo, 
+        string state, 
+        string street, 
+        string zipCode)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public AdressRecord()
+                property "dataio.default" "true";
+    public void addTo_errors(string errors)
+                property collectionAttribute "errors"
+                property update "true";
+    public void clear_errors()
+                property collectionAttribute "errors"
+                property update "true";
+    public void removeFrom_errors(string errors)
+                property collectionAttribute "errors"
+                property update "true";
+    public void set_errors(java.util.Collection errors domain 0,* class string)
+                property collectionAttribute "errors"
+                property update "true";
+}
+

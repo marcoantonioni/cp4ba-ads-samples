@@ -1,0 +1,103 @@
+
+package _084740706.telecom.retention_with_ml.customerchurn;
+
+
+class Error
+        property ads.typeId "2"
+        #de.generated
+{
+    string code
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "code";
+    string message
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "message";
+    Error(string code, string message)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Error()
+                #dataio.default;
+}
+
+class Input
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonPropertyOrder "{Gender,Status,Car Owner,Paymethod,Children,Est Income,Age,Usage,RatePlan}"
+        #de.generated
+{
+    double age
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "Age";
+    string carOwner
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Car Owner";
+    double children
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Children";
+    double estIncome
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "Est Income";
+    string gender
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Gender";
+    string paymethod
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "Paymethod";
+    double rateplan
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "RatePlan";
+    string status
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Status";
+    double usage
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "Usage";
+    Input(string gender, string status, string carOwner, string paymethod, double children, double estIncome, double age, double usage, double rateplan)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Input()
+                #dataio.default;
+}
+
+class Output
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonIgnoreProperties {
+            ignoreUnknown "true"
+        }
+        #de.generated
+{
+    _084740706.telecom.retention_with_ml.customerchurn.Error error
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "error";
+    double probability_f_
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "probability(F)";
+    double probability_t_
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "probability(T)";
+    Output(double probability_t_, double probability_f_)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Output()
+                #dataio.default;
+    boolean inError()
+                property de.generated {
+                    $gen "com.ibm.decision.ml.integration.xom.InErrorTestGenerator",
+                    $target "BOM"
+                };
+    static Output run(_084740706.telecom.retention_with_ml.customerchurn.Input input)
+                #pureFunction;
+    static Output run(com.ibm.decision.run.RunContext runContext, _084740706.telecom.retention_with_ml.customerchurn.Input input)
+                property de.generated {
+                    $gen "com.ibm.decision.ml.integration.xom.PredictionRunGenerator",
+                    $target "BOM",
+                    providerInfoId "eba7639c-fbef-4188-863e-2fe340bbcd9a"
+                }
+                #pureFunction;
+}
+

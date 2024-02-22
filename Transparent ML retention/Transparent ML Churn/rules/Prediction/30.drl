@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>30</name>
+  <uuid>acd0de80-27aa-4049-b4a6-3a6fcf773db9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the car owner is "N" 
+	and the paymethod is "CH" 
+	and the children is more than 1 
+	and the age is more than 50.5933 
+then
+	add a new ML model output where
+		the confidence is 0.9772727272727273 , 
+		the predicted churn is "F" , 
+		the weight is 0.9772727272727273 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

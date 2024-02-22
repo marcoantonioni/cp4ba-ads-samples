@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Coupon for small transactions</name>
+  <uuid>12082d8c-3a4d-4e11-9209-861df3b8ff14</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'Order amount' is less than 350
+then
+    set decision to Coupon ;
+else
+    set decision to Discount ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

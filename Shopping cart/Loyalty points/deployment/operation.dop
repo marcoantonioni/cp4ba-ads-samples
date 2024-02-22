@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Loyalty points">
+  <name>loyalty-points</name>
+  <uuid>5aff8d15-cf2a-4a2e-97b0-e39d4232b4eb</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#ad8ea17b-d728-49b4-9b0e-1876d2471823"/>
+  <targetRuleProject href="../../Loyalty%20points#327aa97a-d799-41c3-b482-f2a87d857e45"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["loyalty-points"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,57 @@
+
+# _084740706.telecom.retention_with_ml.customerchurn.Error
+_084740706.telecom.retention_with_ml.customerchurn.Error#concept.label = 出力エラー
+_084740706.telecom.retention_with_ml.customerchurn.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = 新規の {出力エラー}ここで{0, コード} {1, メッセージ} 
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.action = {this}のコードを{コード}とする
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.navigation = {this}の{コード}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.action = {this}のメッセージを{メッセージ}とする
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.navigation = {this}の{メッセージ}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Input
+_084740706.telecom.retention_with_ml.customerchurn.Input#concept.label = ML モデル入力
+_084740706.telecom.retention_with_ml.customerchurn.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = 新規の {ML モデル入力}ここで{0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.action = {this}のageを{age}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.addition_setter = {this}のageに{age}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.navigation = {this}の{age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.subtraction_setter = {this}のageから{age}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.action = {this}のcar ownerを{car owner}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.navigation = {this}の{car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.action = {this}のchildrenを{children}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.addition_setter = {this}のchildrenに{children}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.navigation = {this}の{children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.subtraction_setter = {this}のchildrenから{children}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.action = {this}のest incomeを{est income}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.addition_setter = {this}のest incomeに{est income}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.navigation = {this}の{est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.subtraction_setter = {this}のest incomeから{est income}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.action = {this}のgenderを{gender}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.navigation = {this}の{gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.action = {this}のpaymethodを{paymethod}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.navigation = {this}の{paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.action = {this}のrateplanを{rateplan}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.addition_setter = {this}のrateplanに{rateplan}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.navigation = {this}の{rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.subtraction_setter = {this}のrateplanから{rateplan}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.action = {this}のstatusを{status}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.navigation = {this}の{status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.action = {this}のusageを{usage}とする
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.addition_setter = {this}のusageに{usage}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.navigation = {this}の{usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.subtraction_setter = {this}のusageから{usage}を引く
+
+# _084740706.telecom.retention_with_ml.customerchurn.Output
+_084740706.telecom.retention_with_ml.customerchurn.Output#concept.label = ML モデル出力
+_084740706.telecom.retention_with_ml.customerchurn.Output.Output(double,double)#phrase.navigation = 新規の {ML モデル出力}ここで{0, probability t} {1, probability f} 
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.action = {this}のエラーを{エラー}とする
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.clearer = エラー{this}をクリアする
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.navigation = {this}の{エラー}
+_084740706.telecom.retention_with_ml.customerchurn.Output.inError()#phrase.navigation = {this}はエラーの
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.action = {this}のprobability fを{probability f}とする
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.addition_setter = {this}のprobability fに{probability f}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.navigation = {this}の{probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.subtraction_setter = {this}のprobability fから{probability f}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.action = {this}のprobability tを{probability t}とする
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.addition_setter = {this}のprobability tに{probability t}を追加する
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.navigation = {this}の{probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.subtraction_setter = {this}のprobability tから{probability t}を引く
+_084740706.telecom.retention_with_ml.customerchurn.Output.run(_084740706.telecom.retention_with_ml.customerchurn.Input)#phrase.navigation = predict({0})

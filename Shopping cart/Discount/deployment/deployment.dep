@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="cp4admin.samples.shopping_cart:discount" ruleAppVersion="LATEST-SNAPSHOT" packageName="com.ibm.ads.samples.retail.shopping_cart.discount" managingXom="true">
+  <name>discount</name>
+  <uuid>f285292d-e664-4529-aa3a-e022a5795d11</uuid>
+  <locales>en_US</locales>
+  <operations operationName="operation">
+    <operation href="operation.dop#59d9765c-8603-4478-b1cf-16b0c3f11942"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Use the base version numbers" recurrent="true">
+    <description><![CDATA[Uses the numbers provided in the deployment configuration. Replaces the latest version of each ruleset with this release. Used for hot fixes or development.]]></description>
+  </versionPolicies>
+  <versionPolicies label="The user can define the version numbers" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Allows you to enter your own version numbers. Used for hot fixes or updates to an earlier release.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

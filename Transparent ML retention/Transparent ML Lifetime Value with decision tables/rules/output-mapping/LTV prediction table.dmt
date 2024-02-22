@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>LTV prediction table</name>
+  <uuid>5ad09fc6-ffd9-4a9e-bed4-4125f1ab1140</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the predicted ltv of 'Weight Comparison' is <a string>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["VERY_ LOW"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[150]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["LOW"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[450]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["AVERAGE"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[750]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["MEDIUM"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[1050]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[1350]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA["HIGH"]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[1650]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Output mapping]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[predicted ltv]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,67 @@
+
+package com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value;
+
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{Age,Paymethod,Usage,Status,RatePlan,Children,Est Income,Gender,Car Owner}"
+        property "de.generated" "true"
+{
+    public java.lang.Double age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Age";
+    public string carOwner
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Car Owner";
+    public java.lang.Integer children
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Children";
+    public java.lang.Double estIncome
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Est Income";
+    public string gender
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gender";
+    public string paymethod
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Paymethod";
+    public java.lang.Integer rateplan
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "RatePlan";
+    public string status
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Status";
+    public java.lang.Double usage
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Usage";
+    public Input(java.lang.Double age, string carOwner, java.lang.Integer children, java.lang.Double estIncome, string gender, string paymethod, java.lang.Integer rateplan, string status, java.lang.Double usage)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public java.lang.Double confidence
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "confidence";
+    public string predictedLtv
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "predicted_LTV";
+    public java.lang.Double weight
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "weight";
+    public Output(java.lang.Double confidence, string predictedLtv, java.lang.Double weight)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+}
+

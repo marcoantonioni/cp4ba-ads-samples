@@ -1,0 +1,57 @@
+
+# _084740706.telecom.retention_with_ml.customerchurn.Error
+_084740706.telecom.retention_with_ml.customerchurn.Error#concept.label = 输出错误
+_084740706.telecom.retention_with_ml.customerchurn.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = 新建 {输出错误}符合条件：{0, 代码} {1, 讯息} 
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.action = 设置{this}的当前 代码为{代码}
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.navigation = {this} 的{代码}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.action = 设置{this}的当前 讯息为{讯息}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.navigation = {this} 的{讯息}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Input
+_084740706.telecom.retention_with_ml.customerchurn.Input#concept.label = ML 模型输入
+_084740706.telecom.retention_with_ml.customerchurn.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = 新建 {ML 模型输入}符合条件：{0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.action = 设置{this}的当前 age为{age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.addition_setter = 加{age}到{this}的属性当前 age里
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.navigation = {this} 的{age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.subtraction_setter = 减{age}到{this}的属性当前 age里
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.action = 设置{this}的当前 car owner为{car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.navigation = {this} 的{car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.action = 设置{this}的当前 children为{children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.addition_setter = 加{children}到{this}的属性当前 children里
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.navigation = {this} 的{children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.subtraction_setter = 减{children}到{this}的属性当前 children里
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.action = 设置{this}的当前 est income为{est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.addition_setter = 加{est income}到{this}的属性当前 est income里
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.navigation = {this} 的{est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.subtraction_setter = 减{est income}到{this}的属性当前 est income里
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.action = 设置{this}的当前 gender为{gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.navigation = {this} 的{gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.action = 设置{this}的当前 paymethod为{paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.navigation = {this} 的{paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.action = 设置{this}的当前 rateplan为{rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.addition_setter = 加{rateplan}到{this}的属性当前 rateplan里
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.navigation = {this} 的{rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.subtraction_setter = 减{rateplan}到{this}的属性当前 rateplan里
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.action = 设置{this}的当前 status为{status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.navigation = {this} 的{status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.action = 设置{this}的当前 usage为{usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.addition_setter = 加{usage}到{this}的属性当前 usage里
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.navigation = {this} 的{usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.subtraction_setter = 减{usage}到{this}的属性当前 usage里
+
+# _084740706.telecom.retention_with_ml.customerchurn.Output
+_084740706.telecom.retention_with_ml.customerchurn.Output#concept.label = ML 模型输出
+_084740706.telecom.retention_with_ml.customerchurn.Output.Output(double,double)#phrase.navigation = 新建 {ML 模型输出}符合条件：{0, probability t} {1, probability f} 
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.action = 设置{this}的当前 错误为{错误}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.clearer = 删除当前 错误的{this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.navigation = {this} 的{错误}
+_084740706.telecom.retention_with_ml.customerchurn.Output.inError()#phrase.navigation = {this} 是当前 出错
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.action = 设置{this}的当前 probability f为{probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.addition_setter = 加{probability f}到{this}的属性当前 probability f里
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.navigation = {this} 的{probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.subtraction_setter = 减{probability f}到{this}的属性当前 probability f里
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.action = 设置{this}的当前 probability t为{probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.addition_setter = 加{probability t}到{this}的属性当前 probability t里
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.navigation = {this} 的{probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.subtraction_setter = 减{probability t}到{this}的属性当前 probability t里
+_084740706.telecom.retention_with_ml.customerchurn.Output.run(_084740706.telecom.retention_with_ml.customerchurn.Input)#phrase.navigation = predict({0})

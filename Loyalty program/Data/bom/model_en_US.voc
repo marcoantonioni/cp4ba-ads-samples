@@ -1,0 +1,81 @@
+
+# com.ibm.ads.samples.retail.loyalty_program.data.Coupon
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon#concept.label = Coupon
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.Coupon(double,java.lang.String,java.lang.String,boolean)#phrase.navigation = a new {Coupon} where {0, amount} {1, description} {2, label} {3, monetary}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.amount#phrase.action = set the amount of {this} to {amount}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.amount#phrase.addition_setter = add {amount} to the amount of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.amount#phrase.navigation = {amount} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.amount#phrase.subtraction_setter = subtract {amount} from the amount of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.description#phrase.action = set the description of {this} to {description}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.description#phrase.navigation = {description} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.label#phrase.action = set the label of {this} to {label}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.label#phrase.navigation = {label} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.action[0] = {this} gets monetary only if {monetary}
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.action[1] = make it {monetary} that {this} is monetary
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.action[1].deprecated = true
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.navigation = {this} is monetary
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.negative_predicate = {this} is not monetary
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.negative_predicate_setter = {this} does not get monetary
+com.ibm.ads.samples.retail.loyalty_program.data.Coupon.monetary#phrase.positive_predicate_setter = {this} gets monetary
+
+# com.ibm.ads.samples.retail.loyalty_program.data.Customer
+com.ibm.ads.samples.retail.loyalty_program.data.Customer#concept.documentation =
+com.ibm.ads.samples.retail.loyalty_program.data.Customer#concept.label = Customer
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.Customer(java.lang.String,java.util.List,com.ibm.ads.samples.retail.loyalty_program.data.Status,double,double)#phrase.navigation = a new {Customer} where {0, name} {1, offer} {2, status} {3, total amount} {4, wallet amount}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.addTo_offers(com.ibm.ads.samples.retail.loyalty_program.data.Offer)#phrase.action = add {0} to the offers of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.clear_offers()#phrase.action = clear the offers of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.name#phrase.navigation = {name} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.offers#phrase.action = set the offers of {this} to {offer}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.offers#phrase.navigation = {offer} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.removeFrom_offers(com.ibm.ads.samples.retail.loyalty_program.data.Offer)#phrase.action = remove {0} from the offers of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.status#phrase.clearer = clear the status of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.status#phrase.navigation = {status} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.totalAmount#phrase.action = set the total amount of {this} to {total amount}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.totalAmount#phrase.addition_setter = add {total amount} to the total amount of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.totalAmount#phrase.navigation = {total amount} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.totalAmount#phrase.subtraction_setter = subtract {total amount} from the total amount of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.walletAmount#phrase.action = set the wallet amount of {this} to {wallet amount}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.walletAmount#phrase.addition_setter = add {wallet amount} to the wallet amount of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.walletAmount#phrase.navigation = {wallet amount} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Customer.walletAmount#phrase.subtraction_setter = subtract {wallet amount} from the wallet amount of {this}
+
+# com.ibm.ads.samples.retail.loyalty_program.data.Item
+com.ibm.ads.samples.retail.loyalty_program.data.Item#concept.label = Item
+com.ibm.ads.samples.retail.loyalty_program.data.Item.Item(java.lang.String,double)#phrase.navigation = a new {Item} where {0, name} {1, price}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.name#phrase.navigation = {name} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.price#phrase.action = set the price of {this} to {price}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.price#phrase.addition_setter = add {price} to the price of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.price#phrase.navigation = {price} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Item.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+
+# com.ibm.ads.samples.retail.loyalty_program.data.Offer
+com.ibm.ads.samples.retail.loyalty_program.data.Offer#concept.label = Offer
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.Offer(com.ibm.ads.samples.retail.loyalty_program.data.Coupon,java.lang.String,com.ibm.ads.samples.retail.loyalty_program.data.OfferType,double)#phrase.navigation = a new {Offer} where {0, coupon} {1, description} {2, type} {3, value}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.coupon#phrase.action = set the coupon of {this} to {coupon}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.coupon#phrase.clearer = clear the coupon of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.coupon#phrase.navigation = {coupon} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.description#phrase.action = set the description of {this} to {description}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.description#phrase.navigation = {description} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.type#phrase.action = set the type of {this} to {type}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.type#phrase.clearer = clear the type of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.type#phrase.navigation = {type} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.value#phrase.action = set the value of {this} to {value}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.value#phrase.addition_setter = add {value} to the value of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.value#phrase.navigation = {value} of {this}
+com.ibm.ads.samples.retail.loyalty_program.data.Offer.value#phrase.subtraction_setter = subtract {value} from the value of {this}
+
+# com.ibm.ads.samples.retail.loyalty_program.data.OfferType
+com.ibm.ads.samples.retail.loyalty_program.data.OfferType#concept.label = Offer type
+com.ibm.ads.samples.retail.loyalty_program.data.OfferType.Coupon#instance.label = Coupon
+com.ibm.ads.samples.retail.loyalty_program.data.OfferType.Discount#instance.label = Discount
+com.ibm.ads.samples.retail.loyalty_program.data.OfferType.Wallet#instance.label = Wallet
+
+# com.ibm.ads.samples.retail.loyalty_program.data.Status
+com.ibm.ads.samples.retail.loyalty_program.data.Status#concept.label = Status
+com.ibm.ads.samples.retail.loyalty_program.data.Status.Bronze#instance.label = Bronze
+com.ibm.ads.samples.retail.loyalty_program.data.Status.Gold#instance.label = Gold
+com.ibm.ads.samples.retail.loyalty_program.data.Status.Platinum#instance.label = Platinum
+com.ibm.ads.samples.retail.loyalty_program.data.Status.Silver#instance.label = Silver

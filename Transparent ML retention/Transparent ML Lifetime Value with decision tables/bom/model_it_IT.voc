@@ -1,0 +1,26 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input#concept.label = Input modello ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input.Input(java.lang.Integer)#phrase.navigation = un nuovo {Input modello ML} dove {0, rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input.rateplan#phrase.action = cambia il rateplan {this,PARTITIVE_ARTICLE} a {rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input.rateplan#phrase.addition_setter = aggiungere {rateplan} a il rateplan {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input.rateplan#phrase.navigation = {rateplan} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input.rateplan#phrase.subtraction_setter = sottrarre {rateplan} da il rateplan {this,PARTITIVE_ARTICLE}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output#concept.label = Output del modello ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.Output(java.lang.String,java.lang.Double,java.lang.Double,int)#phrase.navigation = un nuovo {Output del modello ML} dove {0, predicted ltv} {1, confidence} {2, weight} {3, rank}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.confidence#phrase.action = cambia la confidence {this,PARTITIVE_ARTICLE} a {confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.confidence#phrase.addition_setter = aggiungere {confidence} a la confidence {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.confidence#phrase.navigation = {confidence} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.confidence#phrase.subtraction_setter = sottrarre {confidence} da la confidence {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.predictedLtv#phrase.action = cambia il predicted ltv {this,PARTITIVE_ARTICLE} a {predicted ltv}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.predictedLtv#phrase.navigation = {predicted ltv} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.rank#phrase.action = cambia il rank {this,PARTITIVE_ARTICLE} a {rank}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.rank#phrase.addition_setter = aggiungere {rank} a il rank {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.rank#phrase.navigation = {rank} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.rank#phrase.subtraction_setter = sottrarre {rank} da il rank {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.weight#phrase.action = cambia il weight {this,PARTITIVE_ARTICLE} a {weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.weight#phrase.addition_setter = aggiungere {weight} a il weight {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.weight#phrase.navigation = {weight} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output.weight#phrase.subtraction_setter = sottrarre {weight} da il weight {this,PARTITIVE_ARTICLE}

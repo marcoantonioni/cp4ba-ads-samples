@@ -1,0 +1,53 @@
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Error
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error#concept.label = Ausgabefehler
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = ein neuer {Ausgabefehler} wobei {0, Code} {1, Nachricht} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.action = setze das Code von {this} auf {Code}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.navigation = {Code} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.action = setze das Nachricht von {this} auf {Nachricht}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.navigation = {Nachricht} von {this}
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Input
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input#concept.label = ML-Modelleingabe
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = ein neuer {ML-Modelleingabe} wobei {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.action = setze das age von {this} auf {age}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.addition_setter = füge {age} zu das age von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.navigation = {age} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.subtraction_setter = ziehe {age} von das age von {this} ab
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.action = setze das car owner von {this} auf {car owner}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.navigation = {car owner} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.action = setze das children von {this} auf {children}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.addition_setter = füge {children} zu das children von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.navigation = {children} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.subtraction_setter = ziehe {children} von das children von {this} ab
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.action = setze das est income von {this} auf {est income}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.addition_setter = füge {est income} zu das est income von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.navigation = {est income} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.subtraction_setter = ziehe {est income} von das est income von {this} ab
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.action = setze das gender von {this} auf {gender}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.navigation = {gender} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.action = setze das paymethod von {this} auf {paymethod}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.navigation = {paymethod} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.action = setze das rateplan von {this} auf {rateplan}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.addition_setter = füge {rateplan} zu das rateplan von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.navigation = {rateplan} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.subtraction_setter = ziehe {rateplan} von das rateplan von {this} ab
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.action = setze das status von {this} auf {status}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.navigation = {status} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.action = setze das usage von {this} auf {usage}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.addition_setter = füge {usage} zu das usage von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.navigation = {usage} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.subtraction_setter = ziehe {usage} von das usage von {this} ab
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Output
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output#concept.label = ML-Modellausgabe
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.Output(double)#phrase.navigation = ein neuer {ML-Modellausgabe} wobei {0, predicted ltv} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.action = setze das Fehler von {this} auf {Fehler}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.clearer = lösche das Fehler von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.navigation = {Fehler} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.inError()#phrase.navigation = {this} ist im Fehler
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.action = setze das predicted ltv von {this} auf {predicted ltv}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.addition_setter = füge {predicted ltv} zu das predicted ltv von {this} hinzu
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.navigation = {predicted ltv} von {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.subtraction_setter = ziehe {predicted ltv} von das predicted ltv von {this} ab
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.run(_084740706.telecom.retention_with_ml.customerlifetimevalue.Input)#phrase.navigation = predict({0})

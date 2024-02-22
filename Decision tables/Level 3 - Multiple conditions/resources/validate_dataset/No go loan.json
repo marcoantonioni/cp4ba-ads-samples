@@ -1,0 +1,8 @@
+{
+  "operationId" : "d47e5737-2107-4923-b542-c45f84a981c8",
+  "body" : {
+    "grade" : "C",
+    "loanAmount" : 100000,
+    "alreadyCustomer" : false
+  }
+}

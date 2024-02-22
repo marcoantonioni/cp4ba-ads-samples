@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Get loyalty points</name>
+  <uuid>aec3da51-5d71-4b00-a7f9-252e0f82340f</uuid>
+  <documentation><![CDATA[Get the number of loyalty points]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if the status of Customer is not null 
+then
+set the loyalty points of decision to the loyalty points computed from 
+    Status being the status , Price being the price of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>3</name>
+  <uuid>d7c9345c-d317-40d9-b19c-5c5c025d365a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the gender is "F" 
+	and the car owner is "N" 
+	and the est income is at most 61085.5 
+	and the rateplan is at most 3 
+	and the age is at most 24.27335 
+then
+	add a new ML model output where
+		the confidence is 0.9886363636363636 , 
+		the predicted churn is "T" , 
+		the weight is 0.9886363636363636 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

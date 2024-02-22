@@ -1,0 +1,23 @@
+{
+  "operationId" : "049ef349-deeb-42c6-a26a-a6fbe3a61cb1",
+  "body" : {
+    "customer" : {
+      "children" : 0,
+      "gender" : "M",
+      "location" : "urban",
+      "name" : "Peter",
+      "age" : 49,
+      "maritalStatus" : "S",
+      "estimatedIncome" : 64000,
+      "carOwner" : true
+    },
+    "subscription" : {
+      "usage" : 80,
+      "internationalCalls" : 30,
+      "localCalls" : 15,
+      "ratePlan" : "Essentials",
+      "longDistanceCalls" : 35,
+      "paymentMethod" : "CC"
+    }
+  }
+}

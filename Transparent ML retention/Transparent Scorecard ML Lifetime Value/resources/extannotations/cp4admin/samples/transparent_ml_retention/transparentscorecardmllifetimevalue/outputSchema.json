@@ -1,0 +1,27 @@
+{
+  "fields" : [ {
+    "name" : "RawResult",
+    "type" : "double",
+    "nullable" : false,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Reason Codes",
+    "type" : "[string]",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  } ]
+}

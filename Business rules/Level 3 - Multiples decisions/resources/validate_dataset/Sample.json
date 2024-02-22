@@ -1,0 +1,7 @@
+{
+  "operationId" : "ffad8ad1-f20f-4d2f-8063-6a61f7cb9966",
+  "body" : {
+    "numbers" : [ 10, 20, 30, 40 ],
+    "threshold" : 90
+  }
+}

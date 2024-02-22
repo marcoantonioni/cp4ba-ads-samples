@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>PO Box</name>
+  <uuid>d7c14773-0050-45c0-ab8f-20ac925b226d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'PO Box'  is not empty
+then
+    add 'PO Box'  to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

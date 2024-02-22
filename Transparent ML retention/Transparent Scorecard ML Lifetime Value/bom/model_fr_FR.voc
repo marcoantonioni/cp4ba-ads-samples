@@ -1,0 +1,43 @@
+
+# Term: Entrée de modèle ML
+@Entrée\ de\ modèle\ ML#gender = FEMALE
+
+# Term: Sortie de modèle ML
+@Sortie\ de\ modèle\ ML#gender = FEMALE
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic#concept.label = characteristic
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.Characteristic(double,double,java.lang.String,java.lang.String)#phrase.navigation = un nouveau {characteristic} tel que {0, differential score} {1, partial score} {2, reason code} {3, name}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.action = assigner le differential score {this,PARTITIVE_ARTICLE} à {differential score}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.addition_setter = ajouter {differential score} au differential score {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.navigation = {differential score} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.differentialScore#phrase.subtraction_setter = retirer {differential score} du differential score {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.name#phrase.action = assigner le name {this,PARTITIVE_ARTICLE} à {name}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.name#phrase.navigation = {name} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.action = assigner le partial score {this,PARTITIVE_ARTICLE} à {partial score}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.addition_setter = ajouter {partial score} au partial score {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.navigation = {partial score} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.partialScore#phrase.subtraction_setter = retirer {partial score} du partial score {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.reasonCode#phrase.action = assigner le reason code {this,PARTITIVE_ARTICLE} à {reason code}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic.reasonCode#phrase.navigation = {reason code} {this,PARTITIVE_ARTICLE}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input#concept.label = Entrée de modèle ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.Input(java.lang.Integer)#phrase.navigation = une nouvelle {Entrée de modèle ML} tel que {0, rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.action = assigner le rateplan {this,PARTITIVE_ARTICLE} à {rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.addition_setter = ajouter {rateplan} au rateplan {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.navigation = {rateplan} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input.rateplan#phrase.subtraction_setter = retirer {rateplan} du rateplan {this,PARTITIVE_ARTICLE}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output#concept.label = Sortie de modèle ML
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.Output(double,java.util.List)#phrase.navigation = une nouvelle {Sortie de modèle ML} tel que {0, rawresult} {1, reason code}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.addTo_reasonCodes(java.lang.String)#phrase.action = ajouter {0} à la liste des reasons code {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.clear_reasonCodes()#phrase.action = effacer les reasons code {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.action = assigner le rawresult {this,PARTITIVE_ARTICLE} à {rawresult}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.addition_setter = ajouter {rawresult} au rawresult {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.navigation = {rawresult} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.rawresult#phrase.subtraction_setter = retirer {rawresult} du rawresult {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.reasonCodes#phrase.action = assigner les reasons code {this,PARTITIVE_ARTICLE} à {reason code}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.reasonCodes#phrase.navigation = {reason code} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output.removeFrom_reasonCodes(java.lang.String)#phrase.action = retirer {0} de la liste des reasons code {this,PARTITIVE_ARTICLE}

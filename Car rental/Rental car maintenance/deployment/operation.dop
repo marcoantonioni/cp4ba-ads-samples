@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Rental car maintenance">
+  <name>rental-car-maintenance</name>
+  <uuid>b47e8a16-103f-4658-b4d1-48412b59d710</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#8adec395-c8bd-4b45-b2cf-9f6bc67970a5"/>
+  <targetRuleProject href="../../Rental%20car%20maintenance#e131e2ba-cc14-4ba5-a98e-ab6fff4f6d3e"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA[rental-car-maintenance]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

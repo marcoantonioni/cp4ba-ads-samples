@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Limit number of coupons</name>
+  <uuid>e63083d4-19b1-4dbe-b223-71f6dedfc2c1</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    decision is Coupon and 
+    there are more than 2 Offers in the offers of Customer where the type of each Offer is Coupon , 
+then
+    set decision to Discount ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

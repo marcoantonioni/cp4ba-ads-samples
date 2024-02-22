@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>BusinessRule-1</name>
+  <uuid>c1ddefcb-58c8-4347-bbfa-b07ca2170b56</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the current mileage of the car black box of Car is more than the service mileage of 'Car maintenance record'
+then
+    set decision to true ;
+    print "car has overrun service mileage" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

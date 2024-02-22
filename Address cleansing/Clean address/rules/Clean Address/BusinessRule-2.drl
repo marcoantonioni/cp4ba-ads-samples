@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Fix empty street name</name>
+  <uuid>19de6c8e-0779-4b6b-b8f1-de08b89a49df</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the street of 'Fix state name'  is empty and the secondary address information of 'Fix state name'  is not empty 
+then
+    -- Set secondary name to street name
+    set the street of decision to the secondary address information of 'Fix state name' ;
+    set the secondary address information of decision to "" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

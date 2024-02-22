@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Gender</name>
+  <uuid>d4683502-4d76-4a81-9223-760e5b080d5b</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the gender of 'CustomerRecord' is <a gender>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new characteristic where
+	the differential score is <differential score> , 
+	the partial score is <partial score> , 
+	the reason code is <reason code> , 
+	the name is <name> to 'decision']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C1">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Female]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-52.322304]]></Param>
+                                <Param><![CDATA[52.322304]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Gender"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Male]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[52.09939]]></Param>
+                                <Param><![CDATA[-52.09939]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Gender"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A1)#HeaderText"><![CDATA[decision]]></Data>
+            <Data Name="Definitions(A1)#Width"><![CDATA[876]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[gender]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

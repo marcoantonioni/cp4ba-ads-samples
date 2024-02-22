@@ -1,0 +1,1 @@
+{"operationId":"049ef349-deeb-42c6-a26a-a6fbe3a61cb1","body":{"customer":{"children":2,"gender":"Male","location":"country","maritalStatus":"Married","name":"John","estimatedIncome":56000,"carOwner":true,"age":43},"subscription":{"internationalCalls":30,"localCalls":32,"ratePlan":"Essentials","longDistanceCalls":43,"paymentMethod":"CreditCard","usage":105}}}

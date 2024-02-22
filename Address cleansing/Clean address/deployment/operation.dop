@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Clean address">
+  <name>clean-address</name>
+  <uuid>461b57d7-e9ec-4b0f-9977-05d90080eae5</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#03a6bda7-ea55-4717-8bd3-939c4befc586"/>
+  <targetRuleProject href="../../Clean%20address#52303273-e417-4de1-9a7f-f62c547a0a92"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA[clean-address]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

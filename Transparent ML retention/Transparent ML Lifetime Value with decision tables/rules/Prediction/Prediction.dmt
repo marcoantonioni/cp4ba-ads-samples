@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Prediction</name>
+  <uuid>71693ba0-dd21-4589-9f8d-488f8705d861</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the payment method of 'Subscription' is <a payment method>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the usage of 'Subscription' is more than <min> and at most <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C3">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the age of 'Customer' is more than <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C4">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the marital status of 'Customer' is <a marital status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C5">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the rateplan of 'Input mapping' is at most <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C6">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the estimated income of 'Customer' is at most <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C7">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the children of 'Customer' is at most <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C8">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the gender of 'Customer' is <a gender>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C9">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA['Customer' is car owner is <a boolean>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new ML model output where
+	the predicted ltv is <predicted ltv> , 
+	the confidence is <confidence> , 
+	the weight is <weight> , 
+	the rank is <rank> to 'decision']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C1">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Check]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[77.965]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[42.53]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C5">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[2]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["AVERAGE"]]></Param>
+                                                        <Param><![CDATA[0.8421052631578947]]></Param>
+                                                        <Param><![CDATA[0.8421052631578947]]></Param>
+                                                        <Param><![CDATA[5]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[107.19999999]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                                <Param><![CDATA[12510.805]]></Param>
+                                                <Param><![CDATA[71765.39999999]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.7857142857142857]]></Param>
+                                                        <Param><![CDATA[0.7857142857142857]]></Param>
+                                                        <Param><![CDATA[42]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Credit card]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[77.965]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[42.53]]></Param>
+                                        <Param><![CDATA[53.5]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.9696969696969697]]></Param>
+                                                <Param><![CDATA[0.9696969696969697]]></Param>
+                                                <Param><![CDATA[1]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[16.77499999]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A1">
+                                    <Expression>
+                                        <Param><![CDATA["VERY_LOW"]]></Param>
+                                        <Param><![CDATA[0.986013986013986]]></Param>
+                                        <Param><![CDATA[0.986013986013986]]></Param>
+                                        <Param><![CDATA[49]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[17.00999999]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["VERY_LOW"]]></Param>
+                                                <Param><![CDATA[0.9927007299270073]]></Param>
+                                                <Param><![CDATA[0.9927007299270073]]></Param>
+                                                <Param><![CDATA[46]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[24.945]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[7516.475]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["AVERAGE"]]></Param>
+                                                        <Param><![CDATA[0.6666666666666666]]></Param>
+                                                        <Param><![CDATA[0.6666666666666666]]></Param>
+                                                        <Param><![CDATA[11]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[24.945]]></Param>
+                                <Param><![CDATA[32.115]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.8181818181818182]]></Param>
+                                                <Param><![CDATA[0.8181818181818182]]></Param>
+                                                <Param><![CDATA[6]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[24.945]]></Param>
+                                <Param><![CDATA[37.84]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM"]]></Param>
+                                                <Param><![CDATA[0.8]]></Param>
+                                                <Param><![CDATA[0.8]]></Param>
+                                                <Param><![CDATA[32]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[26.86]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[29.72335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[1]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["VERY_LOW"]]></Param>
+                                                        <Param><![CDATA[0.9375]]></Param>
+                                                        <Param><![CDATA[0.9375]]></Param>
+                                                        <Param><![CDATA[50]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[43.5]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["VERY_LOW"]]></Param>
+                                                <Param><![CDATA[0.9875]]></Param>
+                                                <Param><![CDATA[0.9875]]></Param>
+                                                <Param><![CDATA[47]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[30.44]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[55.03665]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["VERY_LOW"]]></Param>
+                                                <Param><![CDATA[0.9879518072289156]]></Param>
+                                                <Param><![CDATA[0.9879518072289156]]></Param>
+                                                <Param><![CDATA[48]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[32.115]]></Param>
+                                <Param><![CDATA[40.65]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[21.07999999]]></Param>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.8148148148148148]]></Param>
+                                                <Param><![CDATA[0.8148148148148148]]></Param>
+                                                <Param><![CDATA[8]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[32.115]]></Param>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                        <Param><![CDATA[21.07999999]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM"]]></Param>
+                                                <Param><![CDATA[0.8461538461538461]]></Param>
+                                                <Param><![CDATA[0.8461538461538461]]></Param>
+                                                <Param><![CDATA[28]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[37.295]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[3725.475]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["VERY_LOW"]]></Param>
+                                                        <Param><![CDATA[0.9130434782608695]]></Param>
+                                                        <Param><![CDATA[0.9130434782608695]]></Param>
+                                                        <Param><![CDATA[53]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[55.03665]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Single]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C5">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[3]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["VERY_LOW"]]></Param>
+                                                                <Param><![CDATA[0.9166666666666666]]></Param>
+                                                                <Param><![CDATA[0.9166666666666666]]></Param>
+                                                                <Param><![CDATA[52]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[65.17664999]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["VERY_LOW"]]></Param>
+                                                <Param><![CDATA[0.9166666666666666]]></Param>
+                                                <Param><![CDATA[0.9166666666666666]]></Param>
+                                                <Param><![CDATA[51]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[37.295]]></Param>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                        <Param><![CDATA[38.3033]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Married]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["AVERAGE"]]></Param>
+                                                        <Param><![CDATA[0.9230769230769231]]></Param>
+                                                        <Param><![CDATA[0.9230769230769231]]></Param>
+                                                        <Param><![CDATA[3]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Single]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM"]]></Param>
+                                                        <Param><![CDATA[0.8]]></Param>
+                                                        <Param><![CDATA[0.8]]></Param>
+                                                        <Param><![CDATA[31]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[37.84]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C8">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Female]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["HIGH"]]></Param>
+                                                        <Param><![CDATA[0.9818181818181818]]></Param>
+                                                        <Param><![CDATA[0.9818181818181818]]></Param>
+                                                        <Param><![CDATA[15]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                        <Condition>
+                                            <Expression/>
+                                            <Partition DefId="C9">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[true]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["HIGH"]]></Param>
+                                                                <Param><![CDATA[0.868421052631579]]></Param>
+                                                                <Param><![CDATA[0.868421052631579]]></Param>
+                                                                <Param><![CDATA[22]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[37.84]]></Param>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C8">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Male]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C9">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[false]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                                <Param><![CDATA[0.8666666666666667]]></Param>
+                                                                <Param><![CDATA[0.8666666666666667]]></Param>
+                                                                <Param><![CDATA[35]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[40.65]]></Param>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[18.98]]></Param>
+                                        <Param><![CDATA[29.2367]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM"]]></Param>
+                                                <Param><![CDATA[0.8333333333333334]]></Param>
+                                                <Param><![CDATA[0.8333333333333334]]></Param>
+                                                <Param><![CDATA[29]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[50.86]]></Param>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[38.3033]]></Param>
+                                        <Param><![CDATA[50.59]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.7894736842105263]]></Param>
+                                                <Param><![CDATA[0.7894736842105263]]></Param>
+                                                <Param><![CDATA[9]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[30.02665]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["HIGH"]]></Param>
+                                                <Param><![CDATA[0.9746376811594203]]></Param>
+                                                <Param><![CDATA[0.9746376811594203]]></Param>
+                                                <Param><![CDATA[17]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM"]]></Param>
+                                                <Param><![CDATA[0.2955390334572491]]></Param>
+                                                <Param><![CDATA[0.2955390334572491]]></Param>
+                                                <Param><![CDATA[33]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                <Param><![CDATA[57.14]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A1">
+                                    <Expression>
+                                        <Param><![CDATA["LOW"]]></Param>
+                                        <Param><![CDATA[0.4640088593576966]]></Param>
+                                        <Param><![CDATA[0.4640088593576966]]></Param>
+                                        <Param><![CDATA[26]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[64.17]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C5">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[2]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["LOW"]]></Param>
+                                                        <Param><![CDATA[0.8076923076923077]]></Param>
+                                                        <Param><![CDATA[0.8076923076923077]]></Param>
+                                                        <Param><![CDATA[25]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[53.5]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["LOW"]]></Param>
+                                                <Param><![CDATA[0.8974358974358975]]></Param>
+                                                <Param><![CDATA[0.8974358974358975]]></Param>
+                                                <Param><![CDATA[23]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[68.44]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                        <Param><![CDATA[42.53]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.875]]></Param>
+                                                <Param><![CDATA[0.875]]></Param>
+                                                <Param><![CDATA[4]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[77.34999999]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[30.02665]]></Param>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM"]]></Param>
+                                                <Param><![CDATA[0.9230769230769231]]></Param>
+                                                <Param><![CDATA[0.9230769230769231]]></Param>
+                                                <Param><![CDATA[27]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[57.14]]></Param>
+                                <Param><![CDATA[77.965]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[61.75]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["LOW"]]></Param>
+                                                <Param><![CDATA[0.851063829787234]]></Param>
+                                                <Param><![CDATA[0.851063829787234]]></Param>
+                                                <Param><![CDATA[24]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[64.17]]></Param>
+                                <Param><![CDATA[77.965]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[42.53]]></Param>
+                                        <Param><![CDATA[61.75]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.9322033898305084]]></Param>
+                                                <Param><![CDATA[0.9322033898305084]]></Param>
+                                                <Param><![CDATA[2]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[77.34999999]]></Param>
+                                <Param><![CDATA[103.365]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[30.02665]]></Param>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                <Param><![CDATA[0.8181818181818182]]></Param>
+                                                <Param><![CDATA[0.8181818181818182]]></Param>
+                                                <Param><![CDATA[39]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[77.965]]></Param>
+                                <Param><![CDATA[90.71]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[51.27665]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["AVERAGE"]]></Param>
+                                                <Param><![CDATA[0.7777777777777778]]></Param>
+                                                <Param><![CDATA[0.7777777777777778]]></Param>
+                                                <Param><![CDATA[10]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[77.965]]></Param>
+                                <Param><![CDATA[107.19999999]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                        <Param><![CDATA[44.0]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[1]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.8181818181818182]]></Param>
+                                                        <Param><![CDATA[0.8181818181818182]]></Param>
+                                                        <Param><![CDATA[40]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                        <Param><![CDATA[50.56]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[86464.14999999]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.8333333333333334]]></Param>
+                                                        <Param><![CDATA[0.8333333333333334]]></Param>
+                                                        <Param><![CDATA[37]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[51.27665]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C5">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[2]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C6">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                                        <Param><![CDATA[12536.8]]></Param>
+                                                        <Param><![CDATA[86464.14999999]]></Param>
+                                                    </Expression>
+                                                    <Partition DefId="C7">
+                                                        <Condition>
+                                                            <Expression>
+                                                                <Param><![CDATA[1]]></Param>
+                                                            </Expression>
+                                                            <ActionSet>
+                                                                <Action DefId="A1">
+                                                                    <Expression>
+                                                                        <Param><![CDATA["AVERAGE"]]></Param>
+                                                                        <Param><![CDATA[0.8181818181818182]]></Param>
+                                                                        <Param><![CDATA[0.8181818181818182]]></Param>
+                                                                        <Param><![CDATA[7]]></Param>
+                                                                    </Expression>
+                                                                </Action>
+                                                            </ActionSet>
+                                                        </Condition>
+                                                    </Partition>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[103.365]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["HIGH"]]></Param>
+                                                <Param><![CDATA[0.9903846153846154]]></Param>
+                                                <Param><![CDATA[0.9903846153846154]]></Param>
+                                                <Param><![CDATA[12]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[107.19999999]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[12510.805]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C9">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[false]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                                <Param><![CDATA[0.8333333333333334]]></Param>
+                                                                <Param><![CDATA[0.8333333333333334]]></Param>
+                                                                <Param><![CDATA[38]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[87773.3]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C7">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[0]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["HIGH"]]></Param>
+                                                                <Param><![CDATA[0.9764705882352941]]></Param>
+                                                                <Param><![CDATA[0.9764705882352941]]></Param>
+                                                                <Param><![CDATA[16]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[52.32335]]></Param>
+                                        <Param><![CDATA[56.82335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C9">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[true]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["HIGH"]]></Param>
+                                                        <Param><![CDATA[0.8846153846153846]]></Param>
+                                                        <Param><![CDATA[0.8846153846153846]]></Param>
+                                                        <Param><![CDATA[21]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[62.59335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Divorced]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["HIGH"]]></Param>
+                                                        <Param><![CDATA[0.8888888888888888]]></Param>
+                                                        <Param><![CDATA[0.8888888888888888]]></Param>
+                                                        <Param><![CDATA[20]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[107.19999999]]></Param>
+                                <Param><![CDATA[130.065]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C7">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[0]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.8]]></Param>
+                                                        <Param><![CDATA[0.8]]></Param>
+                                                        <Param><![CDATA[41]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[107.19999999]]></Param>
+                                <Param><![CDATA[146.745]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[71765.39999999]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM"]]></Param>
+                                                        <Param><![CDATA[0.8275862068965517]]></Param>
+                                                        <Param><![CDATA[0.8275862068965517]]></Param>
+                                                        <Param><![CDATA[30]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                        <Param><![CDATA[52.32335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[71765.39999999]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C9">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[true]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                                <Param><![CDATA[0.85]]></Param>
+                                                                <Param><![CDATA[0.85]]></Param>
+                                                                <Param><![CDATA[36]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[107.19999999]]></Param>
+                                <Param><![CDATA[190.275]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                                        <Param><![CDATA[39.96335]]></Param>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                <Param><![CDATA[87773.3]]></Param>
+                                            </Expression>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.9333333333333333]]></Param>
+                                                        <Param><![CDATA[0.9333333333333333]]></Param>
+                                                        <Param><![CDATA[34]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[56.82335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C6">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[71765.39999999]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C7">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[1]]></Param>
+                                                    </Expression>
+                                                    <Partition DefId="C9">
+                                                        <Condition>
+                                                            <Expression>
+                                                                <Param><![CDATA[true]]></Param>
+                                                            </Expression>
+                                                            <ActionSet>
+                                                                <Action DefId="A1">
+                                                                    <Expression>
+                                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                                        <Param><![CDATA[0.7692307692307693]]></Param>
+                                                                        <Param><![CDATA[0.7692307692307693]]></Param>
+                                                                        <Param><![CDATA[43]]></Param>
+                                                                    </Expression>
+                                                                </Action>
+                                                            </ActionSet>
+                                                        </Condition>
+                                                    </Partition>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[130.065]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A1">
+                                            <Expression>
+                                                <Param><![CDATA["HIGH"]]></Param>
+                                                <Param><![CDATA[0.988950276243094]]></Param>
+                                                <Param><![CDATA[0.988950276243094]]></Param>
+                                                <Param><![CDATA[14]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[146.745]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                                        <Param><![CDATA[62.59335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Married]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C8">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Male]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["HIGH"]]></Param>
+                                                                <Param><![CDATA[0.9666666666666667]]></Param>
+                                                                <Param><![CDATA[0.9666666666666667]]></Param>
+                                                                <Param><![CDATA[18]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Single]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C5">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                                        <Param><![CDATA[3]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["HIGH"]]></Param>
+                                                                <Param><![CDATA[0.9615384615384616]]></Param>
+                                                                <Param><![CDATA[0.9615384615384616]]></Param>
+                                                                <Param><![CDATA[19]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[146.745]]></Param>
+                                <Param><![CDATA[190.275]]></Param>
+                            </Expression>
+                            <Partition DefId="C3">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[48.52335]]></Param>
+                                    </Expression>
+                                    <Partition DefId="C4">
+                                        <Condition>
+                                            <Expression>
+                                                <Param><![CDATA[Married]]></Param>
+                                            </Expression>
+                                            <Partition DefId="C8">
+                                                <Condition>
+                                                    <Expression>
+                                                        <Param><![CDATA[Female]]></Param>
+                                                    </Expression>
+                                                    <ActionSet>
+                                                        <Action DefId="A1">
+                                                            <Expression>
+                                                                <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                                <Param><![CDATA[0.7333333333333333]]></Param>
+                                                                <Param><![CDATA[0.7333333333333333]]></Param>
+                                                                <Param><![CDATA[44]]></Param>
+                                                            </Expression>
+                                                        </Action>
+                                                    </ActionSet>
+                                                </Condition>
+                                            </Partition>
+                                        </Condition>
+                                        <Condition>
+                                            <Expression/>
+                                            <ActionSet>
+                                                <Action DefId="A1">
+                                                    <Expression>
+                                                        <Param><![CDATA["MEDIUM_HIGH"]]></Param>
+                                                        <Param><![CDATA[0.5777777777777777]]></Param>
+                                                        <Param><![CDATA[0.5777777777777777]]></Param>
+                                                        <Param><![CDATA[45]]></Param>
+                                                    </Expression>
+                                                </Action>
+                                            </ActionSet>
+                                        </Condition>
+                                    </Partition>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                                <Param><![CDATA[190.275]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A1">
+                                    <Expression>
+                                        <Param><![CDATA["HIGH"]]></Param>
+                                        <Param><![CDATA[0.9903846153846154]]></Param>
+                                        <Param><![CDATA[0.9903846153846154]]></Param>
+                                        <Param><![CDATA[13]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A1)#HeaderText"><![CDATA[decision]]></Data>
+            <Data Name="Definitions(A1)#Width"><![CDATA[676]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[paymentMethod]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[usage]]></Data>
+            <Data Name="Definitions(C3)#HeaderText"><![CDATA[age]]></Data>
+            <Data Name="Definitions(C4)#HeaderText"><![CDATA[maritalStatus]]></Data>
+            <Data Name="Definitions(C5)#HeaderText"><![CDATA[rateplan]]></Data>
+            <Data Name="Definitions(C6)#HeaderText"><![CDATA[estimatedIncome]]></Data>
+            <Data Name="Definitions(C7)#HeaderText"><![CDATA[children]]></Data>
+            <Data Name="Definitions(C8)#HeaderText"><![CDATA[gender]]></Data>
+            <Data Name="Definitions(C9)#HeaderText"><![CDATA[carOwner]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Determine number of extra bags</name>
+  <uuid>d97b3cb6-48db-4c02-a82d-5b55c86f63a6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if the number of elements in the bags of 'Checked baggage' 
+    is more than the bag of 'Initial booking' 
+then
+    set decision to the number of elements in the bags of 'Checked baggage' - the bag of 'Initial booking' ;
+else
+    set  decision to 0 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

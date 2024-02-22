@@ -1,0 +1,1 @@
+{"operationId":"3dfeac90-1dcf-42fe-ac94-21216d193a7e","body":{"customer":{"children":0,"gender":"Female","location":"urban","maritalStatus":"Single","name":"Jane","estimatedIncome":42000,"carOwner":true,"age":22},"subscription":{"internationalCalls":30,"localCalls":15,"ratePlan":"Essentials","longDistanceCalls":35,"paymentMethod":"CreditCard","usage":80}}}

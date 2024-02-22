@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Gather size results</name>
+  <uuid>2eabda71-fc7c-42fa-9edf-169ac3aa2daa</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions    
+    set 'message' to a string in the messages of 'Size check' ;
+
+if it is not true that 'Size check' is compliant
+then
+    decision does not get compliant ;
+    add message to the messages of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

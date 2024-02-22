@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>03a6bda7-ea55-4717-8bd3-939c4befc586</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="AddressCleansingDecisionModel (DEPRECATED)" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">(DEPRECATED) null</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="address">
+        <description>Input address</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="address"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="address" typeRef="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord"/>
+    </inputData>
+    <decision id="node_1" name="Preprocessing">
+        <description>Remove secondary address information and addressee from the address if these fields are empty.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="address"/>
+                <output bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <rule defaultRule="false" href="Preprocessing/BusinessRule-2.drl" kind="BusinessRule" name="Copy by default"/>
+                <rule defaultRule="false" href="Preprocessing/DecisionTable-1.dmt" kind="DecisionTable" name="Remove empty secondary info"/>
+                <rule defaultRule="false" href="Preprocessing/DecisionTable-2.dmt" kind="DecisionTable" name="Remove empty addressee"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Preprocessing" typeRef="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="State">
+        <description>Check if the State name is correct.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="State"/>
+                <rule defaultRule="false" href="State/DecisionTable-1.dmt" kind="DecisionTable" name="Check State name"/>
+                <rule defaultRule="true" href="State/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="State" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Errors and warnings">
+        <description>Gather and format error and warning messages.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <input bomType="java.lang.String" collection="false" name="State"/>
+                <input bomType="java.lang.String" collection="false" name="Street"/>
+                <input bomType="java.lang.String" collection="false" name="City"/>
+                <input bomType="java.lang.String" collection="false" name="ZIP"/>
+                <input bomType="java.lang.String" collection="false" name="State and ZIP"/>
+                <input bomType="java.lang.String" collection="false" name="PO Box"/>
+                <output bomType="java.lang.String" collection="true" name="Errors and warnings"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-3.drl" kind="BusinessRule" name="City"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-1.drl" kind="BusinessRule" name="State"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-4.drl" kind="BusinessRule" name="ZIP code"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-5.drl" kind="BusinessRule" name="State and ZIP"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-7.drl" kind="BusinessRule" name="Wrong ZIP code"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-2.drl" kind="BusinessRule" name="Street address"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-6.drl" kind="BusinessRule" name="PO Box"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-9.drl" kind="BusinessRule" name="Sanity check"/>
+                <rule defaultRule="false" href="Errors%20and%20Warnings/BusinessRule-8.drl" kind="BusinessRule" name="Address lookup"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Errors and warnings" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Street">
+        <description>Check the format of the street address.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="Street"/>
+                <rule defaultRule="false" href="Street/BusinessRule-1.drl" kind="BusinessRule" name="Empty street but filled secondary field"/>
+                <rule defaultRule="false" href="Street/BusinessRule-2.drl" kind="BusinessRule" name="Empty street field"/>
+                <rule defaultRule="false" href="Street/BusinessRule-3.drl" kind="BusinessRule" name="Identical street address and secondary address information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Street" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="City">
+        <description>Make sure that the city name is correct.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="City"/>
+                <rule defaultRule="false" href="City/BusinessRule-1.drl" kind="BusinessRule" name="Empty city field"/>
+                <rule defaultRule="false" href="City/BusinessRule-2.drl" kind="BusinessRule" name="Short city name"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="City" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="ZIP">
+        <description>Check the consistency of the ZIP code.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="ZIP"/>
+                <rule defaultRule="false" href="ZIP/BusinessRule-1.drl" kind="BusinessRule" name="Empty ZIP code"/>
+                <rule defaultRule="false" href="ZIP/BusinessRule-2.drl" kind="BusinessRule" name="Short ZIP code"/>
+                <rule defaultRule="false" href="ZIP/BusinessRule-3.drl" kind="BusinessRule" name="Missing hyphen in ZIP+4 code"/>
+                <rule defaultRule="false" href="ZIP/BusinessRule-4.drl" kind="BusinessRule" name="Short ZIP+4 code"/>
+                <rule defaultRule="true" href="ZIP/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="ZIP" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="State and ZIP">
+        <description>Check that the State is associated with the right ZIP code.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="State and ZIP"/>
+                <rule defaultRule="false" href="State%20and%20ZIP/DecisionTable-1.dmt" kind="DecisionTable" name="Check ZIP code"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="State and ZIP" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_8" name="PO Box">
+        <description>Check if the PO Box is associated with the right ZIP code.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="java.lang.String" collection="false" name="PO Box"/>
+                <rule defaultRule="false" href="PO%20Box/BusinessRule-1.drl" kind="BusinessRule" name="Check associated ZIP code"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="PO Box" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_9" name="Fix state name">
+        <description>Convert the abbreviated State name into the full State name (for example 'CA' into 'California').</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Preprocessing"/>
+                <output bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Fix state name"/>
+                <rule defaultRule="false" href="Full%20State%20Name/BusinessRule-1.drl" kind="BusinessRule" name="Copy by default"/>
+                <rule defaultRule="false" href="Full%20State%20Name/DecisionTable-1.dmt" kind="DecisionTable" name="Convert abbreviation"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_9_ii" name="Fix state name" typeRef="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_10" name="Clean address">
+        <description>Finish cleaning the address record and add potential error messages.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="true" name="Errors and warnings"/>
+                <input bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Fix state name"/>
+                <output bomType="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord" collection="false" name="Clean address"/>
+                <rule defaultRule="false" href="Clean%20Address/BusinessRule-4%2001.drl" kind="BusinessRule" name="Copy by default"/>
+                <rule defaultRule="false" href="Clean%20Address/BusinessRule-1.drl" kind="BusinessRule" name="Remove duplicates"/>
+                <rule defaultRule="false" href="Clean%20Address/BusinessRule-2.drl" kind="BusinessRule" name="Fix empty street name"/>
+                <rule defaultRule="false" href="node_10/Add%20errors%20and%20warnings.drl" kind="BusinessRule" name="Add errors and warnings"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_10_ii" name="Clean address" typeRef="com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

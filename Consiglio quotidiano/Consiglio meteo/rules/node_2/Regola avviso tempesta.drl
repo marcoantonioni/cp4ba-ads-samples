@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Regola avviso tempesta</name>
+  <uuid>0f1b70cd-1286-4645-a8ca-8d7c9998412e</uuid>
+  <locale>it_IT</locale>
+  <definition><![CDATA[se
+	Meteo è avviso di tempesta
+allora
+	assegna decisione a "Stai a casa! Oggi avviso di tempesta." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Bonus table</name>
+  <uuid>8a9600b3-1352-45d4-8b25-236352617d2b</uuid>
+  <documentation><![CDATA[Allocate a bonus for an upgrade to an upper level. This bonus goes into the wallet.]]></documentation>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the status of 'Customer' is <a Status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the status of 'decision' is <a Status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set the wallet amount of 'decision' to the wallet amount + <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Bronze]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Silver]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[20]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Gold]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[40]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Platinum]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[60]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Silver]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Gold]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[30]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Platinum]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[50]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Gold]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Platinum]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[40]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Before]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[92]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[After]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[name]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Bonus]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[128]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[128]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Baggage compliance">
+  <name>baggage-compliance</name>
+  <uuid>de77e8b2-801c-4e61-a741-79e62e1265c0</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e28078d9-ff6d-444e-8c12-2e7914ed8086"/>
+  <targetRuleProject href="../../Baggage%20compliance#8aaa5306-ed4e-433c-b8b5-9927dbe11f5a"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["baggage-compliance"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

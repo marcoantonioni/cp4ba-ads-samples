@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>be17d725-aef8-416d-9759-d35cbeee68b8</uuid>
+      
+    <locale>it_IT</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+                
+            <extensionElements>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="it_IT"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Nome">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="java.lang.String" collection="false" name="Nome"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Nome" typeRef="java.lang.String"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Consiglio quotidiano">
+                        
+                <description>Consulenza quotidiana costruita dall'input fornito. </description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.String" collection="false" name="Nome"/>
+                                        
+                        <input bomType="java.lang.String" collection="false" name="Consiglio meteo"/>
+                                        
+                        <output bomType="java.lang.String" collection="false" name="Consiglio quotidiano"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Consiglio.drl" kind="BusinessRule" name="Consiglio"/>
+                                        
+                        <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Consiglio quotidiano" typeRef="java.lang.String"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_2" name="Consiglio meteo">
+                        
+                <description>Costruisce una tavola dalle previsioni del tempo. </description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                                        
+                        <input bomType="com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo" collection="false" name="Meteo"/>
+                                        
+                        <output bomType="java.lang.String" collection="false" name="Consiglio meteo"/>
+                                        
+                        <rule defaultRule="false" href="node_2/Regola%20avviso%20tempesta.drl" kind="BusinessRule" name="Regola avviso tempesta"/>
+                                        
+                        <rule defaultRule="false" href="node_2/Tabella%20meteo.dmt" kind="DecisionTable" name="Tabella meteo"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Consiglio meteo" typeRef="java.lang.String"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_3" name="Meteo">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo" collection="false" name="Meteo"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_3_ii" name="Meteo" typeRef="com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo"/>
+                    
+            </inputData>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

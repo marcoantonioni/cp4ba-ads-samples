@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>RawResult</name>
+  <uuid>e1cd86a0-d767-491a-80ad-25dd0aeb74c7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new ML model output where
+		the rawresult is the sum of the partial scores of Unique , 
+		the reason codes are the reason codes of Unique ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

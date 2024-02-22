@@ -1,0 +1,12 @@
+{
+  "operationId" : "27587d74-b60d-43ce-8707-3a9452d0c42e",
+  "body" : {
+    "customer" : {
+      "name" : "John",
+      "status" : "Gold",
+      "offers" : [ ],
+      "totalAmount" : 8000,
+      "walletAmount" : 354
+    }
+  }
+}

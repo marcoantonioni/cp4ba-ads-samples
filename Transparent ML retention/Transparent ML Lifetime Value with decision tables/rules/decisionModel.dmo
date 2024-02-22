@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>Transparent ML Lifetime Value with decision tables</name>
+  <uuid>feaf3032-6a48-437f-94f3-296ceb5f8170</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="transparentMLLifetimeValueWithDecisionTables" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="input-mapping" name="Input mapping">
+        <description>ML model input</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input" collection="false" name="Input mapping"/>
+                <rule defaultRule="false" href="input-mapping/Rate%20plan%20mapping.dmt" kind="DecisionTable" name="Rate plan mapping"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input_data_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Lifetime value">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="Weight Comparison"/>
+                <output bomType="java.lang.Double" collection="false" name="Lifetime value"/>
+                <rule defaultRule="false" href="output-mapping/LTV%20prediction%20table.dmt" kind="DecisionTable" name="LTV prediction table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Lifetime value" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#WeightComparison"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_LOW" name="All LOW">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All LOW"/>
+                <rule defaultRule="false" href="All_LOW/All%20LOW.drl" kind="BusinessRule" name="All LOW"/>
+                <rule defaultRule="true" href="All_LOW/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_LOW_ii" name="All LOW" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_MEDIUM" name="All MEDIUM">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All MEDIUM"/>
+                <rule defaultRule="false" href="All_MEDIUM/All%20MEDIUM.drl" kind="BusinessRule" name="All MEDIUM"/>
+                <rule defaultRule="true" href="All_MEDIUM/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_MEDIUM_ii" name="All MEDIUM" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="input_data_1" name="Subscription">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_data_1_ii" name="Subscription" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription"/>
+    </inputData>
+    <inputData id="input_data_0" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_data_0_ii" name="Customer" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"/>
+    </inputData>
+    <decision id="Prediction" name="Prediction">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="collect">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord" collection="false" name="Customer"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Input" collection="false" name="Input mapping"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <rule defaultRule="true" href="Prediction/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+                <rule defaultRule="false" href="Prediction/Prediction.dmt" kind="DecisionTable" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="prediction_ii" name="Prediction" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output[]"/>
+        <informationRequirement>
+            <requiredInput href="#input_data_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#input_data_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_HIGH" name="All HIGH">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All HIGH"/>
+                <rule defaultRule="false" href="All_HIGH/All%20HIGH.drl" kind="BusinessRule" name="All HIGH"/>
+                <rule defaultRule="true" href="All_HIGH/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_HIGH_ii" name="All HIGH" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_VERY_LOW" name="All VERY_LOW">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All VERY_LOW"/>
+                <rule defaultRule="false" href="All_VERY_LOW/All%20VERY_LOW.drl" kind="BusinessRule" name="All VERY_LOW"/>
+                <rule defaultRule="true" href="All_VERY_LOW/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_VERY_LOW_ii" name="All VERY_LOW" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_MEDIUM_HIGH" name="All MEDIUM_HIGH">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All MEDIUM_HIGH"/>
+                <rule defaultRule="false" href="All_MEDIUM_HIGH/All%20MEDIUM_HIGH.drl" kind="BusinessRule" name="All MEDIUM_HIGH"/>
+                <rule defaultRule="true" href="All_MEDIUM_HIGH/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_MEDIUM_HIGH_ii" name="All MEDIUM_HIGH" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="WeightComparison" name="Weight Comparison">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All AVERAGE"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All HIGH"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All LOW"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All MEDIUM"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All MEDIUM_HIGH"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All VERY_LOW"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="Weight Comparison"/>
+                <rule defaultRule="false" href="WeightComparison/Weight%20Comparison.drl" kind="BusinessRule" name="Weight Comparison"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="weightComparison_ii" name="Weight Comparison" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#All_VERY_LOW"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#All_HIGH"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#All_MEDIUM"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#All_LOW"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#All_MEDIUM_HIGH"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#All_AVERAGE"/>
+        </informationRequirement>
+    </decision>
+    <decision id="All_AVERAGE" name="All AVERAGE">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output" collection="false" name="All AVERAGE"/>
+                <rule defaultRule="false" href="All_AVERAGE/All%20AVERAGE.drl" kind="BusinessRule" name="All AVERAGE"/>
+                <rule defaultRule="true" href="All_AVERAGE/default-rule.drl" kind="BusinessRule" name="default-rule"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="all_AVERAGE_ii" name="All AVERAGE" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value_with_decision_tables.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

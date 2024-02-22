@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>0e55b696-c65a-4753-840b-8412af2f03ef</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Discount" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Determine the amount of discount for the shopping cart</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Items">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.Item" collection="true" name="Items"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Items" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Item[]"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Discount">
+                        
+                <description>Output total discount.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.Item" collection="true" name="Items"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Volume discount"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Status discount"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Discount"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Sum.drl" kind="BusinessRule" name="Sum"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Discount" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_4"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_2" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Customer"/>
+                    
+            </inputData>
+                
+            <decision id="node_3" name="Volume discount">
+                        
+                <description>Determine the volume discount based on the transaction amount.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Total price"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Volume discount"/>
+                                        
+                        <rule defaultRule="false" href="node_3/Volume%20discount.dmt" kind="DecisionTable" name="Volume discount"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_3_ii" name="Volume discount" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_5"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_4" name="Status discount">
+                        
+                <description>Compute a discount rate based on the customer status.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Status discount"/>
+                                        
+                        <rule defaultRule="false" href="node_4/Status%20discount%20table.dmt" kind="DecisionTable" name="Status discount table"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_4_ii" name="Status discount" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_5" name="Total price">
+                        
+                <description>Get the total price based on the list of purchased items.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.Item" collection="true" name="Items"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Total price"/>
+                                        
+                        <rule defaultRule="false" href="node_5/total.drl" kind="BusinessRule" name="total"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_5_ii" name="Total price" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

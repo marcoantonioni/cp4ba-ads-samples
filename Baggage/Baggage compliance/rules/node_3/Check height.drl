@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check height</name>
+  <uuid>3ef1fc51-b949-40e8-b4f4-45b014ca2b22</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+    set 'maxheight' to the height of the size and weight limits ;
+if there is at least one Baggage Item in the bags 
+    where the height is more than maxheight , then decision does not get compliant ;
+    add `At least one baggage is too high. The maximum allowed height is { maxheight * 100 }cm or { round( maxheight * 100 / 2.54 , 0 ) } inches` to the messages of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

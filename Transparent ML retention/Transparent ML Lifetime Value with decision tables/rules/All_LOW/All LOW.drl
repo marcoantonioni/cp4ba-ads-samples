@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>All LOW</name>
+  <uuid>fa8112e2-abad-4c66-8aae-052e64a92234</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'All LOW' to Prediction 
+		where the predicted ltv of each ML model output is "LOW" ;
+	set 'number of predictions' to the number of elements in Prediction ;
+if
+	'number of predictions' is more than 0 
+then
+	set decision to a new ML model output where
+		the predicted ltv is "LOW" , 
+		the confidence is the sum of the confidences of 'All LOW' / 'number of predictions' , 
+		the weight is the sum of the weights of 'All LOW' , 
+		the rank is 0 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

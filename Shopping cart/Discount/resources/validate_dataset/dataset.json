@@ -1,0 +1,16 @@
+{
+  "operationId" : "59d9765c-8603-4478-b1cf-16b0c3f11942",
+  "body" : {
+    "items" : [ {
+      "name" : "One",
+      "price" : 780
+    }, {
+      "name" : "Two",
+      "price" : 1800
+    } ],
+    "customer" : {
+      "status" : "Gold",
+      "name" : "John"
+    }
+  }
+}

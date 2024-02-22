@@ -1,0 +1,53 @@
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Error
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error#concept.label = Erro de saída
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = um novo {Erro de saída} no qual {0, código} {1, mensagem} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.action = atribuir o código {this,PARTITIVE_ARTICLE} a {código}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.navigation = {código} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.action = atribuir o mensagem {this,PARTITIVE_ARTICLE} a {mensagem}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.navigation = {mensagem} {this,PARTITIVE_ARTICLE}
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Input
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input#concept.label = Entrada do modelo ML
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = um novo {Entrada do modelo ML} no qual {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.action = atribuir o age {this,PARTITIVE_ARTICLE} a {age}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.addition_setter = adicionar {age} ao age {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.navigation = {age} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.subtraction_setter = subtrair {age} do age {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.action = atribuir o car owner {this,PARTITIVE_ARTICLE} a {car owner}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.navigation = {car owner} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.action = atribuir o children {this,PARTITIVE_ARTICLE} a {children}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.addition_setter = adicionar {children} ao children {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.navigation = {children} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.subtraction_setter = subtrair {children} do children {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.action = atribuir o est income {this,PARTITIVE_ARTICLE} a {est income}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.addition_setter = adicionar {est income} ao est income {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.navigation = {est income} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.subtraction_setter = subtrair {est income} do est income {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.action = atribuir o gender {this,PARTITIVE_ARTICLE} a {gender}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.navigation = {gender} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.action = atribuir o paymethod {this,PARTITIVE_ARTICLE} a {paymethod}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.navigation = {paymethod} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.action = atribuir o rateplan {this,PARTITIVE_ARTICLE} a {rateplan}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.addition_setter = adicionar {rateplan} ao rateplan {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.navigation = {rateplan} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.subtraction_setter = subtrair {rateplan} do rateplan {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.action = atribuir o status {this,PARTITIVE_ARTICLE} a {status}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.navigation = {status} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.action = atribuir o usage {this,PARTITIVE_ARTICLE} a {usage}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.addition_setter = adicionar {usage} ao usage {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.navigation = {usage} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.subtraction_setter = subtrair {usage} do usage {this,PARTITIVE_ARTICLE}
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Output
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output#concept.label = Saída do modelo ML
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.Output(double)#phrase.navigation = um novo {Saída do modelo ML} no qual {0, predicted ltv} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.action = atribuir o erro {this,PARTITIVE_ARTICLE} a {erro}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.clearer = limpar o erro {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.navigation = {erro} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.inError()#phrase.navigation = {this} é em erro
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.action = atribuir o predicted ltv {this,PARTITIVE_ARTICLE} a {predicted ltv}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.addition_setter = adicionar {predicted ltv} ao predicted ltv {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.navigation = {predicted ltv} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.subtraction_setter = subtrair {predicted ltv} do predicted ltv {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.run(_084740706.telecom.retention_with_ml.customerlifetimevalue.Input)#phrase.navigation = predict({0})

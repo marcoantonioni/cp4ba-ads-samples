@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Apply loyalty factor</name>
+  <uuid>c6509223-4b32-4cc8-b9c2-3e99f03361e7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to round( 'Loyalty factor' * Price , 0 )  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

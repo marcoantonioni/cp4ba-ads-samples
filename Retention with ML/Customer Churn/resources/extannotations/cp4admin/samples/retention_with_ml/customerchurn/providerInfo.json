@@ -1,0 +1,10 @@
+{
+  "id" : "48944630-377f-4a43-b0df-e2553e40b8ca",
+  "providerId" : null,
+  "predictionParameters" : {
+    "predictionParamType" : "SIMPLE",
+    "modelId" : null,
+    "deploymentId" : null
+  },
+  "version" : "V1"
+}

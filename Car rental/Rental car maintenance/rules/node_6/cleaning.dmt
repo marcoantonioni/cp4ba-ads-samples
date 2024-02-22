@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>cleaning</name>
+  <uuid>a90d3b24-4cfb-4902-8ccf-92732943f9fc</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the interior condition of 'Car Return Record' is <an Interior condition>  
+]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[print <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a boolean>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[dirty]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA["clean the car"]]></Param>
+                            </Expression>
+                        </Action>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[true]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is not one of <objects>]]></Text>
+                        <Param><![CDATA[{ dirty }]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A2">
+                            <Expression/>
+                        </Action>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Cleaning needed]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[212]]></Data>
+            <Data Name="Definitions(A2)#HeaderText"><![CDATA[Message]]></Data>
+            <Data Name="Definitions(A2)#Width"><![CDATA[188]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Interior Condition]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[260]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a Car return record]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

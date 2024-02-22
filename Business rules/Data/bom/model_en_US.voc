@@ -1,0 +1,13 @@
+
+# com.ibm.ads.samples.training.business_rules.data.Person
+com.ibm.ads.samples.training.business_rules.data.Person#concept.documentation =
+com.ibm.ads.samples.training.business_rules.data.Person#concept.label = Person
+com.ibm.ads.samples.training.business_rules.data.Person.Person(long,java.time.LocalDate,java.lang.String)#phrase.navigation = a new {Person} where {0, age} {1, birth date} {2, name}
+com.ibm.ads.samples.training.business_rules.data.Person.age#phrase.action = set the age of {this} to {age}
+com.ibm.ads.samples.training.business_rules.data.Person.age#phrase.addition_setter = add {age} to the age of {this}
+com.ibm.ads.samples.training.business_rules.data.Person.age#phrase.navigation = {age} of {this}
+com.ibm.ads.samples.training.business_rules.data.Person.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+com.ibm.ads.samples.training.business_rules.data.Person.birthDate#phrase.action = set the birth date of {this} to {birth date}
+com.ibm.ads.samples.training.business_rules.data.Person.birthDate#phrase.navigation = {birth date} of {this}
+com.ibm.ads.samples.training.business_rules.data.Person.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.training.business_rules.data.Person.name#phrase.navigation = {name} of {this}

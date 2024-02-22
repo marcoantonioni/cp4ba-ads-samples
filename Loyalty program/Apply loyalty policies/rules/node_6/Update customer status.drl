@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Update customer status</name>
+  <uuid>220c5845-4980-4c1c-981f-e92511bd986b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[-- Check potential upgrade
+set decision to the customer upgrade computed from 
+    Customer being decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

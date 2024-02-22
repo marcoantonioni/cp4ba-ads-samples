@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>State</name>
+  <uuid>dd0d7a87-926e-4fd4-8c94-a8cd1cd18cc9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if State is not " " then 
+--State is incorrect
+add State to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

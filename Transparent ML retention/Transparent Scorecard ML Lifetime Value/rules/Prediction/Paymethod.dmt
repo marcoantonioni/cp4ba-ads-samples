@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Paymethod</name>
+  <uuid>24e6f12a-fde3-446a-b2e3-5728b3ac91cf</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the payment method of 'Subscription' is <a payment method>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new characteristic where
+	the differential score is <differential score> , 
+	the partial score is <partial score> , 
+	the reason code is <reason code> , 
+	the name is <name> to 'decision']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C1">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Auto]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[90.06868]]></Param>
+                                <Param><![CDATA[-90.06868]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Paymethod"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Credit card]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-51.262794]]></Param>
+                                <Param><![CDATA[51.262794]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Paymethod"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Check]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-38.24363]]></Param>
+                                <Param><![CDATA[38.24363]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Paymethod"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A1)#HeaderText"><![CDATA[decision]]></Data>
+            <Data Name="Definitions(A1)#Width"><![CDATA[876]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[paymentMethod]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

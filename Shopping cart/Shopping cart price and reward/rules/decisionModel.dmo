@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>f5dba307-c05c-46d6-97dd-876bef426441</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Shopping cart price and reward" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">[MAIN] Determine the personalized price of a shopping cart and compute loyalty points</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Customer"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Price and reward">
+                        
+                <description>Output the total price after applying a personalize discount, and the loyalty points associated with this transaction.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart" collection="false" name="Shopping cart"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.Result" collection="false" name="Price and reward"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Get%20price%20and%20discount.drl" kind="BusinessRule" name="Get price and discount"/>
+                                        
+                        <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Get%20loyalty%20points.drl" kind="BusinessRule" name="Get loyalty points"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Price and reward" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Result"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_3"/>
+                            
+                </knowledgeRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_4"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_2" name="Shopping cart">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart" collection="false" name="Shopping cart"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Shopping cart" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart"/>
+                    
+            </inputData>
+                
+            <businessKnowledgeModel id="node_3" name="Discount">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Discount" typeRef="java.lang.Double"/>
+                        
+                <encapsulatedLogic typeRef="java.lang.Double">
+                                
+                    <formalParameter name="items" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Item[]"/>
+                                
+                    <formalParameter name="customer" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Customer"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.shopping_cart.discount.Discount"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(java.util.List,com.ibm.ads.samples.retail.shopping_cart.data.Customer)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+                
+            <businessKnowledgeModel id="node_4" name="Loyalty points">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Loyalty points" typeRef="java.lang.Double"/>
+                        
+                <encapsulatedLogic typeRef="java.lang.Double">
+                                
+                    <formalParameter name="status" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Status"/>
+                                
+                    <formalParameter name="price" typeRef="java.lang.Double"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.shopping_cart.loyalty_points.Loyalty_points"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.retail.shopping_cart.data.Status,java.lang.Double)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

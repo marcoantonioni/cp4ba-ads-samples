@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Coupon</name>
+  <uuid>fa1f10c4-9004-421b-87b5-ffb5cc458c08</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Best offer type' is Coupon
+
+then
+    define 'reward' as the coupon reward computed from 
+        Customer being Customer , 
+        Order being Order ;
+
+    set decision to a new Offer where
+        the description is the description of reward , 
+        the type is 'Best offer type' , 
+        the value is 0 ,
+        the coupon is reward ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

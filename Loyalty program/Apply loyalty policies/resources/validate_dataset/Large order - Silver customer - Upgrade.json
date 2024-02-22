@@ -1,0 +1,16 @@
+{
+  "operationId" : "4afda051-efbf-4018-a76c-ed6d038cd26a",
+  "body" : {
+    "order" : [ {
+      "name" : "Tech",
+      "price" : 2200
+    } ],
+    "customer" : {
+      "name" : "Bob",
+      "status" : "Gold",
+      "offers" : [ ],
+      "totalAmount" : 4100,
+      "walletAmount" : 142
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "operationId" : "4afda051-efbf-4018-a76c-ed6d038cd26a",
+  "body" : {
+    "order" : [ {
+      "name" : "Tech",
+      "price" : 75
+    }, {
+      "name" : "Cosmetics",
+      "price" : 100
+    } ],
+    "customer" : {
+      "name" : "John",
+      "status" : "Bronze",
+      "offers" : [ ],
+      "totalAmount" : 150,
+      "walletAmount" : 32
+    }
+  }
+}

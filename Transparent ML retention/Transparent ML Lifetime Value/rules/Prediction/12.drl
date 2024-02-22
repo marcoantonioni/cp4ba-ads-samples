@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>12</name>
+  <uuid>72a0e13b-e0bf-4f0b-b821-d75d65f969d5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the usage is more than 190.275 
+then
+	add a new ML model output where
+		the confidence is 0.9903846153846154 , 
+		the predicted ltv is "HIGH" , 
+		the weight is 0.9903846153846154 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

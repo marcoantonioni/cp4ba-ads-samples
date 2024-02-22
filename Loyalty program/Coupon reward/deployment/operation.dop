@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Coupon reward">
+  <name>coupon-reward</name>
+  <uuid>74d515cb-053c-4bf2-8efa-49ae03885cc3</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#1fce38b8-73bc-4c31-b968-27c73c1ee620"/>
+  <targetRuleProject href="../../Coupon%20reward#8b5fc4cc-bf6b-4c0d-98f9-f4b45ccc1405"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["coupon-reward"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Discount offer</name>
+  <uuid>ba1b90f6-ee7e-4ca1-9d3a-d061a7edca16</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the type of 'Best offer' is Discount
+then
+    add 'Best offer' to the offers of decision ;
+    print "Offer is Discount: " + the value of 'Best offer' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

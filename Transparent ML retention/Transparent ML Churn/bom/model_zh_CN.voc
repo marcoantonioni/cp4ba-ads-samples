@@ -1,0 +1,46 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input#concept.label = ML 模型输入
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.Input(java.lang.Double,java.lang.String,java.lang.Integer,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Double)#phrase.navigation = 新建 {ML 模型输入}符合条件：{0, age} {1, car owner} {2, children} {3, est income} {4, gender} {5, paymethod} {6, rateplan} {7, status} {8, usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.action = 设置{this}的当前 age为{age}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.addition_setter = 加{age}到{this}的属性当前 age里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.navigation = {this} 的{age}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.subtraction_setter = 减{age}到{this}的属性当前 age里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.action = 设置{this}的当前 car owner为{car owner}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.navigation = {this} 的{car owner}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.action = 设置{this}的当前 children为{children}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.addition_setter = 加{children}到{this}的属性当前 children里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.navigation = {this} 的{children}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.subtraction_setter = 减{children}到{this}的属性当前 children里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.action = 设置{this}的当前 est income为{est income}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.addition_setter = 加{est income}到{this}的属性当前 est income里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.navigation = {this} 的{est income}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.subtraction_setter = 减{est income}到{this}的属性当前 est income里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.action = 设置{this}的当前 gender为{gender}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.navigation = {this} 的{gender}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.action = 设置{this}的当前 paymethod为{paymethod}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.navigation = {this} 的{paymethod}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.action = 设置{this}的当前 rateplan为{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.addition_setter = 加{rateplan}到{this}的属性当前 rateplan里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.navigation = {this} 的{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.subtraction_setter = 减{rateplan}到{this}的属性当前 rateplan里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.action = 设置{this}的当前 status为{status}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.navigation = {this} 的{status}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.action = 设置{this}的当前 usage为{usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.addition_setter = 加{usage}到{this}的属性当前 usage里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.navigation = {this} 的{usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.subtraction_setter = 减{usage}到{this}的属性当前 usage里
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output#concept.label = ML 模型输出
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.Output(java.lang.Double,java.lang.String,java.lang.Double)#phrase.navigation = 新建 {ML 模型输出}符合条件：{0, confidence} {1, predicted churn} {2, weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.action = 设置{this}的当前 confidence为{confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.addition_setter = 加{confidence}到{this}的属性当前 confidence里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.navigation = {this} 的{confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.subtraction_setter = 减{confidence}到{this}的属性当前 confidence里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.action = 设置{this}的当前 predicted churn为{predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.navigation = {this} 的{predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.action = 设置{this}的当前 weight为{weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.addition_setter = 加{weight}到{this}的属性当前 weight里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.navigation = {this} 的{weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.subtraction_setter = 减{weight}到{this}的属性当前 weight里

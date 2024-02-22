@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Identical street address and secondary address information</name>
+  <uuid>69a96e26-7eb9-43f1-bfc8-1535c402ecac</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the street of Preprocessing  is the secondary address information of Preprocessing  
+then
+    set decision to "Warning: Street address and secondary address information are identical." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

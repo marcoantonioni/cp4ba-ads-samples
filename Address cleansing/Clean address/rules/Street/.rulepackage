@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Street</name>
+  <uuid>57837b7b-dee9-4183-9b70-490ada167dfa</uuid>
+</ilog.rules.studio.model.base:RulePackage>

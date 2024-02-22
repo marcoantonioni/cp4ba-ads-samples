@@ -1,0 +1,27 @@
+
+# Term: secondary address information
+@secondary\ address\ information#plural = secondary address information
+
+# com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord#concept.documentation =
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord#concept.label = Address Record
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.AdressRecord(java.lang.String,java.lang.String,java.util.List,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Address Record} where {0, addressee} {1, city} {2, error} {3, last line} {4, secondary address information} {5, state} {6, street} {7, ZIP code}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.addTo_errors(java.lang.String)#phrase.action = add {0} to the errors of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.addressee#phrase.action = set the addressee of {this} to {addressee}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.addressee#phrase.navigation = {addressee} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.city#phrase.action = set the city of {this} to {city}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.city#phrase.navigation = {city} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.clear_errors()#phrase.action = clear the errors of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.errors#phrase.action = set the errors of {this} to {error}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.errors#phrase.navigation = {error} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.lastLine#phrase.action = set the last line of {this} to {last line}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.lastLine#phrase.navigation = {last line} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.removeFrom_errors(java.lang.String)#phrase.action = remove {0} from the errors of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.secondaryAddressInfo#phrase.action = set the secondary address information of {this} to {secondary address information}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.secondaryAddressInfo#phrase.navigation = {secondary address information} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.state#phrase.action = set the state of {this} to {state}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.state#phrase.navigation = {state} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.street#phrase.action = set the street of {this} to {street}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.street#phrase.navigation = {street} of {this}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.zipCode#phrase.action = set the ZIP code of {this} to {ZIP code}
+com.ibm.ads.samples.transportation.address_cleansing.data.AdressRecord.zipCode#phrase.navigation = {ZIP code} of {this}

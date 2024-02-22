@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Empty street but filled secondary field</name>
+  <uuid>6204c6fc-22ee-4eaa-ba30-98c726c62fa8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the street of Preprocessing  is empty and the secondary address information of Preprocessing  is not empty 
+then
+    set decision to "Warning: The street field is empty but the secondary address information field is filled. Make sure the secondary address field does not contain the street address." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

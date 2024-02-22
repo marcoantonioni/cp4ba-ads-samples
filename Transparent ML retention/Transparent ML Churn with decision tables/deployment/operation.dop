@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Transparent ML Churn with decision tables">
+  <name>Transparent-ML-Churn-with-decision-tables</name>
+  <uuid>288fc278-15fa-4113-a0a6-010073996644</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#b2dc7f1c-513b-452b-ac7c-a50a4c25a1b9"/>
+  <targetRuleProject href="../../Transparent%20ML%20Churn%20with%20decision%20tables#f1a476e2-42c8-4ef2-9266-0af1eaff22f1"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+  <tags key="ProviderId">
+    <value><![CDATA[disconnectedProvider]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

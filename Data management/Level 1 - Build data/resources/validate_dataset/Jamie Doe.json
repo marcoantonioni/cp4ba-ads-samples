@@ -1,0 +1,9 @@
+{
+  "operationId" : "1e001ee0-5b64-4a2d-8857-2374984f2f7f",
+  "body" : {
+    "firstName" : "Jamie",
+    "lastName" : "Doe",
+    "companyName" : "IBM",
+    "stock" : "IBM"
+  }
+}

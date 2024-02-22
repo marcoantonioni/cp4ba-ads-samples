@@ -1,0 +1,21 @@
+{
+  "operationId" : "cf46888c-cdcd-41a4-b733-915ffbfb2915",
+  "body" : {
+    "customer" : {
+      "name" : "John",
+      "status" : "Gold"
+    },
+    "shoppingCart" : {
+      "items" : [ {
+        "name" : "Computer",
+        "price" : 1000
+      }, {
+        "name" : "Equipment",
+        "price" : 345.2
+      }, {
+        "name" : "Monitor",
+        "price" : 230
+      } ]
+    }
+  }
+}

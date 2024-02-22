@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>0</name>
+  <uuid>bee45995-64f6-4806-bbe6-c41d393e0fb9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the paymethod is "CC" 
+	and the usage is at most 77.965 
+	and the usage is more than 57.14 
+	and the age is at most 53.5 
+	and the age is more than 42.53 
+then
+	add a new ML model output where
+		the confidence is 0.9696969696969697 , 
+		the predicted ltv is "AVERAGE" , 
+		the weight is 0.9696969696969697 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

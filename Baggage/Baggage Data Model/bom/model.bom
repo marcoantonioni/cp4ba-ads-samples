@@ -1,0 +1,175 @@
+
+package com.ibm.ads.samples.transportation.baggage.baggage_data_model;
+
+
+public class Baggage
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Baggage"
+        property "de.generated" "true"
+{
+    public java.util.List bag domain 0,* class com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "bag"
+                property update "true";
+    public Baggage(java.util.List bag domain 0,* class com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Baggage()
+                property "dataio.default" "true";
+    public void addTo_bag(com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem bag)
+                property collectionAttribute "bag"
+                property update "true";
+    public void clear_bag()
+                property collectionAttribute "bag"
+                property update "true";
+    public void removeFrom_bag(com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem bag)
+                property collectionAttribute "bag"
+                property update "true";
+    public void set_bag(java.util.Collection bag domain 0,* class com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem)
+                property collectionAttribute "bag"
+                property update "true";
+}
+
+public class BaggageItem
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "BaggageItem"
+        property "de.generated" "true"
+{
+    public double depth
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "depth"
+                property update "true";
+    public double height
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "height"
+                property update "true";
+    public double weight
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "weight"
+                property update "true";
+    public double width
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "width"
+                property update "true";
+    public BaggageItem(double depth, double height, double weight, double width)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public BaggageItem()
+                property "dataio.default" "true";
+}
+
+public class Booking
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Booking"
+        property "de.generated" "true"
+{
+    public long bags
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "bags"
+                property update "true";
+    public com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass fareClass
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fareClass"
+                property update "true";
+    public string fareCode
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fareCode"
+                property update "true";
+    public Booking(long bags, com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass fareClass, string fareCode)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Booking()
+                property "dataio.default" "true";
+}
+
+public class FareClass
+        extends java.lang.Enum
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "FareClass"
+        property "de.generated" "true"
+{
+    domain {static business, static economy, static first, static premiumEconomy}
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass business
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Business";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass economy
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Economy";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass first
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "First";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass premiumEconomy
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "PremiumEconomy";
+}
+
+public class FrequentFlyerLevel
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "FrequentFlyerLevel"
+        property "de.generated" "true"
+{
+    domain {static bronze, static gold, static none, static platinum, static silver}
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel bronze
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Bronze";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel gold
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gold";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel none
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "None";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel platinum
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Platinum";
+    public static final readonly com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel silver
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Silver";
+}
+
+public class Results
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Results"
+        property "de.generated" "true"
+{
+    public boolean compliant
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "compliant"
+                property update "true";
+    public double fees
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "fees"
+                property update "true";
+    public java.util.List messages domain 0,* class string
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "messages"
+                property update "true";
+    public Results(boolean compliant, 
+        double fees, 
+        java.util.List messages domain 0,* class string)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Results()
+                property "dataio.default" "true";
+    public void addTo_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void clear_messages()
+                property collectionAttribute "messages"
+                property update "true";
+    public void removeFrom_messages(string messages)
+                property collectionAttribute "messages"
+                property update "true";
+    public void set_messages(java.util.Collection messages domain 0,* class string)
+                property collectionAttribute "messages"
+                property update "true";
+}
+

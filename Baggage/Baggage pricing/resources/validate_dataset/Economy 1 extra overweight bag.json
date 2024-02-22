@@ -1,0 +1,18 @@
+{
+  "operationId" : "e1139011-0da4-4c9c-a753-53225f8ff497",
+  "body" : {
+    "initialBooking" : {
+      "bags" : 1,
+      "fareCode" : "Y",
+      "fareClass" : "Economy"
+    },
+    "frequentFlyerStatus" : "Gold",
+    "checkedBaggage" : {
+      "bag" : [ {
+        "weight" : 20
+      }, {
+        "weight" : 25
+      } ]
+    }
+  }
+}

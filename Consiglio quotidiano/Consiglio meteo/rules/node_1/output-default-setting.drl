@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>f30ffc32-167f-4051-8be3-1fba3a87bdb5</uuid>
+  <locale>it_IT</locale>
+  <definition><![CDATA[assegna decisione a "Spiacenti, non abbiamo abbastanza informazioni per fornire una risposta." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

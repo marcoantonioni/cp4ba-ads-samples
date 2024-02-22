@@ -1,0 +1,23 @@
+{
+  "operationId" : "6fe198b6-d635-4638-afd2-53de1f77d888",
+  "body" : {
+    "customer" : {
+      "children" : 2,
+      "gender" : "M",
+      "location" : "country",
+      "name" : "John",
+      "age" : 43,
+      "maritalStatus" : "M",
+      "estimatedIncome" : 56000,
+      "carOwner" : true
+    },
+    "subscription" : {
+      "usage" : 105,
+      "internationalCalls" : 30,
+      "localCalls" : 32,
+      "ratePlan" : "Essentials",
+      "longDistanceCalls" : 43,
+      "paymentMethod" : "CC"
+    }
+  }
+}

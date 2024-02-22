@@ -1,0 +1,46 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input#concept.label = ML モデル入力
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.Input(java.lang.Double,java.lang.String,java.lang.Integer,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Double)#phrase.navigation = 新規の {ML モデル入力}ここで{0, age} {1, car owner} {2, children} {3, est income} {4, gender} {5, paymethod} {6, rateplan} {7, status} {8, usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.action = {this}のageを{age}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.addition_setter = {this}のageに{age}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.navigation = {this}の{age}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.age#phrase.subtraction_setter = {this}のageから{age}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.action = {this}のcar ownerを{car owner}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.carOwner#phrase.navigation = {this}の{car owner}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.action = {this}のchildrenを{children}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.addition_setter = {this}のchildrenに{children}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.navigation = {this}の{children}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.children#phrase.subtraction_setter = {this}のchildrenから{children}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.action = {this}のest incomeを{est income}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.addition_setter = {this}のest incomeに{est income}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.navigation = {this}の{est income}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.estIncome#phrase.subtraction_setter = {this}のest incomeから{est income}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.action = {this}のgenderを{gender}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.gender#phrase.navigation = {this}の{gender}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.action = {this}のpaymethodを{paymethod}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.paymethod#phrase.navigation = {this}の{paymethod}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.action = {this}のrateplanを{rateplan}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.addition_setter = {this}のrateplanに{rateplan}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.navigation = {this}の{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.rateplan#phrase.subtraction_setter = {this}のrateplanから{rateplan}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.action = {this}のstatusを{status}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.status#phrase.navigation = {this}の{status}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.action = {this}のusageを{usage}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.addition_setter = {this}のusageに{usage}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.navigation = {this}の{usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Input.usage#phrase.subtraction_setter = {this}のusageから{usage}を引く
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output#concept.label = ML モデル出力
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.Output(java.lang.Double,java.lang.String,java.lang.Double)#phrase.navigation = 新規の {ML モデル出力}ここで{0, confidence} {1, predicted churn} {2, weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.action = {this}のconfidenceを{confidence}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.addition_setter = {this}のconfidenceに{confidence}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.navigation = {this}の{confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.confidence#phrase.subtraction_setter = {this}のconfidenceから{confidence}を引く
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.action = {this}のpredicted churnを{predicted churn}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.predictedChurn#phrase.navigation = {this}の{predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.action = {this}のweightを{weight}とする
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.addition_setter = {this}のweightに{weight}を追加する
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.navigation = {this}の{weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn.Output.weight#phrase.subtraction_setter = {this}のweightから{weight}を引く

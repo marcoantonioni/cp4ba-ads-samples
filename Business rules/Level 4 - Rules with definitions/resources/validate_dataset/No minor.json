@@ -1,0 +1,18 @@
+{
+  "operationId" : "83aef7d1-6cc2-444d-929a-46afb14bcb54",
+  "body" : {
+    "groupOfPeople" : [ {
+      "age" : 30,
+      "name" : "Robin"
+    }, {
+      "age" : 45,
+      "name" : "Kim"
+    }, {
+      "name" : "Jess",
+      "age" : 53
+    }, {
+      "age" : 24,
+      "name" : "Tracy"
+    } ]
+  }
+}

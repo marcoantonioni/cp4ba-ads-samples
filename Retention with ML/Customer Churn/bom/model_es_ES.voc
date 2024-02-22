@@ -1,0 +1,57 @@
+
+# _084740706.telecom.retention_with_ml.customerchurn.Error
+_084740706.telecom.retention_with_ml.customerchurn.Error#concept.label = Error de salida
+_084740706.telecom.retention_with_ml.customerchurn.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = un nuevo {Error de salida} en que {0, código} {1, mensaje} 
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.action = cambiar el código {this,PARTITIVE_ARTICLE} a {código}
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.navigation = {código} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.action = cambiar el mensaje {this,PARTITIVE_ARTICLE} a {mensaje}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.navigation = {mensaje} {this,PARTITIVE_ARTICLE}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Input
+_084740706.telecom.retention_with_ml.customerchurn.Input#concept.label = Entrada del modelo ML
+_084740706.telecom.retention_with_ml.customerchurn.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = un nuevo {Entrada del modelo ML} en que {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.action = cambiar el age {this,PARTITIVE_ARTICLE} a {age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.addition_setter = añadir {age} a el age {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.navigation = {age} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.subtraction_setter = sustraer {age} de el age {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.action = cambiar el car owner {this,PARTITIVE_ARTICLE} a {car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.navigation = {car owner} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.action = cambiar el children {this,PARTITIVE_ARTICLE} a {children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.addition_setter = añadir {children} a el children {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.navigation = {children} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.subtraction_setter = sustraer {children} de el children {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.action = cambiar el est income {this,PARTITIVE_ARTICLE} a {est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.addition_setter = añadir {est income} a el est income {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.navigation = {est income} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.subtraction_setter = sustraer {est income} de el est income {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.action = cambiar el gender {this,PARTITIVE_ARTICLE} a {gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.navigation = {gender} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.action = cambiar la paymethod {this,PARTITIVE_ARTICLE} a {paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.navigation = {paymethod} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.action = cambiar el rateplan {this,PARTITIVE_ARTICLE} a {rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.addition_setter = añadir {rateplan} a el rateplan {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.navigation = {rateplan} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.subtraction_setter = sustraer {rateplan} de el rateplan {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.action = cambiar el status {this,PARTITIVE_ARTICLE} a {status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.navigation = {status} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.action = cambiar el usage {this,PARTITIVE_ARTICLE} a {usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.addition_setter = añadir {usage} a el usage {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.navigation = {usage} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.subtraction_setter = sustraer {usage} de el usage {this,PARTITIVE_ARTICLE}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Output
+_084740706.telecom.retention_with_ml.customerchurn.Output#concept.label = Salida del modelo ML
+_084740706.telecom.retention_with_ml.customerchurn.Output.Output(double,double)#phrase.navigation = un nuevo {Salida del modelo ML} en que {0, probability t} {1, probability f} 
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.action = cambiar el Error {this,PARTITIVE_ARTICLE} a {Error}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.clearer = borrar el Error {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.navigation = {Error} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.inError()#phrase.navigation = {this} es in error
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.action = cambiar el probability f {this,PARTITIVE_ARTICLE} a {probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.addition_setter = añadir {probability f} a el probability f {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.navigation = {probability f} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.subtraction_setter = sustraer {probability f} de el probability f {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.action = cambiar el probability t {this,PARTITIVE_ARTICLE} a {probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.addition_setter = añadir {probability t} a el probability t {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.navigation = {probability t} {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.subtraction_setter = sustraer {probability t} de el probability t {this,PARTITIVE_ARTICLE}
+_084740706.telecom.retention_with_ml.customerchurn.Output.run(_084740706.telecom.retention_with_ml.customerchurn.Input)#phrase.navigation = predict({0})

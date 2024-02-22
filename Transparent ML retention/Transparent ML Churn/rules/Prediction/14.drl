@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>14</name>
+  <uuid>48bbb940-1692-4bcb-b8d0-9bd78c09e041</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the gender is "F" 
+	and the status is "M" 
+	and the children is at most 1 
+	and the age is at most 39.14665 
+then
+	add a new ML model output where
+		the confidence is 0.9076923076923077 , 
+		the predicted churn is "T" , 
+		the weight is 0.9076923076923077 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

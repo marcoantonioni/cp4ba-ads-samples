@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>e28078d9-ff6d-444e-8c12-2e7914ed8086</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Baggage Compliance" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">This decision checks whether the bags are compliant with size and weight restrictions. In case of non compliance, an explanation is provided.</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="baggage">
+                        
+                <description>Details about the baggage dropped at the drop-off counter: number of items, size, and weight.</description>
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage" collection="false" name="baggage"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="baggage" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Weight check">
+                        
+                <description>Weight restrictions for checked baggage.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage" collection="false" name="baggage"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Weight check"/>
+                                        
+                        <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Check%20weight.drl" kind="BusinessRule" name="Check weight"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_1_ii" name="Weight check" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_5"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <decision id="node_3" name="Size check">
+                        
+                <description>Size restrictions for checked baggage.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage" collection="false" name="baggage"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Size check"/>
+                                        
+                        <rule defaultRule="false" href="node_3/Check%20width.drl" kind="BusinessRule" name="Check width"/>
+                                        
+                        <rule defaultRule="false" href="node_3/Check%20height.drl" kind="BusinessRule" name="Check height"/>
+                                        
+                        <rule defaultRule="false" href="node_3/Check%20depth.drl" kind="BusinessRule" name="Check depth"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_3_ii" name="Size check" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_5"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <decision id="node_4" name="Baggage Compliance">
+                        
+                <description>Check that each bag complies with the size and weight restrictions.
+</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Weight check"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Size check"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results" collection="false" name="Baggage Compliance"/>
+                                        
+                        <rule defaultRule="false" href="node_4/Gather%20weight%20results.drl" kind="BusinessRule" name="Gather weight results"/>
+                                        
+                        <rule defaultRule="false" href="node_4/Gather%20size%20results.drl" kind="BusinessRule" name="Gather size results"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_4_ii" name="Baggage Compliance" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_1"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <businessKnowledgeModel id="node_5" name="Size and weight limits">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Size and weight limits" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem"/>
+                        
+                <encapsulatedLogic typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem">
+                                
+                    <formalParameter name="fareClass" typeRef="com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.transportation.baggage.size_weight_limits.Size_and_weight_limits"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

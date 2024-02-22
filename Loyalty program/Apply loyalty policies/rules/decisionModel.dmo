@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>4d706469-d0bd-4b63-90f8-3a6da7a306a1</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Reward transaction" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">[MAIN] Reward a transaction by offering the right offer to a customer. An offer can be a discount, a coupon, an amount to add to the wallet, etc.</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Order">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_0_ii" name="Order" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Item[]"/>
+                    
+            </inputData>
+                
+            <inputData id="node_2" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="node_2_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                    
+            </inputData>
+                
+            <decision id="node_5" name="Best offer type">
+                        
+                <description>Determine what type of offer makes most sense, depending on the context. Could be a discount, a coupon, etc.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Order amount"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.OfferType" collection="false" name="Best offer type"/>
+                                        
+                        <rule defaultRule="false" href="node_5/Coupon%20for%20small%20transactions.drl" kind="BusinessRule" name="Coupon for small transactions"/>
+                                        
+                        <rule defaultRule="false" href="node_5/Limit%20number%20of%20coupons.drl" kind="BusinessRule" name="Limit number of coupons"/>
+                                        
+                        <rule defaultRule="false" href="node_5/Discount%20into%20wallet%20for%20small%20transactions.drl" kind="BusinessRule" name="Discount into wallet for small transactions"/>
+                                        
+                        <rule defaultRule="false" href="node_5/Print.dmt" kind="DecisionTable" name="Print"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_5_ii" name="Best offer type" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.OfferType"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_8"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_6" name="Updated customer">
+                        
+                <description>Returns the customer record, updated after applying loyalty policies.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Discounted price"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Offer" collection="false" name="Best offer"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Updated customer"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Copy%20customer%20information.drl" kind="BusinessRule" name="Copy customer information"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Add%20Coupon.drl" kind="BusinessRule" name="Add Coupon"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Add%20Wallet%20discount.drl" kind="BusinessRule" name="Add Wallet discount"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Add%20Discount%20offer.drl" kind="BusinessRule" name="Add Discount offer"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Update%20customers%20total%20amount%20and%20wallet.drl" kind="BusinessRule" name="Update customers total amount and wallet"/>
+                                        
+                        <rule defaultRule="false" href="node_6/Update%20customer%20status.drl" kind="BusinessRule" name="Update customer status"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_6_ii" name="Updated customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_13"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_7"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_18"/>
+                            
+                </knowledgeRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_17"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <decision id="node_7" name="Best offer">
+                        
+                <description>Output the real offer to make.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.OfferType" collection="false" name="Best offer type"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Order amount"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Offer" collection="false" name="Best offer"/>
+                                        
+                        <rule defaultRule="false" href="node_7/Discount%20or%20Wallet%20offer.drl" kind="BusinessRule" name="Discount or Wallet offer"/>
+                                        
+                        <rule defaultRule="false" href="node_7/Coupon.drl" kind="BusinessRule" name="Coupon"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_7_ii" name="Best offer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Offer"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_5"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_8"/>
+                            
+                </informationRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_19"/>
+                            
+                </knowledgeRequirement>
+                        
+                <knowledgeRequirement>
+                                
+                    <requiredKnowledge href="#node_16"/>
+                            
+                </knowledgeRequirement>
+                    
+            </decision>
+                
+            <decision id="node_8" name="Order amount">
+                        
+                <description>Compute total amount of the transaction</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Item" collection="true" name="Order"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Order amount"/>
+                                        
+                        <rule defaultRule="false" href="node_8/Sum.drl" kind="BusinessRule" name="Sum"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_8_ii" name="Order amount" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_13" name="Discounted price">
+                        
+                <description>In case of a discount, compute the discounted price.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Offer" collection="false" name="Best offer"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Order amount"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Discounted price"/>
+                                        
+                        <rule defaultRule="false" href="node_13/Compute%20order%20amount%20after%20discount.drl" kind="BusinessRule" name="Compute order amount after discount"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_13_ii" name="Discounted price" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_7"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_8"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_14" name="Final price">
+                        
+                <description>Output discounted price.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Discounted price"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Final price"/>
+                                        
+                        <rule defaultRule="true" href="node_14/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="node_14_ii" name="Final price" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_13"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <businessKnowledgeModel id="node_16" name="Coupon reward">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Coupon reward" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Coupon"/>
+                        
+                <encapsulatedLogic typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Coupon">
+                                
+                    <formalParameter name="order" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Item[]"/>
+                                
+                    <formalParameter name="customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.loyalty_program.coupon_reward.Coupon_reward"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(java.util.List,com.ibm.ads.samples.retail.loyalty_program.data.Customer)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+                
+            <businessKnowledgeModel id="node_17" name="Customer upgrade">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Customer upgrade" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                        
+                <encapsulatedLogic typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer">
+                                
+                    <formalParameter name="customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.loyalty_program.customer_upgrade.Customer_upgrade"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.retail.loyalty_program.data.Customer)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+                
+            <businessKnowledgeModel id="node_18" name="Wallet reward">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Wallet reward" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                        
+                <encapsulatedLogic typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer">
+                                
+                    <formalParameter name="purchase" typeRef="java.lang.Double"/>
+                                
+                    <formalParameter name="customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.loyalty_program.wallet_reward.Wallet_reward"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(java.lang.Double,com.ibm.ads.samples.retail.loyalty_program.data.Customer)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+                
+            <businessKnowledgeModel id="node_19" name="Discount">
+                        
+                <extensionElements>
+                                
+                    <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+                                    
+                    </properties>
+                            
+                </extensionElements>
+                        
+                <variable name="Discount" typeRef="java.lang.Double"/>
+                        
+                <encapsulatedLogic typeRef="java.lang.Double">
+                                
+                    <formalParameter name="customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                                
+                    <formalParameter name="order" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Item[]"/>
+                                
+                    <context>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="class"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"com.ibm.ads.samples.retail.loyalty_program.discount.Discount"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                        
+                        <contextEntry>
+                                                
+                            <variable name="method signature"/>
+                                                
+                            <literalExpression>
+                                                        
+                                <text>"run(com.ibm.ads.samples.retail.loyalty_program.data.Customer,java.util.List)"</text>
+                                                    
+                            </literalExpression>
+                                            
+                        </contextEntry>
+                                    
+                    </context>
+                            
+                </encapsulatedLogic>
+                    
+            </businessKnowledgeModel>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>output-mapping</name>
+  <uuid>d6dc39f5-9791-4520-9ae0-b37e1c6ef483</uuid>
+</ilog.rules.studio.model.base:RulePackage>

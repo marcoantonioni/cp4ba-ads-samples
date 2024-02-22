@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>PO Box</name>
+  <uuid>8c3937fc-019a-48b4-ad5a-fa88dc131352</uuid>
+</ilog.rules.studio.model.base:RulePackage>

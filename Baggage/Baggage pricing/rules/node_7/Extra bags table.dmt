@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Extra bags table</name>
+  <uuid>29f119a5-d088-4fe7-b94e-82d20078cf91</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the fare code is <a string> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the fare class is <an object> ]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to <a number> * 'Extra bags']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is <an object>]]></Text>
+                        <Param><![CDATA["Y"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[25]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Premium Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[25]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Business]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[36]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[First]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[50]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is <an object>]]></Text>
+                        <Param><![CDATA["S"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[15]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Premium Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[15]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Business]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[28]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[First]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[45]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<an object> is <an object>]]></Text>
+                        <Param><![CDATA["X"]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[20]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Premium Economy]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[20]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Business]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[32]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[First]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[40]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Fare code]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Fare class]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[200]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a number]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[min]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Extra Bag Fees]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[212]]></Data>
+            <Data Name="Definitions(C1)[0]#HeaderText"><![CDATA[a Booking]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[140]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

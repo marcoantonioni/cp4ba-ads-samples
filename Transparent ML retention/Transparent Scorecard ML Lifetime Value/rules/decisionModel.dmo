@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>Transparent Scorecard ML Lifetime Value</name>
+  <uuid>37b5ca6e-282d-41f0-9b1c-cc974120e3b5</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="transparentScorecardMLLifetimeValue" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="input-mapping" name="Input mapping">
+        <description>ML model input</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input" collection="false" name="Input mapping"/>
+                <rule defaultRule="false" href="input-mapping/rate%20plan.dmt" kind="DecisionTable" name="rate plan"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input_data_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="LTV">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output" collection="false" name="RawResult"/>
+                <output bomType="java.lang.Double" collection="false" name="LTV"/>
+                <rule defaultRule="false" href="output-mapping/ltv.drl" kind="BusinessRule" name="ltv"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="LTV" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#FinalScore"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="input_data_1" name="Subscription">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_data_1_ii" name="Subscription" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription"/>
+    </inputData>
+    <decision id="Unique" name="Unique">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic" collection="true" name="Prediction"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic" collection="true" name="Unique"/>
+                <rule defaultRule="false" href="Unique/Unique.drl" kind="BusinessRule" name="Unique"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="unique_ii" name="Unique" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic[]"/>
+        <informationRequirement>
+            <requiredInput href="#Prediction"/>
+        </informationRequirement>
+    </decision>
+    <decision id="Prediction" name="Prediction">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="collect">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord" collection="false" name="CustomerRecord"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription" collection="false" name="Subscription"/>
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Input" collection="false" name="Input mapping"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic" collection="true" name="Prediction"/>
+                <rule defaultRule="false" href="Prediction/Est%20Income.dmt" kind="DecisionTable" name="Est Income"/>
+                <rule defaultRule="false" href="Prediction/Age.dmt" kind="DecisionTable" name="Age"/>
+                <rule defaultRule="false" href="Prediction/Usage.dmt" kind="DecisionTable" name="Usage"/>
+                <rule defaultRule="false" href="Prediction/Children.dmt" kind="DecisionTable" name="Children"/>
+                <rule defaultRule="false" href="Prediction/RatePlan.dmt" kind="DecisionTable" name="RatePlan"/>
+                <rule defaultRule="false" href="Prediction/Gender.dmt" kind="DecisionTable" name="Gender"/>
+                <rule defaultRule="false" href="Prediction/Status.dmt" kind="DecisionTable" name="Status"/>
+                <rule defaultRule="false" href="Prediction/Car%20Owner.dmt" kind="DecisionTable" name="Car Owner"/>
+                <rule defaultRule="false" href="Prediction/Paymethod.dmt" kind="DecisionTable" name="Paymethod"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="prediction_ii" name="Prediction" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic[]"/>
+        <informationRequirement>
+            <requiredInput href="#input_data_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#input_data_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="input_data_0" name="CustomerRecord">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord" collection="false" name="CustomerRecord"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_data_0_ii" name="CustomerRecord" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"/>
+    </inputData>
+    <decision id="FinalScore" name="RawResult">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Characteristic" collection="true" name="Unique"/>
+                <output bomType="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output" collection="false" name="RawResult"/>
+                <rule defaultRule="false" href="FinalScore/RawResult.drl" kind="BusinessRule" name="RawResult"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="finalScore_ii" name="RawResult" typeRef="com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_scorecard_ml_lifetime_value.Output"/>
+        <informationRequirement>
+            <requiredInput href="#Unique"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

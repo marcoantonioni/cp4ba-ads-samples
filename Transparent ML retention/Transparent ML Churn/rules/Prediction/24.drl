@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>24</name>
+  <uuid>345e8f07-0492-4800-9f2f-ee2c1f598463</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the status is "M" 
+	and the car owner is "Y" 
+	and the paymethod is "CC" 
+	and the children is more than 1 
+then
+	add a new ML model output where
+		the confidence is 0.992 , 
+		the predicted churn is "F" , 
+		the weight is 0.992 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

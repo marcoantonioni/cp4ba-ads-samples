@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Discount">
+  <name>discount</name>
+  <uuid>fd85d914-e3e9-42a7-bd3c-a65d26009f14</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#c6d17493-3522-446b-9f36-cc0db3659c8c"/>
+  <targetRuleProject href="../../Discount#2e8f200a-83ff-4ab7-89d3-4984c66004b1"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["discount"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

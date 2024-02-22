@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Customer upgrade">
+  <name>customer-upgrade</name>
+  <uuid>27587d74-b60d-43ce-8707-3a9452d0c42e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#169d1bb9-c072-443a-902a-db396a96f4b6"/>
+  <targetRuleProject href="../../Customer%20upgrade#1fdfb803-ad4f-420f-ba31-7475cc6c5033"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["customer-upgrade"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

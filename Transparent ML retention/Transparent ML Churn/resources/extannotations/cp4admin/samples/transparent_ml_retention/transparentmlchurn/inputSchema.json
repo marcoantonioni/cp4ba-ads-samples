@@ -1,0 +1,111 @@
+{
+  "fields" : [ {
+    "name" : "Gender",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Status",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Est Income",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Paymethod",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Usage",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Age",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Car Owner",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "RatePlan",
+    "type" : "integer",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Children",
+    "type" : "integer",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  } ]
+}

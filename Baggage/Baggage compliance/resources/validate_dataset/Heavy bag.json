@@ -1,0 +1,13 @@
+{
+  "operationId" : "de77e8b2-801c-4e61-a741-79e62e1265c0",
+  "body" : {
+    "baggage" : {
+      "bag" : [ {
+        "weight" : 200,
+        "width" : 10,
+        "height" : 10,
+        "depth" : 10
+      } ]
+    }
+  }
+}

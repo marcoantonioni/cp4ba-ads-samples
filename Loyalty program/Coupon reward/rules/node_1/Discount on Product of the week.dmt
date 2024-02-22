@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Discount on Product of the week</name>
+  <uuid>b874e38c-7935-42ca-8905-767f778eadaf</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the status of 'Customer' is <a Status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set 'decision' to a new Coupon where
+	the amount is <amount> , 
+	the description is <description> , 
+	the label is <label> , 
+	monetary is <monetary>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Bronze]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[0.1]]></Param>
+                                <Param><![CDATA["10% off on the product of the week"]]></Param>
+                                <Param><![CDATA["POW 10"]]></Param>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Silver]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[0.15]]></Param>
+                                <Param><![CDATA["15% off on the product of the week"]]></Param>
+                                <Param><![CDATA["POW 15"]]></Param>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Gold]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[0.2]]></Param>
+                                <Param><![CDATA["20% off on the product of the week"]]></Param>
+                                <Param><![CDATA["POW 20"]]></Param>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Platinum]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA[0.25]]></Param>
+                                <Param><![CDATA["25% off on the product of the week"]]></Param>
+                                <Param><![CDATA["POW 25"]]></Param>
+                                <Param><![CDATA[false]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Coupon]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[1089]]></Data>
+            <Data Name="Definitions(A0)[0]#Format"><![CDATA[{0,number,#0.##%}]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[amount]]></Data>
+            <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[description]]></Data>
+            <Data Name="Definitions(A0)[2]#HeaderText"><![CDATA[label]]></Data>
+            <Data Name="Definitions(A0)[3]#HeaderText"><![CDATA[monetary]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Customer.status]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[204]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

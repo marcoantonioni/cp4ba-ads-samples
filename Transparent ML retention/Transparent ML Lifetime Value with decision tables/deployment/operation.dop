@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Transparent ML Lifetime Value with decision tables">
+  <name>Transparent-ML-Lifetime-Value-with-decision-tables</name>
+  <uuid>5d0bf406-4180-4610-ac65-be10fc2bb6b5</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#feaf3032-6a48-437f-94f3-296ceb5f8170"/>
+  <targetRuleProject href="../../Transparent%20ML%20Lifetime%20Value%20with%20decision%20tables#d13f5afe-f08e-495b-991e-273c9ee148a1"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+  <tags key="ProviderId">
+    <value><![CDATA[disconnectedProvider]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

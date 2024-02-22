@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Wallet reward">
+  <name>wallet-reward</name>
+  <uuid>81ce274f-f6f8-49be-9924-4bdcfa959928</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#c5f257ab-cdd7-4169-9205-ba7dc7401ec6"/>
+  <targetRuleProject href="../../Wallet%20reward#1e315c2e-b635-4a54-89ca-8d4dd954d8a8"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[false]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["wallet-reward"]]></value>
+  </tags>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

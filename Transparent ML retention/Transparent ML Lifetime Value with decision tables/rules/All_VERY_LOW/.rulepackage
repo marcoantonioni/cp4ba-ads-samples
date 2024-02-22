@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>All_VERY_LOW</name>
+  <uuid>c0e99090-5026-4b4a-bc9b-03e71f56b230</uuid>
+</ilog.rules.studio.model.base:RulePackage>

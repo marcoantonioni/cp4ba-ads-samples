@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Add Wallet discount</name>
+  <uuid>277cfaf5-dae7-467f-8c90-31b198036442</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+     the type of 'Best offer' is Wallet
+then
+    set the wallet amount of decision to the wallet amount of decision  + the value of 'Best offer' ;
+    print "Adding discount to the wallet: " + the value of 'Best offer' ; 
+    add 'Best offer' to the offers of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

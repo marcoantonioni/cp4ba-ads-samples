@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>1b320520-45b6-47b9-b640-cffa60445e95</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set 'Car Return Record' to a new Car return record where
+        the interior condition is dirty , 
+        the fuel level is 35 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,1 @@
+{"operationId":"6fe198b6-d635-4638-afd2-53de1f77d888","body":{"customer":{"children":0,"gender":"Male","location":"urban","name":"Peter","age":49,"carOwner":true,"estimatedIncome":64000,"maritalStatus":"Single"},"subscription":{"usage":80,"internationalCalls":30,"localCalls":15,"longDistanceCalls":35,"paymentMethod":"CreditCard","ratePlan":"Essentials"}}}

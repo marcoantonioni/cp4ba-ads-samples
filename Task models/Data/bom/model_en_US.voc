@@ -1,0 +1,41 @@
+
+# Term: financial information
+@financial\ information#plural = financial information
+
+# com.ibm.ads.samples.training.task_models.data.Answer
+com.ibm.ads.samples.training.task_models.data.Answer#concept.documentation =
+com.ibm.ads.samples.training.task_models.data.Answer#concept.label = final answer
+com.ibm.ads.samples.training.task_models.data.Answer.Answer(java.util.List,boolean)#phrase.navigation = a new {final answer} where {0, explanation} {1, go}
+com.ibm.ads.samples.training.task_models.data.Answer.addTo_explanation(java.lang.String)#phrase.action = add {0} to the explanations of {this}
+com.ibm.ads.samples.training.task_models.data.Answer.clear_explanation()#phrase.action = clear the explanations of {this}
+com.ibm.ads.samples.training.task_models.data.Answer.explanation#phrase.action = set the explanations of {this} to {explanation}
+com.ibm.ads.samples.training.task_models.data.Answer.explanation#phrase.navigation = {explanation} of {this}
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.action[0] = {this} gets go only if {go}
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.action[1] = make it {go} that {this} is go
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.action[1].deprecated = true
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.navigation = {this} is go
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.negative_predicate = {this} is not go
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.negative_predicate_setter = {this} does not get go
+com.ibm.ads.samples.training.task_models.data.Answer.go#phrase.positive_predicate_setter = {this} gets go
+com.ibm.ads.samples.training.task_models.data.Answer.removeFrom_explanation(java.lang.String)#phrase.action = remove {0} from the explanations of {this}
+
+# com.ibm.ads.samples.training.task_models.data.Finance
+com.ibm.ads.samples.training.task_models.data.Finance#concept.label = financial information
+com.ibm.ads.samples.training.task_models.data.Finance.Finance(double,double)#phrase.navigation = a new {financial information} where {0, balance} {1, debit}
+com.ibm.ads.samples.training.task_models.data.Finance.balance#phrase.action = set the balance of {this} to {balance}
+com.ibm.ads.samples.training.task_models.data.Finance.balance#phrase.addition_setter = add {balance} to the balance of {this}
+com.ibm.ads.samples.training.task_models.data.Finance.balance#phrase.navigation = {balance} of {this}
+com.ibm.ads.samples.training.task_models.data.Finance.balance#phrase.subtraction_setter = subtract {balance} from the balance of {this}
+com.ibm.ads.samples.training.task_models.data.Finance.debit#phrase.action = set the debit of {this} to {debit}
+com.ibm.ads.samples.training.task_models.data.Finance.debit#phrase.addition_setter = add {debit} to the debit of {this}
+com.ibm.ads.samples.training.task_models.data.Finance.debit#phrase.navigation = {debit} of {this}
+com.ibm.ads.samples.training.task_models.data.Finance.debit#phrase.subtraction_setter = subtract {debit} from the debit of {this}
+
+# com.ibm.ads.samples.training.task_models.data.Weather
+com.ibm.ads.samples.training.task_models.data.Weather#concept.label = weather forecast
+com.ibm.ads.samples.training.task_models.data.Weather.clouds#instance.label = Clouds
+com.ibm.ads.samples.training.task_models.data.Weather.fair#instance.label = Fair
+com.ibm.ads.samples.training.task_models.data.Weather.heavyRain#instance.label = Heavy rain
+com.ibm.ads.samples.training.task_models.data.Weather.rain#instance.label = Rain
+com.ibm.ads.samples.training.task_models.data.Weather.storm#instance.label = Storm
+com.ibm.ads.samples.training.task_models.data.Weather.sun#instance.label = Sun

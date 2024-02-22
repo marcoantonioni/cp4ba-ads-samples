@@ -1,0 +1,32 @@
+{
+  "operationId" : "b47e8a16-103f-4658-b4d1-48412b59d710",
+  "body" : {
+    "carMaintenanceRecord" : {
+      "ID" : 2,
+      "lastFullServiceDate" : "2019-01-01T00:00:00Z",
+      "lastOilChangeDate" : "2020-01-05T00:00:00Z",
+      "serviceMileage" : 1000
+    },
+    "car" : {
+      "brand" : "Mercedes",
+      "ID" : 123,
+      "model" : "E class",
+      "category" : "fullSize",
+      "status" : "notAvailable",
+      "serialNumber" : "123456",
+      "carBlackBox" : {
+        "averageSpeedLastWeek" : 80,
+        "currentMileage" : 182345,
+        "distanceDrivenLastWeek" : 500,
+        "maxEngineTemperature" : 110,
+        "maxSpeedLastWeek" : 130,
+        "oilLevel" : 85,
+        "tyrePressure" : 1.8
+      }
+    },
+    "carReturnRecord" : {
+      "fuelLevel" : 35,
+      "interiorCondition" : "fair"
+    }
+  }
+}

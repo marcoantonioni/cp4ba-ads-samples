@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Get price and discount</name>
+  <uuid>bc81c013-598b-4a71-9e68-288126b180b6</uuid>
+  <documentation><![CDATA[Get the personalized discount and the compute price after discount]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[define 'price' as the sum of the prices of the items ;
+
+define 'discount' as the discount computed from 
+    Customer being Customer , Items being the items ; 
+
+set the price of decision to round( ( 1 - discount ) * price , 2 ) ;
+set the given discount of decision to round( discount , 2 ) ; 
+
+print "Total price before discount is " + price ;
+print "Total price after discount is " + the price of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

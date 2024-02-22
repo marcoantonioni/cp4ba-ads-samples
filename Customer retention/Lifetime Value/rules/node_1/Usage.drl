@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Usage</name>
+  <uuid>fae61a00-bd49-4134-8874-667af73b3e7e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to 0.25 * the usage * 36 ; -- 25% of 3-year usage]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

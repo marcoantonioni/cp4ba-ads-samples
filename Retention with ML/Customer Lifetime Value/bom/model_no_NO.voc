@@ -1,0 +1,53 @@
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Error
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error#concept.label = Output error
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = et nytt {Output error} hvor {0, code} {1, message} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.action = sett coden på {this} til {code}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.code#phrase.navigation = {code} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.action = sett messagen på {this} til {message}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Error.message#phrase.navigation = {message} på {this}
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Input
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input#concept.label = ML model input
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = et nytt {ML model input} hvor {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.action = sett agen på {this} til {age}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.addition_setter = legg {age} til agen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.navigation = {age} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.age#phrase.subtraction_setter = trekk {age} fra agen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.action = sett car owneren på {this} til {car owner}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.carOwner#phrase.navigation = {car owner} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.action = sett childrenen på {this} til {children}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.addition_setter = legg {children} til childrenen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.navigation = {children} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.children#phrase.subtraction_setter = trekk {children} fra childrenen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.action = sett est incomen på {this} til {est income}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.addition_setter = legg {est income} til est incomen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.navigation = {est income} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.estIncome#phrase.subtraction_setter = trekk {est income} fra est incomen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.action = sett genderen på {this} til {gender}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.gender#phrase.navigation = {gender} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.action = sett paymethoden på {this} til {paymethod}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.paymethod#phrase.navigation = {paymethod} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.action = sett rateplanen på {this} til {rateplan}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.addition_setter = legg {rateplan} til rateplanen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.navigation = {rateplan} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.rateplan#phrase.subtraction_setter = trekk {rateplan} fra rateplanen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.action = sett statusen på {this} til {status}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.status#phrase.navigation = {status} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.action = sett usagen på {this} til {usage}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.addition_setter = legg {usage} til usagen på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.navigation = {usage} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Input.usage#phrase.subtraction_setter = trekk {usage} fra usagen på {this}
+
+# _084740706.telecom.retention_with_ml.customerlifetimevalue.Output
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output#concept.label = ML model output
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.Output(double)#phrase.navigation = et nytt {ML model output} hvor {0, predicted ltv} 
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.action = sett erroren på {this} til {error}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.clearer = fjern erroren på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.error#phrase.navigation = {error} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.inError()#phrase.navigation = {this} er in error
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.action = sett predicted ltven på {this} til {predicted ltv}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.addition_setter = legg {predicted ltv} til predicted ltven på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.navigation = {predicted ltv} på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.predictedLtv#phrase.subtraction_setter = trekk {predicted ltv} fra predicted ltven på {this}
+_084740706.telecom.retention_with_ml.customerlifetimevalue.Output.run(_084740706.telecom.retention_with_ml.customerlifetimevalue.Input)#phrase.navigation = predict({0})

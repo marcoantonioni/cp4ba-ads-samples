@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>ad8ea17b-d728-49b4-9b0e-1876d2471823</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Loyalty points" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Compute the loyalty points earned by the customer based on his status and the total price of a purchase.</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Status">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.shopping_cart.data.Status" collection="false" name="Status"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="status_ii" name="Status" typeRef="com.ibm.ads.samples.retail.shopping_cart.data.Status"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Loyalty points">
+                        
+                <description>Compute the loyalty points earned by the customer based on the total price of the purchase and the loyalty factor.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Loyalty factor"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Price"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Loyalty points"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Apply%20loyalty%20factor.drl" kind="BusinessRule" name="Apply loyalty factor"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="loyaltyPoints_ii" name="Loyalty points" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_2" name="Loyalty factor">
+                        
+                <description>Indicate the loyalty factor based on the status of the customer. This number is used as a multiplier to compute the total loyalty points.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.shopping_cart.data.Status" collection="false" name="Status"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Loyalty factor"/>
+                                        
+                        <rule defaultRule="false" href="node_2/loyalty%20table.dmt" kind="DecisionTable" name="loyalty table"/>
+                                        
+                        <rule defaultRule="true" href="node_2/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="loyaltyFactor_ii" name="Loyalty factor" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_3" name="Price">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Price"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="price_ii" name="Price" typeRef="java.lang.Double"/>
+                    
+            </inputData>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

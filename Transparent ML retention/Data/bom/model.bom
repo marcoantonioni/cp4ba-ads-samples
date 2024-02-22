@@ -1,0 +1,203 @@
+
+package com.ibm.ads.samples.telecom.transparent_ml_retention.data;
+
+
+public class CustomerRecord
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "customerRecord"
+        property "de.generated" "true"
+{
+    public boolean carOwner
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "carOwner"
+                property update "true";
+    public double estimatedIncome
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estimatedIncome"
+                property update "true";
+    public com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender gender
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "gender"
+                property update "true";
+    public com.ibm.ads.samples.telecom.transparent_ml_retention.data.Location location
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "location"
+                property update "true";
+    public com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus maritalStatus
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "maritalStatus"
+                property update "true";
+    public string name
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public long children
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "children"
+                property update "true";
+    public double age
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public CustomerRecord(boolean carOwner, double estimatedIncome, com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender gender, com.ibm.ads.samples.telecom.transparent_ml_retention.data.Location location, com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus maritalStatus, string name, long children, double age)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CustomerRecord()
+                property "dataio.default" "true";
+}
+
+public class Gender
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "gender"
+        property "de.generated" "true"
+{
+    domain {static female, static male, static other}
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender female
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Female";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender male
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Male";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender other
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Other";
+}
+
+public class Location
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "location"
+        property "de.generated" "true"
+{
+    domain {static country, static suburban, static urban}
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Location country
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "country";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Location suburban
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "suburban";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.Location urban
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "urban";
+}
+
+public class MaritalStatus
+        extends java.lang.Enum
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "maritalStatus"
+        property "de.generated" "true"
+{
+    domain {static divorced, static married, static single}
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus divorced
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Divorced";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus married
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Married";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus single
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Single";
+}
+
+public class Offer
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "offer"
+        property "de.generated" "true"
+{
+    public double estimatedCost
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estimatedCost"
+                property update "true";
+    public string message
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "message"
+                property update "true";
+    public Offer(double estimatedCost, string message)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Offer()
+                property "dataio.default" "true";
+}
+
+public class PaymentMethod
+        extends java.lang.Enum
+        property "ads.typeId" "8"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "paymentMethod"
+        property "de.generated" "true"
+{
+    domain {static auto, static check, static creditCard}
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod auto
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Auto";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod check
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Check";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod creditCard
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CreditCard";
+}
+
+public class RatePlan
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "ratePlan"
+        property "de.generated" "true"
+{
+    domain {static basic, static essentials, static gold, static premium}
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan basic
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Basic";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan essentials
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Essentials";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan gold
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gold";
+    public static final readonly com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan premium
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Premium";
+}
+
+public class Subscription
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "subscription"
+        property "de.generated" "true"
+{
+    public double internationalCalls
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "internationalCalls"
+                property update "true";
+    public double localCalls
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "localCalls"
+                property update "true";
+    public double longDistanceCalls
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "longDistanceCalls"
+                property update "true";
+    public com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod paymentMethod
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "paymentMethod"
+                property update "true";
+    public com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan ratePlan
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ratePlan"
+                property update "true";
+    public double usage
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "usage"
+                property update "true";
+    public Subscription(double internationalCalls, double localCalls, double longDistanceCalls, com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod paymentMethod, com.ibm.ads.samples.telecom.transparent_ml_retention.data.RatePlan ratePlan, double usage)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Subscription()
+                property "dataio.default" "true";
+}
+

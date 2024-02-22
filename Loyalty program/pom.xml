@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+                
+    
+    
+    <modelVersion>4.0.0</modelVersion>
+                
+    
+    
+    <groupId>cp4admin.samples.loyalty_program</groupId>
+                
+    
+    
+    <artifactId>loyaltyProgram</artifactId>
+                
+    
+    
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Loyalty program</name>
+    <description>About the project:
+The Loyalty Program decision service implements the basics of a Loyalty program used by Retail industry by vendors to attract and retain customers. They can mix different approaches to offer commercial benefits (eg an instant discount), stack virtual money or coupons that will be used later on. In addition, multiple statuses (eg silver, gold) can be implemented to reward more benefits for loyal customers or customers spending more.
+Why is it important?
+The retail company needs to automate the management of their loyalty program. The mechanics of the program are advertised to the customers, documented in brochures/contracts and sometimes (because there is money involved) compliant to regulations. Every time a customer buys something, the logic of the loyalty program is applied. This logic needs to match the terms of the program, so that everything is consistent across channels (eg physical store, online store, phone, etc.). If an expected benefit is not instantly seen by the customer on their account, it can create frustration and be very bad for the brand.
+As loyalty programs evolve quite frequently (new benefits, time-limited promotions, new statuses, etc), the loyalty program manager needs to update the automated logic to reflects those changes.
+Loyatly program:
+Information and data associated with the customer record will show in their “account”, such as their status (bronze, silver, gold or platinum) and available offers.
+An offer can be a coupon, a discount or an amount stored in a personal wallet. Based on multiple criteria, when there is a transaction, the store can add an offer (eg a coupon), or use an existing offer for the current transaction (eg use money from the wallet). The store also tracks the customer’s spending over time. The status can evolve based on the spending and the more they spend, the higher their status.
+The Apply loyalty policies is the main decision that determines what changes to make to the customer’s account when a purchase is made. Depending on what is purchased and what is on the customer account, the right policies are applied, the best offer is identified and the benefits are applied or stored into the account. For example, if the best offer is an instant discount, the final price is computed according to this discount rate. If the best offer is a coupon, this coupon is added to the account and can be used at a later date.
+At the end, the decision looks at the spending and determines whether the customer needs to be upgraded to an upper status. The final price is determined and the customer account is updated with whatever benefit was given, for this transaction.</description>
+                
+    
+    
+    <packaging>pom</packaging>
+                
+    
+    
+    <properties>
+        <ads-mojo.version>12.0.3</ads-mojo.version>
+        <buildTime>${maven.build.timestamp}</buildTime>
+        <decisionServiceId>${project.groupId}:${project.artifactId}</decisionServiceId>
+        <engine-api.version>3.1.0</engine-api.version>
+        <engine-compact-runtime.version>3.1.9</engine-compact-runtime.version>
+        <jackson.version>2.15.0</jackson.version>
+        <junit.jupiter.version>5.8.0</junit.jupiter.version>
+        <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
+        <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
+        <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <ml-integration-runtime.version>48.0.4</ml-integration-runtime.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+                
+    
+    
+    <dependencyManagement>
+                                
+        
+        
+        <dependencies>
+                                                
+            
+            
+            <dependency>
+                                                                
+                
+                
+                <groupId>com.ibm.decision</groupId>
+                                                                
+                
+                
+                <artifactId>engine-compact-runtime</artifactId>
+                                                                
+                
+                
+                <version>${engine-compact-runtime.version}</version>
+                                                                
+                
+                
+                <scope>test</scope>
+                                                            
+            
+            
+            </dependency>
+                                                
+            
+            
+            <dependency>
+                                                                
+                
+                
+                <groupId>com.ibm.decision</groupId>
+                                                                
+                
+                
+                <artifactId>engine-de-api</artifactId>
+                                                                
+                
+                
+                <version>${engine-api.version}</version>
+                                                                
+                
+                
+                <scope>test</scope>
+                                                            
+            
+            
+            </dependency>
+                                                
+            
+            
+            <dependency>
+                                                                
+                
+                
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                                                                
+                
+                
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                                                                
+                
+                
+                <version>${jackson.version}</version>
+                                                                
+                
+                
+                <scope>test</scope>
+                                                            
+            
+            
+            </dependency>
+                                                
+            
+            
+            <dependency>
+                                                                
+                
+                
+                <groupId>org.junit.jupiter</groupId>
+                                                                
+                
+                
+                <artifactId>junit-jupiter-api</artifactId>
+                                                                
+                
+                
+                <version>${junit.jupiter.version}</version>
+                                                                
+                
+                
+                <scope>test</scope>
+                                                            
+            
+            
+            </dependency>
+                                                
+            
+            
+            <dependency>
+                                                                
+                
+                
+                <groupId>org.junit.jupiter</groupId>
+                                                                
+                
+                
+                <artifactId>junit-jupiter-engine</artifactId>
+                                                                
+                
+                
+                <version>${junit.jupiter.version}</version>
+                                                                
+                
+                
+                <scope>test</scope>
+                                                            
+            
+            
+            </dependency>
+                                            
+        
+        
+        </dependencies>
+                            
+    
+    
+    </dependencyManagement>
+                
+    
+    
+    <modules>
+        <module>.decisionservice</module>
+        <module>Apply loyalty policies</module>
+        <module>Coupon reward</module>
+        <module>Customer upgrade</module>
+        <module>Data</module>
+        <module>Discount</module>
+        <module>Wallet reward</module>
+    </modules>
+                
+    
+    
+    <build>
+                                
+        
+        
+        <pluginManagement>
+                                                
+            
+            
+            <plugins>
+                                                                
+                
+                
+                <plugin>
+                                                                                
+                    
+                    
+                    <groupId>com.ibm.decision</groupId>
+                                                                                
+                    
+                    
+                    <artifactId>build-maven-plugin</artifactId>
+                                                                                
+                    
+                    
+                    <version>${ads-mojo.version}</version>
+                                                                            
+                    
+                    
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.ibm.decision</groupId>
+                            <artifactId>ml-integration-runtime</artifactId>
+                            <version>${ml-integration-runtime.version}</version>
+                        </dependency>
+                    </dependencies>
+                                                                            
+                
+                
+                </plugin>
+                                                            
+                
+                
+                <plugin>
+                                                                                
+                    
+                    
+                    <groupId>org.apache.maven.plugins</groupId>
+                                                                                
+                    
+                    
+                    <artifactId>maven-surefire-plugin</artifactId>
+                                                                                
+                    
+                    
+                    <version>${maven-surefire-plugin.version}</version>
+                                                                                
+                    
+                    
+                    <configuration>
+                                                                                                
+                        
+                        
+                        
+                                                                                                
+                        
+                        
+                        <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                                                                                            
+                    
+                    
+                    <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+                            <disable>false</disable>
+                            <version>3.0</version>
+                            <usePhrasedFileName>false</usePhrasedFileName>
+                            <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+                            <usePhrasedTestCaseClassName>true</usePhrasedTestCaseClassName>
+                            <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+                        </statelessTestsetReporter>
+                        <consoleOutputReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5ConsoleOutputReporter">
+                            <disable>false</disable>
+                            <encoding>UTF-8</encoding>
+                            <usePhrasedFileName>false</usePhrasedFileName>
+                        </consoleOutputReporter>
+                        <statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoReporter">
+                            <disable>false</disable>
+                            <usePhrasedFileName>false</usePhrasedFileName>
+                            <usePhrasedClassNameInRunning>true</usePhrasedClassNameInRunning>
+                            <usePhrasedClassNameInTestCaseSummary>true</usePhrasedClassNameInTestCaseSummary>
+                        </statelessTestsetInfoReporter>
+                    </configuration>
+                                                                            
+                
+                
+                </plugin>
+                                                            
+            
+            
+            </plugins>
+                                            
+        
+        
+        </pluginManagement>
+                            
+    
+    
+    </build>
+            
+
+
+</project>

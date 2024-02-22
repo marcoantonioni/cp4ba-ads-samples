@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>All T</name>
+  <uuid>526fcbcb-3e0a-49db-8560-561129b32271</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'All T' to Prediction 
+		where the predicted churn of each ML model output is "T" ;
+	set 'number of predictions' to the number of elements in Prediction ;
+if
+	'number of predictions' is more than 0 
+then
+	set decision to a new ML model output where
+		the predicted churn is "T" , 
+		the confidence is the sum of the confidences of 'All T' / 'number of predictions' , 
+		the weight is the sum of the weights of 'All T' , 
+		the rank is 0 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

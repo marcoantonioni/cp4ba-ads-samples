@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Missing hyphen in ZIP+4 code</name>
+  <uuid>c5ebc630-d1d7-4d5b-adc1-ddb412b21175</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the length of the ZIP code of Preprocessing is more than 5
+and
+    the ZIP code of Preprocessing  does not contain "-"  
+then
+    set decision to "Warning: Missing hyphen before the last four digits." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

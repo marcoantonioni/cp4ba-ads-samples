@@ -1,0 +1,10 @@
+{
+  "operationId" : "a82d2e4a-072f-4ccd-9b6c-e7bbdd5806a7",
+  "body" : {
+    "orderAmount" : 1445,
+    "customer" : {
+      "name" : "John",
+      "status" : "Gold"
+    }
+  }
+}

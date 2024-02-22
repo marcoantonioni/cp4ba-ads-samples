@@ -1,0 +1,78 @@
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage#concept.documentation =
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage#concept.label = Baggage
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.Baggage(java.util.List)#phrase.navigation = a new {Baggage} where {0, bag}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.addTo_bag(com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem)#phrase.action = add {0} to the bags of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.bag#phrase.action = set the bags of {this} to {bag}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.bag#phrase.navigation = {bag} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.clear_bag()#phrase.action = clear the bags of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Baggage.removeFrom_bag(com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem)#phrase.action = remove {0} from the bags of {this}
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem#concept.label = Baggage Item
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.BaggageItem(double,double,double,double)#phrase.navigation = a new {Baggage Item} where {0, depth} {1, height} {2, weight} {3, width}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.depth#phrase.action = set the depth of {this} to {depth}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.depth#phrase.addition_setter = add {depth} to the depth of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.depth#phrase.navigation = {depth} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.depth#phrase.subtraction_setter = subtract {depth} from the depth of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.height#phrase.action = set the height of {this} to {height}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.height#phrase.addition_setter = add {height} to the height of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.height#phrase.navigation = {height} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.height#phrase.subtraction_setter = subtract {height} from the height of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.weight#phrase.action = set the weight of {this} to {weight}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.weight#phrase.addition_setter = add {weight} to the weight of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.weight#phrase.navigation = {weight} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.weight#phrase.subtraction_setter = subtract {weight} from the weight of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.width#phrase.action = set the width of {this} to {width}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.width#phrase.addition_setter = add {width} to the width of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.width#phrase.navigation = {width} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.BaggageItem.width#phrase.subtraction_setter = subtract {width} from the width of {this}
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking#concept.label = Booking
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.Booking(long,com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass,java.lang.String)#phrase.navigation = a new {Booking} where {0, bag} {1, fare class} {2, fare code}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.bags#phrase.action = set the bag of {this} to {bag}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.bags#phrase.addition_setter = add {bag} to the bag of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.bags#phrase.navigation = {bag} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.bags#phrase.subtraction_setter = subtract {bag} from the bag of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.fareClass#phrase.action = set the fare class of {this} to {fare class}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.fareClass#phrase.clearer = clear the fare class of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.fareClass#phrase.navigation = {fare class} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.fareCode#phrase.action = set the fare code of {this} to {fare code}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Booking.fareCode#phrase.navigation = {fare code} of {this}
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass#concept.label = Fare Class
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass.business#instance.label = Business
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass.economy#instance.label = Economy
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass.first#instance.label = First
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FareClass.premiumEconomy#instance.label = Premium Economy
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel#concept.label = Frequent Flyer Level
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel.bronze#instance.label = Bronze
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel.gold#instance.label = Gold
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel.none#instance.label = None
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel.platinum#instance.label = Platinum
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.FrequentFlyerLevel.silver#instance.label = Silver
+
+# com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results#concept.label = Result
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.Results(boolean,double,java.util.List)#phrase.navigation = a new {Result} where {0, compliant} {1, fee} {2, message}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.addTo_messages(java.lang.String)#phrase.action = add {0} to the messages of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.clear_messages()#phrase.action = clear the messages of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.action[0] = {this} gets compliant only if {compliant}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.action[1] = make it {compliant} that {this} is compliant
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.action[1].deprecated = true
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.navigation = {this} is compliant
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.negative_predicate = {this} is not compliant
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.negative_predicate_setter = {this} does not get compliant
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.compliant#phrase.positive_predicate_setter = {this} gets compliant
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.fees#phrase.action = set the fee of {this} to {fee}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.fees#phrase.addition_setter = add {fee} to the fee of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.fees#phrase.navigation = {fee} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.fees#phrase.subtraction_setter = subtract {fee} from the fee of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.messages#phrase.action = set the messages of {this} to {message}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.messages#phrase.navigation = {message} of {this}
+com.ibm.ads.samples.transportation.baggage.baggage_data_model.Results.removeFrom_messages(java.lang.String)#phrase.action = remove {0} from the messages of {this}

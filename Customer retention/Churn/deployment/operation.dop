@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Churn">
+  <name>Churn</name>
+  <uuid>39804a30-5db8-44bf-8764-ef68b04f4063</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#6f479b61-3c0e-49da-9223-69e9cd971b1e"/>
+  <targetRuleProject href="../../Churn#4819184b-0c8f-4080-9af2-885f3c59641f"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

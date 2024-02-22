@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Update customers total amount and wallet</name>
+  <uuid>344275a9-9b37-4854-9ce6-43950c009c38</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'Best offer' is defined  and the type of 'Best offer' is one of { Discount , Wallet } then
+    -- update total amount for this customer
+    set the total amount of decision to the total amount + 'Discounted price' ;
+
+    -- Add order reward to the wallet.
+    define 'reward' as the wallet reward computed from  Customer being decision , Purchase being 'Discounted price' ;
+    set the wallet amount of decision to the wallet amount of reward ;
+
+else
+    set the total amount of decision to the total amount + 'Discounted price' ;
+    print "Order amount: " + the total amount of decision ;
+
+    -- Add order reward to the wallet.
+    define 'reward' as the wallet reward computed from  Customer being decision , Purchase being 'Discounted price'  ;
+    set the wallet amount of decision to the wallet amount of reward ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

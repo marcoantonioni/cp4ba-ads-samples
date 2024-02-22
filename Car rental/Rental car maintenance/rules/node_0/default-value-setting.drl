@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>f81c02bd-01e9-4e08-8382-fc63435ce34a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set 'Car maintenance record' to a new Car maintenance record where
+        the ID is 1 , 
+        the last full service date is 1/1/2015 12:00:00 PM , 
+        the last oil change date is 1/5/2016 11:00:00 AM , 
+        the service mileage is 100000 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

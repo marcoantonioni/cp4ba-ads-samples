@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>All VERY_LOW</name>
+  <uuid>202f4579-ae4b-49a9-8934-908c552bd002</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'All VERY_LOW' to Prediction 
+		where the predicted ltv of each ML model output is "VERY_LOW" ;
+	set 'number of predictions' to the number of elements in Prediction ;
+if
+	'number of predictions' is more than 0 
+then
+	set decision to a new ML model output where
+		the confidence is the sum of the confidences of 'All VERY_LOW' / 'number of predictions' , 
+		the predicted ltv is "VERY_LOW" , 
+		the weight is the sum of the weights of 'All VERY_LOW' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,53 @@
+
+# com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error#concept.label = Output error
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = a new {Output error} where {0, code} {1, message}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error.code#phrase.action = set the code of {this} to {code}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error.code#phrase.navigation = {code} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error.message#phrase.action = set the message of {this} to {message}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Error.message#phrase.navigation = {message} of {this}
+
+# com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input#concept.label = ML model input
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.Input(java.lang.Double,java.lang.String,java.lang.Long,java.lang.Double,java.lang.String,java.lang.String,java.lang.Long,java.lang.String,java.lang.Double)#phrase.navigation = a new {ML model input} where {0, age} {1, car owner} {2, children} {3, est income} {4, gender} {5, paymethod} {6, rateplan} {7, status} {8, usage}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.age#phrase.action = set the age of {this} to {age}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.age#phrase.addition_setter = add {age} to the age of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.age#phrase.navigation = {age} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.carOwner#phrase.action = set the car owner of {this} to {car owner}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.carOwner#phrase.navigation = {car owner} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.children#phrase.action = set the children of {this} to {children}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.children#phrase.addition_setter = add {children} to the children of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.children#phrase.navigation = {children} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.children#phrase.subtraction_setter = subtract {children} from the children of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.estIncome#phrase.action = set the est income of {this} to {est income}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.estIncome#phrase.addition_setter = add {est income} to the est income of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.estIncome#phrase.navigation = {est income} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.estIncome#phrase.subtraction_setter = subtract {est income} from the est income of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.gender#phrase.action = set the gender of {this} to {gender}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.gender#phrase.navigation = {gender} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.paymethod#phrase.action = set the paymethod of {this} to {paymethod}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.paymethod#phrase.navigation = {paymethod} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.rateplan#phrase.action = set the rateplan of {this} to {rateplan}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.rateplan#phrase.addition_setter = add {rateplan} to the rateplan of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.rateplan#phrase.navigation = {rateplan} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.rateplan#phrase.subtraction_setter = subtract {rateplan} from the rateplan of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.status#phrase.navigation = {status} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.usage#phrase.action = set the usage of {this} to {usage}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.usage#phrase.addition_setter = add {usage} to the usage of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.usage#phrase.navigation = {usage} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input.usage#phrase.subtraction_setter = subtract {usage} from the usage of {this}
+
+# com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output#concept.label = ML model output
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.Output(java.lang.Double)#phrase.navigation = a new {ML model output} where {0, prediction}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.error#phrase.action = set the error of {this} to {error}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.error#phrase.clearer = clear the error of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.error#phrase.navigation = {error} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.inError()#phrase.navigation = {this} is in error
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.prediction#phrase.action = set the prediction of {this} to {prediction}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.prediction#phrase.addition_setter = add {prediction} to the prediction of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.prediction#phrase.navigation = {prediction} of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.prediction#phrase.subtraction_setter = subtract {prediction} from the prediction of {this}
+com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Output.run(com.ibm.ads.samples.ml_customer_loyalty.telco_retention.customer_lifetime_value.Input)#phrase.navigation = predict({0})

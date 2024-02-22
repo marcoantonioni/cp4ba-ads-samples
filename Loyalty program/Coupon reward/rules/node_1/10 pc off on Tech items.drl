@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>10 pc off on Tech items</name>
+  <uuid>cd4bd7fd-0279-4822-9907-f74a354eddff</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if there is at least one Item in Order where the name of this Item contains "Tech" ,
+
+then
+
+set decision to a new Coupon where
+        the amount is 0.1 , 
+        the description is "10% off on Technology products" , 
+        the label is "Technology 10" , 
+        monetary is false ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

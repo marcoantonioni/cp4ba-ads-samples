@@ -1,0 +1,57 @@
+
+# _084740706.telecom.retention_with_ml.customerchurn.Error
+_084740706.telecom.retention_with_ml.customerchurn.Error#concept.label = Output error
+_084740706.telecom.retention_with_ml.customerchurn.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = en ny {Output error} hvor {0, code} {1, message} 
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.action = sæt coden på {this} til {code}
+_084740706.telecom.retention_with_ml.customerchurn.Error.code#phrase.navigation = {code} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.action = sæt messagen på {this} til {message}
+_084740706.telecom.retention_with_ml.customerchurn.Error.message#phrase.navigation = {message} på {this}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Input
+_084740706.telecom.retention_with_ml.customerchurn.Input#concept.label = ML model input
+_084740706.telecom.retention_with_ml.customerchurn.Input.Input(java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,double,double,double,double)#phrase.navigation = en ny {ML model input} hvor {0, gender} {1, status} {2, car owner} {3, paymethod} {4, children} {5, est income} {6, age} {7, usage} {8, rateplan} 
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.action = sæt agen på {this} til {age}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.addition_setter = føj {age} til agen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.navigation = {age} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.age#phrase.subtraction_setter = træk {age} fra agen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.action = sæt car owneren på {this} til {car owner}
+_084740706.telecom.retention_with_ml.customerchurn.Input.carOwner#phrase.navigation = {car owner} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.action = sæt childrenen på {this} til {children}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.addition_setter = føj {children} til childrenen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.navigation = {children} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.children#phrase.subtraction_setter = træk {children} fra childrenen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.action = sæt est incomen på {this} til {est income}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.addition_setter = føj {est income} til est incomen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.navigation = {est income} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.estIncome#phrase.subtraction_setter = træk {est income} fra est incomen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.action = sæt genderen på {this} til {gender}
+_084740706.telecom.retention_with_ml.customerchurn.Input.gender#phrase.navigation = {gender} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.action = sæt paymethoden på {this} til {paymethod}
+_084740706.telecom.retention_with_ml.customerchurn.Input.paymethod#phrase.navigation = {paymethod} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.action = sæt rateplanen på {this} til {rateplan}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.addition_setter = føj {rateplan} til rateplanen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.navigation = {rateplan} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.rateplan#phrase.subtraction_setter = træk {rateplan} fra rateplanen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.action = sæt statusen på {this} til {status}
+_084740706.telecom.retention_with_ml.customerchurn.Input.status#phrase.navigation = {status} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.action = sæt usagen på {this} til {usage}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.addition_setter = føj {usage} til usagen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.navigation = {usage} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Input.usage#phrase.subtraction_setter = træk {usage} fra usagen på {this}
+
+# _084740706.telecom.retention_with_ml.customerchurn.Output
+_084740706.telecom.retention_with_ml.customerchurn.Output#concept.label = ML model output
+_084740706.telecom.retention_with_ml.customerchurn.Output.Output(double,double)#phrase.navigation = en ny {ML model output} hvor {0, probability t} {1, probability f} 
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.action = sæt erroren på {this} til {error}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.clearer = fjern erroren på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.error#phrase.navigation = {error} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.inError()#phrase.navigation = {this} er in error
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.action = sæt probability fen på {this} til {probability f}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.addition_setter = føj {probability f} til probability fen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.navigation = {probability f} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_f_#phrase.subtraction_setter = træk {probability f} fra probability fen på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.action = sæt probability ten på {this} til {probability t}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.addition_setter = føj {probability t} til probability ten på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.navigation = {probability t} på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.probability_t_#phrase.subtraction_setter = træk {probability t} fra probability ten på {this}
+_084740706.telecom.retention_with_ml.customerchurn.Output.run(_084740706.telecom.retention_with_ml.customerchurn.Input)#phrase.navigation = predict({0})

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-rule</name>
+  <uuid>d486059b-1739-4591-9ff5-e436b0e6c928</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new ML model output where
+		the predicted ltv is "LOW" , 
+		the confidence is 0.5 , 
+		the weight is 0.5 , 
+		the rank is 0 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

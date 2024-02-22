@@ -1,0 +1,56 @@
+
+# com.ibm.ads.samples.retail.shopping_cart.data.Customer
+com.ibm.ads.samples.retail.shopping_cart.data.Customer#concept.documentation = customer details
+com.ibm.ads.samples.retail.shopping_cart.data.Customer#concept.label = Customer
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.Customer(java.lang.String,com.ibm.ads.samples.retail.shopping_cart.data.Status)#phrase.navigation = a new {Customer} where {0, name} {1, status}
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.name#phrase.navigation = {name} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.status#phrase.clearer = clear the status of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Customer.status#phrase.navigation = {status} of {this}
+
+# com.ibm.ads.samples.retail.shopping_cart.data.Item
+com.ibm.ads.samples.retail.shopping_cart.data.Item#concept.label = Item
+com.ibm.ads.samples.retail.shopping_cart.data.Item.Item(java.lang.String,double)#phrase.navigation = a new {Item} where {0, name} {1, price}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.name#phrase.action = set the name of {this} to {name}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.name#phrase.navigation = {name} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.price#phrase.action = set the price of {this} to {price}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.price#phrase.addition_setter = add {price} to the price of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.price#phrase.navigation = {price} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Item.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+
+# com.ibm.ads.samples.retail.shopping_cart.data.Result
+com.ibm.ads.samples.retail.shopping_cart.data.Result#concept.label = Result
+com.ibm.ads.samples.retail.shopping_cart.data.Result.Result(double,double,double)#phrase.navigation = a new {Result} where {0, given discount} {1, loyalty points} {2, price}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.givenDiscount#phrase.action = set the given discount of {this} to {given discount}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.givenDiscount#phrase.addition_setter = add {given discount} to the given discount of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.givenDiscount#phrase.navigation = {given discount} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.givenDiscount#phrase.subtraction_setter = subtract {given discount} from the given discount of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.loyaltyPoints#phrase.action = set the loyalty points of {this} to {loyalty points}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.loyaltyPoints#phrase.addition_setter = add {loyalty points} to the loyalty points of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.loyaltyPoints#phrase.navigation = {loyalty points} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.loyaltyPoints#phrase.subtraction_setter = subtract {loyalty points} from the loyalty points of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.price#phrase.action = set the price of {this} to {price}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.price#phrase.addition_setter = add {price} to the price of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.price#phrase.navigation = {price} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.Result.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+
+# com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart#concept.label = Shopping cart
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.ShoppingCart(java.util.List,double)#phrase.navigation = a new {Shopping cart} where {0, item} {1, price}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.addTo_items(com.ibm.ads.samples.retail.shopping_cart.data.Item)#phrase.action = add {0} to the items of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.clear_items()#phrase.action = clear the items of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.items#phrase.action = set the items of {this} to {item}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.items#phrase.navigation = {item} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.price#phrase.action = set the price of {this} to {price}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.price#phrase.addition_setter = add {price} to the price of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.price#phrase.navigation = {price} of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+com.ibm.ads.samples.retail.shopping_cart.data.ShoppingCart.removeFrom_items(com.ibm.ads.samples.retail.shopping_cart.data.Item)#phrase.action = remove {0} from the items of {this}
+
+# com.ibm.ads.samples.retail.shopping_cart.data.Status
+com.ibm.ads.samples.retail.shopping_cart.data.Status#concept.label = Status
+com.ibm.ads.samples.retail.shopping_cart.data.Status.Bronze#instance.label = Bronze
+com.ibm.ads.samples.retail.shopping_cart.data.Status.Gold#instance.label = Gold
+com.ibm.ads.samples.retail.shopping_cart.data.Status.Platinum#instance.label = Platinum
+com.ibm.ads.samples.retail.shopping_cart.data.Status.Silver#instance.label = Silver

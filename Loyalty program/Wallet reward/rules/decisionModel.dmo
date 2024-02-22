@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+      
+    <name>decisionModel</name>
+      
+    <uuid>c5f257ab-cdd7-4169-9205-ba7dc7401ec6</uuid>
+      
+    <locale>en_US</locale>
+      
+    <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Wallet reward" namespace="">
+                
+            <extensionElements>
+                        
+                <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Determine the amount to add to the wallet</description>
+                        
+                <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+                    
+            </extensionElements>
+                
+            <inputData id="node_0" name="Purchase">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Purchase"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="purchase_ii" name="Purchase" typeRef="java.lang.Double"/>
+                    
+            </inputData>
+                
+            <decision id="node_1" name="Wallet multipler">
+                        
+                <description>Determine the percentage of the amount to add.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Eligible amount"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Wallet multipler"/>
+                                        
+                        <rule defaultRule="false" href="node_1/Apply%20reward%20table.dmt" kind="DecisionTable" name="Apply reward table"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="walletMultipler_ii" name="Wallet multipler" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <inputData id="node_2" name="Customer">
+                        
+                <extensionElements>
+                                
+                    <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                    
+                    </initialization>
+                            
+                </extensionElements>
+                        
+                <variable id="customer_ii" name="Customer" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                    
+            </inputData>
+                
+            <decision id="node_3" name="Eligible amount">
+                        
+                <description>Determine the real amount to reward. Small purchases are not rewarded.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Purchase"/>
+                                        
+                        <output bomType="java.lang.Double" collection="false" name="Eligible amount"/>
+                                        
+                        <rule defaultRule="false" href="node_3/Remove%20the%20first%20100.drl" kind="BusinessRule" name="Remove the first 100"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="eligibleAmount_ii" name="Eligible amount" typeRef="java.lang.Double"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_0"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+                
+            <decision id="node_4" name="Wallet reward">
+                        
+                <description>Add the reward to the customer's wallet.</description>
+                        
+                <extensionElements>
+                                
+                    <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Wallet multipler"/>
+                                        
+                        <input bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Customer"/>
+                                        
+                        <input bomType="java.lang.Double" collection="false" name="Eligible amount"/>
+                                        
+                        <output bomType="com.ibm.ads.samples.retail.loyalty_program.data.Customer" collection="false" name="Wallet reward"/>
+                                        
+                        <rule defaultRule="false" href="node_4/Apply%20reward.drl" kind="BusinessRule" name="Apply reward"/>
+                                    
+                    </ruleset>
+                            
+                </extensionElements>
+                        
+                <variable id="walletReward_ii" name="Wallet reward" typeRef="com.ibm.ads.samples.retail.loyalty_program.data.Customer"/>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_1"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_2"/>
+                            
+                </informationRequirement>
+                        
+                <informationRequirement>
+                                
+                    <requiredInput href="#node_3"/>
+                            
+                </informationRequirement>
+                    
+            </decision>
+            
+        </definitions>
+    </definition>
+    
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

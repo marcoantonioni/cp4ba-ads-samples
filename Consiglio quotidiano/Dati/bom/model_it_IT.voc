@@ -1,0 +1,31 @@
+
+# Term: meteo
+@meteo#gender = FEMALE
+@meteo#plural = meteo
+
+# Term: previsione di pioggia
+@previsione\ di\ pioggia#gender = FEMALE
+
+# com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo#concept.label = meteo
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.Meteo(com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura,boolean,long)#phrase.navigation = una nuova {meteo} dove {0, temperatura} {1, avviso di tempesta} {2, previsione di pioggia}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.temperatura#phrase.action = cambia la temperatura {this,PARTITIVE_ARTICLE} a {temperatura}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.temperatura#phrase.clearer = cancella la temperatura {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.temperatura#phrase.navigation = {temperatura} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.action[0] = {this} verrà avviso di tempesta soltanto se {avviso di tempesta}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.action[1] = cambia a {avviso di tempesta} il fatto che {this} è avviso di tempesta
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.action[1].deprecated = true
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.navigation = {this} è avviso di tempesta
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.negative_predicate = {this} non è avviso di tempesta
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.negative_predicate_setter = {this} non verrà avviso di tempesta
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.avvisoDiTempesta#phrase.positive_predicate_setter = {this} verrà avviso di tempesta
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.previsioneDiPioggia#phrase.action = cambia la previsione di pioggia {this,PARTITIVE_ARTICLE} a {previsione di pioggia}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.previsioneDiPioggia#phrase.addition_setter = aggiunge {previsione di pioggia} a la previsione di pioggia {this, PARTITIVE_ARTICLE}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.previsioneDiPioggia#phrase.navigation = {previsione di pioggia} {this,PARTITIVE_ARTICLE}
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Meteo.previsioneDiPioggia#phrase.subtraction_setter = sostrae {previsione di pioggia} da la previsione di pioggia {this, PARTITIVE_ARTICLE}
+
+# com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura#concept.label = temperatura
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura.caldo#instance.label = caldo
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura.freddo#instance.label = freddo
+com.ibm.ads.samples.italian.consiglio_quotidiano.dati.Temperatura.moltoCaldo#instance.label = molto caldo

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check associated ZIP code</name>
+  <uuid>12551531-aa07-4105-83e0-53d1f4e670ea</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    ( the secondary address information of Preprocessing  contains "PO Box" or the street of Preprocessing  contains "PO Box" )
+    and the length of the ZIP code of Preprocessing  is less than 10  
+then
+    set decision to "Warning: Post Office Boxes are usually associated with a ZIP+4 code." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

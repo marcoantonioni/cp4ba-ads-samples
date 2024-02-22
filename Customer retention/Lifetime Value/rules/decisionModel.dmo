@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><com.ibm.rules.studio.model.decisionmodel:DecisionModel xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <name>decisionModel</name>
+  <uuid>6200db83-a44b-443c-be59-23e603e9c58a</uuid>
+  <locale>en_US</locale>
+  <definition>
+        <definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.customer_retention.data.CustomerRecord" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer" typeRef="com.ibm.ads.samples.telecom.customer_retention.data.CustomerRecord"/>
+    </inputData>
+    <decision id="node_1" name="Lifetime Value">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="com.ibm.ads.samples.telecom.customer_retention.data.CustomerRecord" collection="false" name="Customer"/>
+                <input bomType="com.ibm.ads.samples.telecom.customer_retention.data.Subscription" collection="false" name="Subscription"/>
+                <output bomType="java.lang.Double" collection="false" name="Lifetime Value"/>
+                <rule defaultRule="false" href="node_1/Default.drl" kind="BusinessRule" name="Default"/>
+                <rule defaultRule="false" href="node_1/Usage.drl" kind="BusinessRule" name="Usage"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Lifetime Value" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Subscription">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="com.ibm.ads.samples.telecom.customer_retention.data.Subscription" collection="false" name="Subscription"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Subscription" typeRef="com.ibm.ads.samples.telecom.customer_retention.data.Subscription"/>
+    </inputData>
+</definitions>
+    </definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

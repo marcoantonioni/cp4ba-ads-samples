@@ -1,0 +1,8 @@
+{
+  "operationId" : "3adb3bb1-91e4-4e6f-8fc1-7483bed1443b",
+  "body" : {
+    "customerName" : "Ashley",
+    "creditScore" : 525,
+    "yearlyIncome" : 100050
+  }
+}

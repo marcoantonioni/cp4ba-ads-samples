@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>37</name>
+  <uuid>df56f7ed-34e0-4b68-9b55-b220b1cd5e95</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the car owner is "N" 
+	and the usage is more than 107.19999999 
+	and the est income is at most 12510.805 
+	and the age is more than 48.52335 
+then
+	add a new ML model output where
+		the confidence is 0.8333333333333334 , 
+		the predicted ltv is "MEDIUM_HIGH" , 
+		the weight is 0.8333333333333334 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

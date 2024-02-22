@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>29</name>
+  <uuid>37c70368-95a1-46fd-8566-fb10bdfe911d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the usage is at most 146.745 
+	and the usage is more than 107.19999999 
+	and the est income is more than 71765.39999999 
+	and the age is more than 48.52335 
+then
+	add a new ML model output where
+		the confidence is 0.8275862068965517 , 
+		the predicted ltv is "MEDIUM" , 
+		the weight is 0.8275862068965517 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

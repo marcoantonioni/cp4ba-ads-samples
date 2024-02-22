@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Shopping cart price and reward">
+  <name>shopping-cart-price-and-reward</name>
+  <uuid>cf46888c-cdcd-41a4-b733-915ffbfb2915</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#f5dba307-c05c-46d6-97dd-876bef426441"/>
+  <targetRuleProject href="../../Shopping%20cart%20price%20and%20reward#7001f321-b292-4820-9937-4572df12997e"/>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA[shopping-cart-price-and-reward]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

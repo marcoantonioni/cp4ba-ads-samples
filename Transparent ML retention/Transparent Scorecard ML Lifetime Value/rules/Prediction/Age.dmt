@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Age</name>
+  <uuid>b0b2ef1c-45ba-4109-a5a4-e8d3220315d1</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the age of 'CustomerRecord' is at least <min> and less than <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new characteristic where
+	the differential score is <differential score> , 
+	the partial score is <partial score> , 
+	the reason code is <reason code> , 
+	the name is <name> to 'decision']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C1">
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<a number> is less than <a number>]]></Text>
+                        <Param><![CDATA[11.476179]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[11.476179]]></Param>
+                        <Param><![CDATA[15.127762]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-1604.9071]]></Param>
+                                <Param><![CDATA[1604.9071]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[15.127762]]></Param>
+                        <Param><![CDATA[17.714256]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-1441.1444]]></Param>
+                                <Param><![CDATA[1441.1444]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[17.714256]]></Param>
+                        <Param><![CDATA[22.948704]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-878.8944]]></Param>
+                                <Param><![CDATA[878.8944]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[22.948704]]></Param>
+                        <Param><![CDATA[26.810888]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-606.0589]]></Param>
+                                <Param><![CDATA[606.0589]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[26.810888]]></Param>
+                        <Param><![CDATA[30.979456]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-29.39021]]></Param>
+                                <Param><![CDATA[29.39021]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[30.979456]]></Param>
+                        <Param><![CDATA[35.994026]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[94.129456]]></Param>
+                                <Param><![CDATA[-94.129456]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[35.994026]]></Param>
+                        <Param><![CDATA[39.8163]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[222.78433]]></Param>
+                                <Param><![CDATA[-222.78433]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[39.8163]]></Param>
+                        <Param><![CDATA[44.868553]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[193.60245]]></Param>
+                                <Param><![CDATA[-193.60245]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[44.868553]]></Param>
+                        <Param><![CDATA[49.230118]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[271.21808]]></Param>
+                                <Param><![CDATA[-271.21808]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[49.230118]]></Param>
+                        <Param><![CDATA[53.031494]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[395.4299]]></Param>
+                                <Param><![CDATA[-395.4299]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[53.031494]]></Param>
+                        <Param><![CDATA[56.033302]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[490.57513]]></Param>
+                                <Param><![CDATA[-490.57513]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[56.033302]]></Param>
+                        <Param><![CDATA[59.107018]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[434.8132]]></Param>
+                                <Param><![CDATA[-434.8132]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[59.107018]]></Param>
+                        <Param><![CDATA[62.144234]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[566.03345]]></Param>
+                                <Param><![CDATA[-566.03345]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[62.144234]]></Param>
+                        <Param><![CDATA[64.197845]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[655.0815]]></Param>
+                                <Param><![CDATA[-655.0815]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[64.197845]]></Param>
+                        <Param><![CDATA[70.25109]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[609.52026]]></Param>
+                                <Param><![CDATA[-609.52026]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[70.25109]]></Param>
+                        <Param><![CDATA[73.12924]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[73.12924]]></Param>
+                        <Param><![CDATA[85.65199]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[628.1686]]></Param>
+                                <Param><![CDATA[-628.1686]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[85.65199]]></Param>
+                        <Param><![CDATA[89.46014]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                        <Param><![CDATA[89.46014]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[0.0]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Age"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A1)#HeaderText"><![CDATA[decision]]></Data>
+            <Data Name="Definitions(A1)#Width"><![CDATA[876]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[age]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

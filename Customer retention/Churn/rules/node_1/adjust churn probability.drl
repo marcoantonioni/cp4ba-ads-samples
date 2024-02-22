@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>adjust churn probability</name>
+  <uuid>f9141fe1-7c2d-4761-8434-fcda0200a08d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the marital status is Married
+then
+	set decision to decision - 0.1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

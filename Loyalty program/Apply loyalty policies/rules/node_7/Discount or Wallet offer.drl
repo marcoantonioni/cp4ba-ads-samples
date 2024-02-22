@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Discount or Wallet offer</name>
+  <uuid>77e01027-f4d2-420e-bef2-6e2411c8cd41</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'Best offer type' is one of { Discount , Wallet } 
+
+then
+
+    define 'discount' as the discount computed from Customer being Customer , Order being Order ; 
+    print "Discount is: " + round( discount * 100 , 1 ) + "% or " + round( 'Order amount' * discount , 0 ) ;
+    set decision to a new Offer where
+        the description is "Discount on this order (" + round( discount * 100 , 1 ) + "%)" , 
+        the type is 'Best offer type' , 
+        the value is round( 'Order amount' * discount , 0 ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

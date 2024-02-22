@@ -1,0 +1,149 @@
+{
+  "fields" : [ {
+    "name" : "Gender",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender",
+      "expression" : "the gender of CustomerRecord",
+      "collection" : false,
+      "values" : {
+        "F" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender/female",
+        "M" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.Gender/male"
+      },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  }, {
+    "name" : "Status",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus",
+      "expression" : "the marital status of CustomerRecord",
+      "collection" : false,
+      "values" : {
+        "S" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus/single",
+        "D" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus/divorced",
+        "M" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.MaritalStatus/married"
+      },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  }, {
+    "name" : "Est Income",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "java.lang.Double",
+      "expression" : "the estimated income of CustomerRecord",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  }, {
+    "name" : "Paymethod",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod",
+      "expression" : "the payment method of Subscription",
+      "collection" : false,
+      "values" : {
+        "Auto" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod/auto",
+        "CC" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod/creditCard",
+        "CH" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.PaymentMethod/check"
+      },
+      "variables" : [ {
+        "name" : "Subscription",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription"
+      } ]
+    }
+  }, {
+    "name" : "Usage",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "java.lang.Double",
+      "expression" : "the usage of Subscription",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ {
+        "name" : "Subscription",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.Subscription"
+      } ]
+    }
+  }, {
+    "name" : "Age",
+    "type" : "double",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "java.lang.Double",
+      "expression" : "the age of CustomerRecord",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  }, {
+    "name" : "Car Owner",
+    "type" : "string",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "java.lang.Boolean",
+      "expression" : "CustomerRecord is car owner",
+      "collection" : false,
+      "values" : {
+        "Y" : "java.lang.Boolean/TRUE",
+        "N" : "java.lang.Boolean/FALSE"
+      },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  }, {
+    "name" : "RatePlan",
+    "type" : "integer",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "",
+      "expression" : "",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ ]
+    }
+  }, {
+    "name" : "Children",
+    "type" : "integer",
+    "nullable" : true,
+    "fieldMapping" : {
+      "name" : "",
+      "type" : "java.lang.Long",
+      "expression" : "the children of CustomerRecord",
+      "collection" : false,
+      "values" : { },
+      "variables" : [ {
+        "name" : "CustomerRecord",
+        "type" : "com.ibm.ads.samples.telecom.transparent_ml_retention.data.CustomerRecord"
+      } ]
+    }
+  } ]
+}

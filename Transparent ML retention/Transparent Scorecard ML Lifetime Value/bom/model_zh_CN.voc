@@ -1,0 +1,37 @@
+
+# _105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic#concept.label = characteristic
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.Characteristic(double,double,java.lang.String,java.lang.String)#phrase.navigation = 新建 {characteristic}符合条件：{0, differential score} {1, partial score} {2, reason code} {3, name} 
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.differentialScore#phrase.action = 设置{this}的当前 differential score为{differential score}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.differentialScore#phrase.addition_setter = 加{differential score}到{this}的属性当前 differential score里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.differentialScore#phrase.navigation = {this} 的{differential score}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.differentialScore#phrase.subtraction_setter = 减{differential score}到{this}的属性当前 differential score里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.name#phrase.action = 设置{this}的当前 name为{name}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.name#phrase.navigation = {this} 的{name}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.partialScore#phrase.action = 设置{this}的当前 partial score为{partial score}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.partialScore#phrase.addition_setter = 加{partial score}到{this}的属性当前 partial score里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.partialScore#phrase.navigation = {this} 的{partial score}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.partialScore#phrase.subtraction_setter = 减{partial score}到{this}的属性当前 partial score里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.reasonCode#phrase.action = 设置{this}的当前 reason code为{reason code}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Characteristic.reasonCode#phrase.navigation = {this} 的{reason code}
+
+# _105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input#concept.label = ML 模型输入
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input.Input(java.lang.Integer)#phrase.navigation = 新建 {ML 模型输入}符合条件：{0, rateplan} 
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input.rateplan#phrase.action = 设置{this}的当前 rateplan为{rateplan}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input.rateplan#phrase.addition_setter = 加{rateplan}到{this}的属性当前 rateplan里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input.rateplan#phrase.navigation = {this} 的{rateplan}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Input.rateplan#phrase.subtraction_setter = 减{rateplan}到{this}的属性当前 rateplan里
+
+# _105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output#concept.label = ML 模型输出
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.Output(double,java.util.List)#phrase.navigation = 新建 {ML 模型输出}符合条件：{0, rawresult} {1, reason codes} 
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.addTo_reasonCodes(java.lang.String)#phrase.action = 在{this}的这些 reason codes中增加{0}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.clear_reasonCodes()#phrase.action = 删除这些 reason codes的 {this}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.rawresult#phrase.action = 设置{this}的当前 rawresult为{rawresult}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.rawresult#phrase.addition_setter = 加{rawresult}到{this}的属性当前 rawresult里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.rawresult#phrase.navigation = {this} 的{rawresult}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.rawresult#phrase.subtraction_setter = 减{rawresult}到{this}的属性当前 rawresult里
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.reasonCodes#phrase.action = 设置{this}的当前 reason codes为{reason codes}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.reasonCodes#phrase.navigation = {this} 的{reason codes}
+_105924706.ml.transparent_ml_retention.transparentscorecardmllifetimevalue.Output.removeFrom_reasonCodes(java.lang.String)#phrase.action = 从{this}的这些 reason codes中删除{0}

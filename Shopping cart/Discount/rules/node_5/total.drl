@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>total</name>
+  <uuid>6e31e25f-3f7b-4e65-9ddd-ad27df86f7da</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the sum of the prices of Items ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

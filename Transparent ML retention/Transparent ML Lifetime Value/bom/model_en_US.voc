@@ -1,0 +1,46 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input#concept.label = ML model input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.Input(java.lang.Double,java.lang.String,java.lang.Integer,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Double)#phrase.navigation = a new {ML model input} where {0, age} {1, car owner} {2, children} {3, est income} {4, gender} {5, paymethod} {6, rateplan} {7, status} {8, usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.age#phrase.action = set the age of {this} to {age}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.age#phrase.addition_setter = add {age} to the age of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.age#phrase.navigation = {age} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.carOwner#phrase.action = set the car owner of {this} to {car owner}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.carOwner#phrase.navigation = {car owner} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.children#phrase.action = set the children of {this} to {children}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.children#phrase.addition_setter = add {children} to the children of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.children#phrase.navigation = {children} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.children#phrase.subtraction_setter = subtract {children} from the children of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.estIncome#phrase.action = set the est income of {this} to {est income}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.estIncome#phrase.addition_setter = add {est income} to the est income of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.estIncome#phrase.navigation = {est income} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.estIncome#phrase.subtraction_setter = subtract {est income} from the est income of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.gender#phrase.action = set the gender of {this} to {gender}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.gender#phrase.navigation = {gender} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.paymethod#phrase.action = set the paymethod of {this} to {paymethod}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.paymethod#phrase.navigation = {paymethod} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.rateplan#phrase.action = set the rateplan of {this} to {rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.rateplan#phrase.addition_setter = add {rateplan} to the rateplan of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.rateplan#phrase.navigation = {rateplan} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.rateplan#phrase.subtraction_setter = subtract {rateplan} from the rateplan of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.status#phrase.action = set the status of {this} to {status}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.status#phrase.navigation = {status} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.usage#phrase.action = set the usage of {this} to {usage}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.usage#phrase.addition_setter = add {usage} to the usage of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.usage#phrase.navigation = {usage} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Input.usage#phrase.subtraction_setter = subtract {usage} from the usage of {this}
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output#concept.label = ML model output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.Output(java.lang.Double,java.lang.String,java.lang.Double)#phrase.navigation = a new {ML model output} where {0, confidence} {1, predicted ltv} {2, weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.confidence#phrase.action = set the confidence of {this} to {confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.confidence#phrase.addition_setter = add {confidence} to the confidence of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.confidence#phrase.navigation = {confidence} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.confidence#phrase.subtraction_setter = subtract {confidence} from the confidence of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.predictedLtv#phrase.action = set the predicted ltv of {this} to {predicted ltv}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.predictedLtv#phrase.navigation = {predicted ltv} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.weight#phrase.action = set the weight of {this} to {weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.weight#phrase.addition_setter = add {weight} to the weight of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.weight#phrase.navigation = {weight} of {this}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_lifetime_value.Output.weight#phrase.subtraction_setter = subtract {weight} from the weight of {this}

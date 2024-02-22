@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Tabella meteo</name>
+  <uuid>ec7d7969-df59-4ff9-950a-a87adc6fe209</uuid>
+  <locale>it_IT</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[la previsione di pioggia di 'Meteo' è almeno <min> e minore <max>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C2">
+                    <Properties>
+                        <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[true]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[la temperatura di 'Meteo' è <una temperatura>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[assegna 'decisione' a <una stringa>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[0]]></Param>
+                        <Param><![CDATA[20]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[freddo]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Giorno freddo. Prendi un cappotto"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[20]]></Param>
+                        <Param><![CDATA[80]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[caldo]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Rischio pioggia. Potrebbe servire un ombrello."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[80]]></Param>
+                        <Param><![CDATA[100]]></Param>
+                    </Expression>
+                    <Partition DefId="C2">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[molto caldo]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["Giornata piovosa. Prendi un ombrello."]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression/>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression/>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="it_IT">
+        <ResourceSet Locale="it_IT">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Meteo]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[584]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Meteo]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[136]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[min]]></Data>
+            <Data Name="Definitions(C0)[1]#HeaderText"><![CDATA[max]]></Data>
+            <Data Name="Definitions(C2)#HeaderText"><![CDATA[temperature]]></Data>
+            <Data Name="Definitions(C2)#Width"><![CDATA[212]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

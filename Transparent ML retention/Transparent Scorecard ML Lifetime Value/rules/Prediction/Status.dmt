@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Status</name>
+  <uuid>b978f129-97f5-47a9-b2b7-88f872c759f3</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C1">
+                    <Properties>
+                        <Property Name="Check.Gap"><![CDATA[false]]></Property>
+                        <Property Name="Check.Overlap"><![CDATA[false]]></Property>
+                    </Properties>
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the marital status of 'CustomerRecord' is <a marital status>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[add a new characteristic where
+	the differential score is <differential score> , 
+	the partial score is <partial score> , 
+	the reason code is <reason code> , 
+	the name is <name> to 'decision']]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C1">
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Divorced]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[13.684241]]></Param>
+                                <Param><![CDATA[-13.684241]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Status"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Married]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[5.6265655]]></Param>
+                                <Param><![CDATA[-5.6265655]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Status"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Single]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A1">
+                            <Expression>
+                                <Param><![CDATA[-19.418262]]></Param>
+                                <Param><![CDATA[19.418262]]></Param>
+                                <Param><![CDATA[""]]></Param>
+                                <Param><![CDATA["Status"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A1)#HeaderText"><![CDATA[decision]]></Data>
+            <Data Name="Definitions(A1)#Width"><![CDATA[876]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[maritalStatus]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

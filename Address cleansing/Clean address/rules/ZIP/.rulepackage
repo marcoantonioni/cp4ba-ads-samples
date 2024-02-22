@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>ZIP</name>
+  <uuid>52c03bc0-5c6b-4426-88a9-bc6eafbb2a5a</uuid>
+</ilog.rules.studio.model.base:RulePackage>

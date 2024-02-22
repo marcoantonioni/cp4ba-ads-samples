@@ -1,0 +1,26 @@
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input#concept.label = ML 模型输入
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input.Input(java.lang.Integer)#phrase.navigation = 新建 {ML 模型输入}符合条件：{0, rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input.rateplan#phrase.action = 设置{this}的当前 rateplan为{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input.rateplan#phrase.addition_setter = 加{rateplan}到{this}的属性当前 rateplan里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input.rateplan#phrase.navigation = {this} 的{rateplan}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Input.rateplan#phrase.subtraction_setter = 减{rateplan}到{this}的属性当前 rateplan里
+
+# com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output#concept.label = ML 模型输出
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.Output(java.lang.String,java.lang.Double,java.lang.Double,int)#phrase.navigation = 新建 {ML 模型输出}符合条件：{0, predicted churn} {1, confidence} {2, weight} {3, rank}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.confidence#phrase.action = 设置{this}的当前 confidence为{confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.confidence#phrase.addition_setter = 加{confidence}到{this}的属性当前 confidence里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.confidence#phrase.navigation = {this} 的{confidence}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.confidence#phrase.subtraction_setter = 减{confidence}到{this}的属性当前 confidence里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.predictedChurn#phrase.action = 设置{this}的当前 predicted churn为{predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.predictedChurn#phrase.navigation = {this} 的{predicted churn}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.rank#phrase.action = 设置{this}的当前 rank为{rank}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.rank#phrase.addition_setter = 加{rank}到{this}的属性当前 rank里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.rank#phrase.navigation = {this} 的{rank}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.rank#phrase.subtraction_setter = 减{rank}到{this}的属性当前 rank里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.weight#phrase.action = 设置{this}的当前 weight为{weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.weight#phrase.addition_setter = 加{weight}到{this}的属性当前 weight里
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.weight#phrase.navigation = {this} 的{weight}
+com.ibm.ads.samples.telecom.transparent_ml_retention.transparent_ml_churn_with_decision_tables.Output.weight#phrase.subtraction_setter = 减{weight}到{this}的属性当前 weight里

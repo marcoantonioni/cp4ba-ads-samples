@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>2bc54b42-0404-41b4-ac56-2b59e4db26f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set Car to a new Car where
+        the ID is 123 ,
+        the brand is "Mercedes" ,
+        the model is "E class" ,
+        the category is full size ,
+        the status is not available ,
+         the car black box is a new Car black box where
+            the distance driven last week is 500 ,
+            the average speed last week is 80 ,
+            the max speed last week is 130 ,
+            the max engine temperature is 110 ,
+            the oil level is 85 ,
+            the tyre pressure is 1.8 ,
+            the current mileage is 182345 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
